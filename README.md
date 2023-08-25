@@ -40,5 +40,4 @@ SrNo | Name  | Department| Institute|
 
 SrNo | Name | Designation | Department| Institute| 
 :--|:--|:--|:--|:--|
-
 1 | **Puja Kumari** | Research Scholar | School of Bioscience | IIT Kharagpur |
