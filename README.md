@@ -16,6 +16,7 @@ Agarose gel electrophoresis is used to resolve DNA fragments on the basis of the
 2. Running an agarose gel 
 3. Visualization of DNA 
 
+### Subject Matter Experts
 
 <b>Name of Developer | <b> Prof. Soumya De 
 :--|:--|
