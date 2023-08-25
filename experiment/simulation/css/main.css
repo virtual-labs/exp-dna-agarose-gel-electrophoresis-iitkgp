@@ -1,1 +1,11 @@
 /* You CSS goes in here */
+
+#agelcase{
+    position:relative;
+}
+
+#agel{
+    position:absolute;
+    top: 20.5%;
+    left: 4%;
+}
