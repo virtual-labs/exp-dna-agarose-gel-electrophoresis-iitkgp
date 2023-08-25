@@ -2,36 +2,123 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The technique agarose gel electrophoresis separated which of the biomolecules?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Lipid",
+        "b": "Proteins",
+        "c": "Nucleic acids",
+        "d": "Carbohydrates"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Agarose is a polysaccharide extracted from:",
+      "answers": {
+        "a": "Fungi",
+        "b": "Bacteria",
+        "c": "Algae",
+        "d": "Plants"
       },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The DNA fragments on an agarose gel can be visualized using:",
+      "answers": {
+        "a": "Fungi",
+        "b": "Bacteria",
+        "c": "Algae",
+        "d": "Plants"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The quantification of DNA molecules on a gel can be carried out using:",
+      "answers": {
+        "a": "pH meter",
+        "b": "acetocarmine",
+        "c": "ethidium bromide",
+        "d": "bromophenol blue"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The DNA fragments are separated through which of the following methods on an agarose gel?",
+      "answers": {
+        "a": "Under the influence of light",
+        "b": "Diffusion across gel",
+        "c": "Under the influence of electric field",
+        "d": "Under the influence of light"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following options correctly depicts the direction of migration of DNA on an agarose gel?",
+      "answers": {
+        "a": "Positive anode  Negative cathode",
+        "b": "Negative anode  Positive cathode",
+        "c": "Positive cathode  Negative anode",
+        "d": "Negative cathode  Positive anode"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "The rate of migration of DNA in agarose gels will not be affected by which of the following factors?",
+      "answers": {
+        "a": "Gel concentration",
+        "b": "Voltage",
+        "c": "DNA conformation",
+        "d": "DNA concentration"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which fragment of DNA (in base pairs (bp)) would travel the fastest on an agarose gel out of the following:",
+      "answers": {
+        "a": "Fragment 1- 180 bp",
+        "b": "Fragment 2- 600 bp",
+        "c": "Fragment 3 – 200bp",
+        "d": "Fragment 4 – 120 bp"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why do the fragments of DNA in gel electrophoresis travel away from the negative electrode?",
+      "answers": {
+        "a": "DNA is negatively charged so is attracted to the positive end of the unit",
+        "b": "DNA is positively charged so is attracted to the negative end of the unit",
+        "c": "The agarose gel is negatively charged",
+        "d": "The agarose gel is positively charged"
+      },
+     
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The fluorescent dye such as Ethidium bromide (EtBr) is used for visualizing DNA. How does EtBr binds to DNA? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Stacked between histone molecules",
+        "b": "Binds to the nucleotide base",
+        "c": "Intercalated between the stacked bases",
+        "d": "Binds to the phosphodiester backbone"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }

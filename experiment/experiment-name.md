@@ -1,1 +1,1 @@
-## Experiment name
+## DNA analysis by agarose gel electrophoresis
