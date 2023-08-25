@@ -64,10 +64,10 @@
     {
       "question": "Which of the following options correctly depicts the direction of migration of DNA on an agarose gel?",
       "answers": {
-        "a": "Positive anode  Negative cathode",
-        "b": "Negative anode  Positive cathode",
-        "c": "Positive cathode  Negative anode",
-        "d": "Negative cathode  Positive anode"
+        "a": "Positive anode → Negative cathode",
+        "b": "Negative anode → Positive cathode",
+        "c": "Positive cathode → Negative anode",
+        "d": "Negative cathode → Positive anode"
       },
      
       "correctAnswer": "d",
