@@ -1,16 +1,22 @@
 /* You CSS goes in here */
 .img-container {
     /*width: 100%;*/
+    max-width: 100%;
     display: inline-block;
     position: relative;
 }
 
-/* .poscol{
+#board{
+    position: relative;
+    width: 204%;
+    display: none;
+}
+ .poscol{
     width: 100%;
     min-width: 23px;
     min-height: 1px;
     }
- */
+
 #agelcase {
     position: relative;
     top: 20.5%;
@@ -22,7 +28,8 @@
     position: absolute;
     top: 22.7%;
     left: 23.9%;
-    transition: transform 4s ease-in-out;
+    animation: age1 10s linear;
+    /*transition: transform 4s ease-in-out;*/
 }
 
 
@@ -38,38 +45,62 @@
     position: absolute;
     top: 10%;
     left: 100%;
-    cursor: pointer;
+    
 }
 
 #case {
     position: relative;
-    top: 5%;
+    top: 50%;
     left: 2%;
     z-index: -10;
+}
+#agel1{
+    position: absolute;
+    top: 5%;
+    left: 42%;
+    width: 27%;
+    z-index: 10;
+    
+    /*transition: transform 4s ease-in-out;*/
 }
 
 #casecover {
     position: absolute;
-    top: 100%;
+    top: 150%;
     left: 2%;
 }
 
 #sideviewcase {
     position: absolute;
-    top: 150%;
+    top: 98%;
     left: 5%;
 }
 
+#myCanvas1{
+    position: absolute;
+    top:5%;
+    left:36%; 
+    display: block;
+    }
+
 #voltage {
 
-    position: relative;
-    top: 150%;
+    position: absolute;
+    top: 1%;
     left: 20%;
 
 }
 
 #uvmachine {
     position: relative;
-    top: 100%;
-    left: 50%;
+    top: 320%;
+    left: 10%;
+    z-index: -10;
 }
+
+#myCanvas2{
+    position: absolute;
+    top:27%;
+    left:50%; 
+    display: block;
+    }
