@@ -1,5 +1,10 @@
 ## Procedure
 
+
+<div align="center">
+<img src="images/Gel setup.png" width="50%">
+</div>
+
 The protocol for running an agarose gel has been described briefly in the following sections:
 
 1. Agarose Gel Preparation
@@ -14,13 +19,10 @@ The protocol for running an agarose gel has been described briefly in the follow
 2. Sample preparation
     1. Mix the sample containing DNA with the loading buffer in particular concentrations and then pipette it into the sample wells.  
 
-
-
 3. Running the gel and visualization
    1. Once the samples has been loaded on the gel, place the lid and power leads on the apparatus, and finally set the voltage or current. Confirm the current flow by observing bubbles coming off the electrodes.
    2. The positive electrode is usually colored red, owing to its negative charge whereas the negative electrode is colored black. DNA migrates from the negative electrode to the positive electrode. 
    3. The distance DNA has migrated in the gel can be visually observed by monitoring the migration of the tracking dyes such as bromophenol blue and xylene cyanol dyes.  
-
 
 
 4. Visualization of the DNA under UV light.

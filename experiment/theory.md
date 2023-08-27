@@ -11,12 +11,9 @@ Agarose gel electrophoresis is used to resolve DNA fragments on the basis of the
 Gel electrophoresis is the standard lab procedure for separating DNA by size (length is measured by base pairs) for visualization and purification. It is one of the most widely-used techniques in biochemistry and molecular biology. Agarose is a linear polymer composed of alternative residues of D-galactose and 3,6-anhydro-L-galactopyranose joined by α (1→3) and β (1→4) glycosidic linkages as shown in the figure below. It is extracted and purified from seaweeds. Agarose forms a gel matrix of agarose molecules which has channels and pores through which molecules are able to pass. 
 
 <div align="center">
-<img src="experiment/images/iitkgp.png" width="10%">
+<img src="images/gel.png" width="50%">
 </div> 
 
-<div align="center">
-<img src="experiment/images/iitkgp.png" width="10%">
-</div>
 
 Electrophoresis is based on the principle of utilizing an electric field for the separation of DNA, RNA or proteins on the basis of their molecular size and charge. Deoxyribonucleic acid (DNA) is a negatively charged molecule due to the presence of phosphate groups in the backbone. Electrophoresis uses an electrical field to move the negatively charged DNA through an agarose gel matrix toward a positive electrode. The smaller DNA fragments migrate through the gel more quickly as compared to the larger ones. Thus, the approximate length of a DNA fragment can be determined by running it on an agarose gel alongside a DNA ladder (a mixture of DNA fragments of known lengths).
 

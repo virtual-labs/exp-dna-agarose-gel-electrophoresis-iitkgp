@@ -1,12 +1,19 @@
 //Your JavaScript goes in here
-
+var image;
+var image1;
 function moveImage() {
     // Calculate the new position (adjust these values as needed)
-    var newX = 200; // X-coordinate in pixels
-    var newY = 257; // Y-coordinate in pixels
-var image = document.getElementById('agel');
-  image.style.transform = `translate(${newX}px, ${newY}px)`;
-  image.style.width= 185 + 'px';
+    var topimg = 111 ; 
+    var lefting = 98 ; 
+image = document.getElementById('agel');
+  image.style.top = topimg + '%';
+  image.style.left = lefting + '%';  //`translate(${top}%, ${left}%)`;
+  image.style.width= 65 + '%';
+  
+  if((top == 95) && (left = 11)){
+    image1.style.display="block";
+    image.style.display="none";
+  }
   
 }
 
@@ -24,3 +31,14 @@ function allowDrop(event) {
     var image = document.getElementById(data);
     event.target.appendChild(image);
   }
+
+  function moveImage1() {
+    // Calculate the new position (adjust these values as needed)
+    var top = 200 ; 
+    var left = 310 ; 
+ image1   = document.getElementById('agel1');
+  image1.style.transform = `translate(${top}%, ${left}%)`;
+  //image1.style.width= 69 + '%';
+  image.style.display="none";
+  
+}

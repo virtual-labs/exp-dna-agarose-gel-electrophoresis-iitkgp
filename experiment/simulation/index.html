@@ -38,59 +38,91 @@
 					</div>
 
 					<div class="card-body">
+						<ol id="inst1">
+							<li>First, mix the agarose powder with electrophoresis buffer, TAE or TBE to the required
+								concentration. Heat the mixture in a microwave oven to melt it.
 
+							</li>
+							<li>The agarose percentage used depends on the size of the fragments to be settled. The
+								agarose gels are normally in the range of 0.2 – 3.0%. The lower concentration of agarose
+								makes the DNA fragments faster in migration and vice-versa.
+							</li>
+							<li>Once the mixture is cooled, add EtBr to the gel to facilitate visualization of DNA after
+								electrophoresis. Pour it into a casting tray with a sample comb inserted on it. Allow
+								the gel to solidify at room temperature.
+							</li>
+							<li>After the solidification of the gel, remove the comb gently without ripping the bottom
+								of the wells. There will be formation of wells on the gel.
+							</li>
+							<li>Insert the gel in a plastic tray horizontally into the electrophoresis chamber and pour
+								the electrophoresis buffer sufficiently to immerse the gel with the buffer.</li>
+						</ol>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid p-2 mt-2">
-		<div class="row p-2 mt-2">
+	<div class="container-fluid p-2 ">
+		<div class="row  ">
 
-			<div class="col-md-6 mb-3 poscol">
+			<div class="col-md-6  ">
 				<div class="img-container">
+					<!--img src="./images/board.png" id="board" class="image-fluid"-->
 					<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid">
-					<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()">
-
+					<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()"
+						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">
 
 				</div>
 			</div>
-			<div class="col-md-6 mb-3 ">
+			<div class="col-md-6  ">
 				<div class="img-container">
 					<img src="./images/tubes.png" id="tube" class="image-fluid">
-					
-					<img src="./images/tubemeter.png" id="tubemeter " class="image-fluid "  draggable="true" ondragstart="drag(event)">
-				
+
+					<img src="./images/tubemeter.png" id="tubemeter " class="image-fluid " style="cursor: pointer;">
+
 				</div>
-			</div>
-		</div>
-		</div>
-		<div class="container-fluid p-2 mt-2">
-		<div class="row p-2 mt-2">
-			<div class="col-md-6 mb-3">
-				<div class="img-container">
-				<img src="./images/case.png" id="case" class="image-fluid" ondragover="allowDrop(event)" ondrop="drop(event)">
-				<img src="./images/casecover.png" id="casecover" class="image-fluid">
-				<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid">
-				
-			</div>
-		</div>
-		<div class="col-md-6 mb-3">
-			<div class="img-container">
-				<img src="./images/voltage.png" id="voltage" class="image-fluid">
-			</div>
-		</div>
-		</div></div>
-		<div class="container-fluid p-2 mt-2">
-		<div class="row p-2 mt-2">
-			<div class="col-md-12 mb-3 ">
-				<div class="img-container">
-				<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid ">
-			</div>
 			</div>
 		</div>
 	</div>
+	<div class="container-fluid p-2  ">
+		<div class="row ">
+			<div class="col-md-6 ">
+				<div class="img-container">
+					<img src="./images/case.png" id="case" class="image-fluid">
+					<img src="./images/agarose gel.png" id="agel1" class="image-fluid" onclick="moveImage1()"
+						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">
 
+
+					<canvas id="myCanvas1" width="210" height="175" style="border:0px solid #535252;"
+						ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+
+				</div>
+			</div>
+			<div class="col-md-6 ">
+				<div class="img-container">
+					<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid">
+
+				</div>
+			</div>
+		</div>
+		<!--div class="container-fluid  "-->
+		<div class="row  ">
+			<div class="col-md-6 ">
+				<div class="img-container">
+					<img src="./images/voltage.png" id="voltage" class="image-fluid">
+
+				</div>
+			</div>
+			<div class="col-md-6  ">
+				<div class="img-container">
+					<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid ">
+					<canvas id="myCanvas2" width="225" height="225" style="border:1px solid #535252;"
+						ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
+				</div>
+			</div>
+		</div>
+		<!--/div-->
+	</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
