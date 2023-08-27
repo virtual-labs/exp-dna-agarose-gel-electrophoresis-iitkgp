@@ -1,11 +1,75 @@
 /* You CSS goes in here */
-
-#agelcase{
-    position:relative;
+.img-container {
+    /*width: 100%;*/
+    display: inline-block;
+    position: relative;
 }
 
-#agel{
-    position:absolute;
+/* .poscol{
+    width: 100%;
+    min-width: 23px;
+    min-height: 1px;
+    }
+ */
+#agelcase {
+    position: relative;
     top: 20.5%;
     left: 4%;
+
+}
+
+#agel {
+    position: absolute;
+    top: 22.7%;
+    left: 23.9%;
+    transition: transform 4s ease-in-out;
+}
+
+
+
+#tube {
+    position: relative;
+    top: 50%;
+    left: 4%;
+
+}
+
+#tubemeter {
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    cursor: pointer;
+}
+
+#case {
+    position: relative;
+    top: 5%;
+    left: 2%;
+    z-index: -10;
+}
+
+#casecover {
+    position: absolute;
+    top: 100%;
+    left: 2%;
+}
+
+#sideviewcase {
+    position: absolute;
+    top: 150%;
+    left: 5%;
+}
+
+#voltage {
+
+    position: relative;
+    top: 150%;
+    left: 20%;
+
+}
+
+#uvmachine {
+    position: relative;
+    top: 100%;
+    left: 50%;
 }
