@@ -1,106 +1,249 @@
 /* You CSS goes in here */
+/*  
+Lab name: Experimental Biochemistry
+Exp name: DNA analysis by agarose gel electrophoresis
+File name: main.css
+Developer: Prakriti Dhang
+*/
+
+.card {
+    margin-bottom: 5px;
+}
+
 .img-container {
     /*width: 100%;*/
-    max-width: 100%;
+
     display: inline-block;
     position: relative;
 }
 
-#board{
-    position: relative;
-    width: 204%;
-    display: none;
-}
- .poscol{
+
+/* .poscol{
     width: 100%;
     min-width: 23px;
     min-height: 1px;
-    }
+    } */
 
 #agelcase {
     position: relative;
-    top: 20.5%;
+    width: 17%;
+    top: 1%;
     left: 4%;
 
 }
 
 #agel {
     position: absolute;
-    top: 22.7%;
-    left: 23.9%;
-    animation: age1 10s linear;
-    /*transition: transform 4s ease-in-out;*/
+    width: 9.6%;
+    top: 24%;
+    left: 7.8%;
+    /*animation: age1 10s linear;*/
+    transition: transform 4s ease-in-out;
+    z-index: 5;
 }
 
 
 
 #tube {
-    position: relative;
+    position: absolute;
+    width: 15%;
     top: 50%;
-    left: 4%;
+    left: 50%;
 
 }
 
 #tubemeter {
     position: absolute;
+    width: 2%;
     top: 10%;
-    left: 100%;
-    
+    left: 65%;
+
+}
+
+#buffer {
+    position: absolute;
+    width: 4%;
+    top: 40%;
+    left: 70%;
+}
+
+#voltage {
+
+    position: absolute;
+    width: 22%;
+    top: 120%;
+    left: 25%;
+
 }
 
 #case {
-    position: relative;
-    top: 50%;
-    left: 2%;
-    z-index: -10;
-}
-#agel1{
     position: absolute;
-    top: 5%;
-    left: 42%;
-    width: 27%;
-    z-index: 10;
-    
+    width: 35%;
+    top: 220%;
+    left: 2%;
+
+}
+
+#myCanvas1 {
+    position: absolute;
+    width: 11%;
+    top: 223%;
+    left: 14%;
+    display: block;
+}
+
+#negativedot {
+    position: absolute;
+    width: 1%;
+    top: 273.2%;
+    left: 4.5%;
+}
+
+#positivedot {
+    position: absolute;
+    width: 1%;
+    top: 227.5%;
+    left: 33.3%;
+}
+
+#vnegativedot {
+    position: absolute;
+    width: 0.8%;
+    top: 144%;
+    left: 27%;
+}
+
+#vpositivedot {
+    position: absolute;
+    width: 0.8%;
+    top: 144%;
+    left: 29%;
+}
+
+#sideviewcase {
+    position: absolute;
+    width: 35%;
+    top: 220%;
+    left: 50%;
+}
+
+#agel1 {
+    position: absolute;
+    top: 223%;
+    left: 14%;
+    width: 9.6%;
+   z-index: 10;
+
     /*transition: transform 4s ease-in-out;*/
 }
+
+#uvmachine {
+    position: absolute;
+    width: 30%;
+    top: 320%;
+    left: 10%;
+    z-index: -10;
+}
+
+#myCanvas2 {
+    position: absolute;
+    width: 11%;
+    top: 365%;
+    left: 18.5%;
+    display: block;
+}
+
+
+#myCanvass1 {
+    position: absolute;
+    width: 8.6%;
+    height: 31%;
+    top: 238%;
+    left: 52.95%;
+
+}
+
+
+#myCanvass2 {
+    position: absolute;
+    width: 8.7%;
+    height: 31%;
+    top: 238%;
+    left: 74%;
+
+}
+
+#myCanvass3 {
+    position: absolute;
+    width: 35%;
+    height: 9.4%;
+    top: 229%;
+    left: 50%;
+
+}
+
+#myCanvass4 {
+    position: absolute;
+    width: 12.5%;
+    height: 18.5%;
+    top: 238%;
+    left: 61.5%;
+
+}
+
+
+#myCanvasv1 {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 141.2%;
+    left: 31.2%;
+    cursor: pointer;
+
+}
+
+#myCanvast1 {
+    position: absolute;
+    width: 1%;
+    height: 8%;
+    top: 165%;
+    left: 31.3%;
+    cursor: pointer;
+
+}
+
+#myCanvasvp {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 141%;
+    left: 39.5%;
+    cursor: pointer;
+
+}
+
+#myCanvasvn {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 155%;
+    left: 39.5%;
+    cursor: pointer;
+
+}
+
+#textvoltimer {
+    position: absolute;
+    width: 4%;
+    height: 14%;
+    top: 144%;
+    left: 33.9%;
+}
+
+
 
 #casecover {
     position: absolute;
     top: 150%;
     left: 2%;
 }
-
-#sideviewcase {
-    position: absolute;
-    top: 98%;
-    left: 5%;
-}
-
-#myCanvas1{
-    position: absolute;
-    top:5%;
-    left:36%; 
-    display: block;
-    }
-
-#voltage {
-
-    position: absolute;
-    top: 1%;
-    left: 20%;
-
-}
-
-#uvmachine {
-    position: relative;
-    top: 320%;
-    left: 10%;
-    z-index: -10;
-}
-
-#myCanvas2{
-    position: absolute;
-    top:27%;
-    left:50%; 
-    display: block;
-    }
