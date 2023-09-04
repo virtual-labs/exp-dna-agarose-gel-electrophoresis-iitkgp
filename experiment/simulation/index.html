@@ -1,3 +1,12 @@
+<!--
+Lab name: Experimental Biochemistry
+Exp name: DNA analysis by agarose gel electrophoresis
+File name: index.html
+Developer: Prakriti Dhang
+-->
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -10,17 +19,21 @@
 </head>
 
 <body>
-	<div class="container-fluid p-2 mt-2">
+	<div class="container-fluid p-2 mt-2 ">
 		<div class="row">
-			<div class="col-md-12 ">
-				<div class="d-grid  d-flex flex-row d-flex justify-content-md-evenly gap-5">
-
-					<button class="btn btn-primary" type="button" onclick="gel_prep()">Gel Preparation</button>
-					<button class="btn btn-primary" type="button" disabled onclick="sample_prep()">Sample
+			<div class="col-md-12 mb-2 ">
+				<div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2">
+					<button class="btn btn-primary" type="button" id="start" onclick="start()">Start</button>
+					<button class="btn btn-primary" type="button" id="gelprep" onclick="gel_prep()" disabled>Gel
 						Preparation</button>
-					<button class="btn btn-primary" type="button" disabled onclick="sample_run()">Sample Loading and
+					<button class="btn btn-primary" type="button" id="sampleprep" disabled
+						onclick="sample_prep()">Sample
+						Preparation</button>
+					<button class="btn btn-primary" type="button" id="samplerun" disabled onclick="sample_run()">Sample
+						Loading and
 						Running of Gel </button>
-					<button class="btn btn-primary" type="button" disabled onclick="view_sample_UVlight()">Visualization
+					<button class="btn btn-primary" type="button" id="viewsample" disabled
+						onclick="view_sample_UVlight()">Visualization
 						of the DNA under UV light</button>
 
 				</div>
@@ -28,107 +41,137 @@
 
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid p-2 mt-2">
+	
+	
 		<div class="row ">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header fs-5 fw-bold">
 						Instructions
 					</div>
 
 					<div class="card-body">
 						<ol id="inst1">
-							<li>First, mix the agarose powder with electrophoresis buffer, TAE or TBE to the required
-								concentration. Heat the mixture in a microwave oven to melt it.
+							<li>Click on "Start" button and then click on "Gel Preparation" button.
 
 							</li>
-							<li>The agarose percentage used depends on the size of the fragments to be settled. The
-								agarose gels are normally in the range of 0.2 – 3.0%. The lower concentration of agarose
-								makes the DNA fragments faster in migration and vice-versa.
+							<li>
 							</li>
-							<li>Once the mixture is cooled, add EtBr to the gel to facilitate visualization of DNA after
-								electrophoresis. Pour it into a casting tray with a sample comb inserted on it. Allow
-								the gel to solidify at room temperature.
+							<li>
 							</li>
-							<li>After the solidification of the gel, remove the comb gently without ripping the bottom
-								of the wells. There will be formation of wells on the gel.
+							<li>
 							</li>
-							<li>Insert the gel in a plastic tray horizontally into the electrophoresis chamber and pour
-								the electrophoresis buffer sufficiently to immerse the gel with the buffer.</li>
+							<li></li>
 						</ol>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid p-2 ">
-		<div class="row  ">
+	
 
-			<div class="col-md-6  ">
-				<div class="img-container">
-					<!--img src="./images/board.png" id="board" class="image-fluid"-->
-					<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid">
-					<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()"
-						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">
-
-				</div>
-			</div>
-			<div class="col-md-6  ">
-				<div class="img-container">
-					<img src="./images/tubes.png" id="tube" class="image-fluid">
-
-					<img src="./images/tubemeter.png" id="tubemeter " class="image-fluid " style="cursor: pointer;">
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid p-2  ">
+	
 		<div class="row ">
-			<div class="col-md-6 ">
-				<div class="img-container">
-					<img src="./images/case.png" id="case" class="image-fluid">
-					<img src="./images/agarose gel.png" id="agel1" class="image-fluid" onclick="moveImage1()"
-						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">
+			<div class="col-md-12">
+				<div class="card card-body border border-0" >
+					<!-- <div class="card-header fs-5 fw-bold">
+						Experimental Setup
+					</div>
+					<div class=""> -->
+					<div class="img-container">
+						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid"> <!-- Agarose gel case-->
+						<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()" 
+						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">  <!-- Agarose gel -->
+ 
+						<img src="./images/tubes.png" id="tube" class="image-fluid">  <!-- Samples-->
+						<img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="cursor: pointer;"> <!-- peptite-->
+					<img src="./images/buffer.png" id="buffer" class="image-fluid " style="cursor: pointer;"> <!-- buffer-->
+
+					<img src="./images/voltagetimer.png" id="voltage" class="image-fluid"> <!-- voltage timer -->
+		
+
+					<img src="./images/case.png" id="case" class="image-fluid"> <!-- case -->
+					<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"
+						ondrop="drop(event)" ondragover="allowDrop(event)"></canvas> 
+
+						<img src="./images/agarose gel.png" id="agel1" class="image-fluid" onclick="moveImage1()" 
+						 style="cursor: pointer; display:block;">  <!-- Agarose gel -->
+
+						<img src="./images/negvedot.png" id="negativedot" class="image-fluid"> <!-- negvoltage-->
+						<img src="./images/posdot.png" id="positivedot" class="image-fluid"> <!-- posvoltage-->
+
+						<img src="./images/negvedot.png" id="vnegativedot" class="image-fluid"> <!-- negvoltage-->
+						<img src="./images/posdot.png" id="vpositivedot" class="image-fluid"> <!-- posvoltage-->
 
 
-					<canvas id="myCanvas1" width="210" height="175" style="border:0px solid #535252;"
-						ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+						<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid"> <!-- sideviewcase-->
 
-				</div>
-			</div>
-			<div class="col-md-6 ">
-				<div class="img-container">
-					<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid">
+						<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid "> <!-- uv machine -->
 
-				</div>
-			</div>
-		</div>
-		<!--div class="container-fluid  "-->
-		<div class="row  ">
-			<div class="col-md-6 ">
-				<div class="img-container">
-					<img src="./images/voltage.png" id="voltage" class="image-fluid">
-
-				</div>
-			</div>
-			<div class="col-md-6  ">
-				<div class="img-container">
-					<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid ">
-					<canvas id="myCanvas2" width="225" height="225" style="border:1px solid #535252;"
+						<canvas id="myCanvas2" width="21" height="21" style="border:0px solid #535252;"
 						ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
+
+						<canvas id="myCanvass1"   style="border:1px solid #535252;"></canvas>
+						<canvas id="myCanvass2"   style="border:1px solid #535252;"></canvas>
+						<canvas id="myCanvass3"   style="border:1px solid #535252;"></canvas>
+						<canvas id="myCanvass4"   style="border:1px solid #535252;"></canvas>
+
+
+
+						<canvas id="myCanvasv1"   style="border:0px solid #535252;" onclick="voltclick()" ></canvas>
+						<canvas id="myCanvast1"   style="border:0px solid #535252;" onclick="timerclick()"></canvas>
+						<canvas id="myCanvasvp"   style="border:0px solid #535252;" onclick="voltinc()" ></canvas>
+						<canvas id="myCanvasvn"   style="border:0px solid #535252;" onclick="voltdec()"></canvas>
+
+						<canvas id="textvoltimer" style="border:0px solid #535252;" >400</canvas>
+
+					</div>
+					<!-- </div> -->
+
 				</div>
 			</div>
 		</div>
-		<!--/div-->
 	</div>
+
+	
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="./js/main.js"></script>
+
+	<script>
+		// Get a reference to the canvas element
+const canvas = document.getElementById('textvoltimer');
+
+// Check if the browser supports the canvas element
+if (canvas.getContext) {
+    // Get the 2D drawing context
+    const ctx = canvas.getContext('2d');
+
+    // Set font properties
+    ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
+	
+    // Set text properties
+    ctx.fillStyle = 'black'; // Text color
+    ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+    ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+    // Define the text to be displayed
+    const text = '';
+
+    // Get the position to place the text (in this case, centered on the canvas)
+    const x = canvas.width / 2;
+    const y = canvas.height / 2;
+
+    // Draw the text on the canvas
+    ctx.fillText(text, x, y);
+} else {
+    // Canvas not supported, provide a fallback or error message
+    console.log('Canvas is not supported in this browser.');
+}
+
+	</script>
 </body>
 
 </html>
