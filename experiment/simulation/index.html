@@ -21,28 +21,35 @@ Developer: Prakriti Dhang
 <body>
 	<div class="container-fluid p-2 mt-2 ">
 		<div class="row">
-			<div class="col-md-12 mb-2 ">
-				<div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2">
-					<button class="btn btn-primary" type="button" id="start" onclick="start()">Start</button>
-					<button class="btn btn-primary" type="button" id="gelprep" onclick="gel_prep()" disabled>Gel
-						Preparation</button>
-					<button class="btn btn-primary" type="button" id="sampleprep" disabled
-						onclick="sample_prep()">Sample
-						Preparation</button>
-					<button class="btn btn-primary" type="button" id="samplerun"  onclick="sample_run()">Sample
-						Loading and
-						Running of Gel </button>
-					<button class="btn btn-primary" type="button" id="viewsample" disabled
-						onclick="view_sample_UVlight()">Visualization
-						of the DNA under UV light</button>
+			<div class="col-md-2 mb-2 " style="text-align: center;">
+				<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
+				<button class="btn btn-primary" type="button" id="start" onclick="start()">Start</button>
+			</div>
+			<div class="col-md-2 mb-2 " style="text-align: center;">
+				<button class="btn btn-primary" type="button" id="gelprep" onclick="gel_prep()" disabled>Gel
+					Preparation</button>
+			</div>
+			<div class="col-md-2 mb-2 " style="text-align: center;">
+				<button class="btn btn-primary" type="button" id="sampleprep" disabled onclick="sample_prep()">Sample
+					Preparation</button>
+			</div>
+			<div class="col-md-2 mb-2 " style="text-align: center;">
+				<button class="btn btn-primary" type="button" id="samplerun" disabled onclick="sample_run()">Sample
+					Loading and
+					Running of Gel </button>
+			</div>
+			<div class="col-md-4  " style="text-align: center;">
+				<button class="btn btn-primary" type="button" id="viewsample" disabled
+					onclick="view_sample_UVlight()">Visualization
+					of the DNA under UV light</button>
 
-				</div>
+				<!--/div-->
 
 
 			</div>
 		</div>
-	
-	
+
+
 		<div class="row ">
 			<div class="col-md-12">
 				<div class="card">
@@ -56,54 +63,77 @@ Developer: Prakriti Dhang
 
 							</li>
 							<li>
-								Next, click on the gel that is being prepared in the casting tray. This will place in the electrophoresis chamber.
+								Next, click on the gel that is being prepared in the casting tray. This will place in
+								the electrophoresis chamber.
 							</li>
-							<li> Now, click of "Sample preparation" button. Click on buffer to submerge the gel under buffer.
+							<li> Now, click on "Sample preparation" button. Click on buffer to submerge the gel under
+								buffer.
 							</li>
-							<li>
+							<li> Next Click on "Sample Loading and Running Gel" button, to enable peptite. Now, Click on peptite, it will collect the sample A and load to the gel. Repeat for sample B, C, D.
 							</li>
-							<li>
+							<li> Next connect the negative wire of electrophorersis to negative of voltage meter and positive wire of electrophorersis to positive wire of voltage meter.
 
 							</li>
+							<li> Now click on "V" and "+" sign to set the voltage. Range is 50 V to 100 V.</li>
+							<li> Click on the run icon button to run the gel. The gel will move from negative to positive side. Once it reaches the positive end. Click on the gel to visualise under UV light. </li>
+							
 						</ol>
 					</div>
 				</div>
 			</div>
 		</div>
-	
 
-	
 		<div class="row ">
 			<div class="col-md-12">
-				<div class="card card-body border border-0" >
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">
+						Input Panels
+					</div>
+
+					<div class="card-body">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="card card-body border border-0">
 					<!-- <div class="card-header fs-5 fw-bold">
 						Experimental Setup
 					</div>
 					<div class=""> -->
 					<div class="img-container">
-						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid"> <!-- Agarose gel case-->
-						<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()" 
-						draggable="true" ondragstart="drag(event)" style="cursor: pointer;">  <!-- Agarose gel -->
- 
-						<img src="./images/tubes.png" id="tube" class="image-fluid">  <!-- Samples-->
-						<img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="cursor: pointer;"> <!-- peptite-->
-					<img src="./images/buffer.png" id="buffer" class="image-fluid " style="cursor: pointer;" onclick="addbuffer()"> <!-- buffer-->
+						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid">
+						<!-- Agarose gel case-->
+						<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()"
+							draggable="true" ondragstart="drag(event)" style="cursor: pointer;"> <!-- Agarose gel -->
 
-					<img src="./images/voltagetimer.png" id="voltage" class="image-fluid"> <!-- voltage timer -->
-		
+						<img src="./images/tubes.png" id="tube" class="image-fluid"> <!-- Samples-->
+						<img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="cursor: pointer;">
+						<!-- peptite-->
+						<img src="./images/buffer.png" id="buffer" class="image-fluid " style="cursor: pointer;"
+							onclick="addbuffer()"> <!-- buffer-->
 
-					<img src="./images/case.png" id="case" class="image-fluid"> <!-- case -->
-					<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"
-						ondrop="drop(event)" ondragover="allowDrop(event)"></canvas> 
+						<img src="./images/voltagetimer.png" id="voltage" class="image-fluid"> <!-- voltage timer -->
 
-						<img src="./images/agarosegel1.png" id="agel1" class="image-fluid" onclick="moveImage1()" 
-						 style="cursor: pointer; display:block;">  <!-- Agarose gel -->
 
-						<img src="./images/negvedot.png" id="negativedot" class="image-fluid"> <!-- negvoltage-->
-						<img src="./images/posdot.png" id="positivedot" class="image-fluid"> <!-- posvoltage-->
+						<img src="./images/case.png" id="case" class="image-fluid"> <!-- case -->
+						<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"
+							ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
 
-						<img src="./images/negvedot.png" id="vnegativedot" class="image-fluid"> <!-- negvoltage-->
-						<img src="./images/posdot.png" id="vpositivedot" class="image-fluid"> <!-- posvoltage-->
+						<img src="./images/agarosegel1.png" id="agel1" class="image-fluid" onclick="moveImage1()"
+							style="cursor: pointer; display:block;"> <!-- Agarose gel -->
+
+						<!-- <img src="./images/negvedot.png" id="negativedot" class="image-fluid"> 
+						<img src="./images/posdot.png" id="positivedot" class="image-fluid"> 
+
+						<img src="./images/negvedot.png" id="vnegativedot" class="image-fluid"> 
+						<img src="./images/posdot.png" id="vpositivedot" class="image-fluid">  -->
 
 
 						<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid"> <!-- sideviewcase-->
@@ -111,32 +141,32 @@ Developer: Prakriti Dhang
 						<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid "> <!-- uv machine -->
 
 						<canvas id="myCanvas2" width="21" height="21" style="border:0px solid #535252;"
-						ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
+							ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
 
-						<canvas id="myCanvass1"   style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass2"   style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass3"   style="border:1px solid #535252;"></canvas>
-						<canvas id="myCanvass4"   style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvass1" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvass2" style="border:0px solid #535252;"></canvas>
+						<canvas id="myCanvass3" style="border:1px solid #535252;"></canvas>
+						<canvas id="myCanvass4" style="border:0px solid #535252;"></canvas>
 
 
 
-						<canvas id="myCanvasv1"   style="border:0px solid #535252;" onclick="voltclick()" ></canvas>
-						<canvas id="myCanvast1"   style="border:0px solid #535252;" onclick="timerclick()"></canvas>
-						<canvas id="myCanvasvp"   style="border:0px solid #535252;" onclick="voltinc()" ></canvas>
-						<canvas id="myCanvasvn"   style="border:0px solid #535252;" onclick="voltdec()"></canvas>
+						<canvas id="myCanvasv1" style="border:0px solid #535252;" onclick="voltclick()"></canvas>
+						<canvas id="myCanvast1" style="border:0px solid #535252;" onclick="timerclick()"></canvas>
+						<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()"></canvas>
+						<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()"></canvas>
 
 						<div id="ld1"></div> <!-- negitive side in case-->
 						<div id="ld2"></div> <!-- positive side in voltmeter-->
 						<div id="ld3"></div> <!-- negitive side in case-->
 						<div id="ld4"></div> <!-- positive side in voltmeter-->
 
-						<canvas id="textvoltimer" style="border:0px solid #535252;" ></canvas>
-						<canvas id="sideviewcasetext" style="border:1px solid #535252;" >400</canvas>
+						<canvas id="textvoltimer" style="border:0px solid #535252;"></canvas>
+						<canvas id="sideviewcasetext" style="border:1px solid #535252;">400</canvas>
 
-						<canvas id="sample1" style="border:1px solid #a1a0a0;" ></canvas>
-						<canvas id="sample2" style="border:1px solid #a1a0a0;" ></canvas>
-						<canvas id="sample3" style="border:1px solid #a1a0a0;" ></canvas>
-						<canvas id="sample4" style="border:1px solid #a1a0a0;" ></canvas>
+						<canvas id="sample1" style="border:1px solid #a1a0a0;"></canvas>
+						<canvas id="sample2" style="border:1px solid #a1a0a0;"></canvas>
+						<canvas id="sample3" style="border:1px solid #a1a0a0;"></canvas>
+						<canvas id="sample4" style="border:1px solid #a1a0a0;"></canvas>
 					</div>
 					<!-- </div> -->
 
@@ -145,7 +175,7 @@ Developer: Prakriti Dhang
 		</div>
 	</div>
 
-	
+
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -157,67 +187,67 @@ Developer: Prakriti Dhang
 
 	<script>
 		// Get a reference to the canvas element
-const canvas = document.getElementById('textvoltimer');
+		const canvas = document.getElementById('textvoltimer');
 
-// Check if the browser supports the canvas element
-if (canvas.getContext) {
-    // Get the 2D drawing context
-    const ctx = canvas.getContext('2d');
+		// Check if the browser supports the canvas element
+		if (canvas.getContext) {
+			// Get the 2D drawing context
+			const ctx = canvas.getContext('2d');
 
-    // Set font properties
-    ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
-	
-    // Set text properties
-    ctx.fillStyle = 'black'; // Text color
-    ctx.textAlign = 'center'; // Text alignment (centered horizontally)
-    ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
+			// Set font properties
+			ctx.font = 'bold 80px Arial'; // You can adjust the font weight, size and family
 
-    // Define the text to be displayed
-    const text = '';
+			// Set text properties
+			ctx.fillStyle = 'black'; // Text color
+			ctx.textAlign = 'center'; // Text alignment (centered horizontally)
+			ctx.textBaseline = 'middle'; // Text baseline (centered vertically)
 
-    // Get the position to place the text (in this case, centered on the canvas)
-    const x = canvas.width / 2;
-    const y = canvas.height / 2;
+			// Define the text to be displayed
+			const text = '';
 
-    // Draw the text on the canvas
-    ctx.fillText(text, x, y);
-} else {
-    // Canvas not supported, provide a fallback or error message
-    console.log('Canvas is not supported in this browser.');
-}
+			// Get the position to place the text (in this case, centered on the canvas)
+			const x = canvas.width / 2;
+			const y = canvas.height / 2;
 
-
+			// Draw the text on the canvas
+			ctx.fillText(text, x, y);
+		} else {
+			// Canvas not supported, provide a fallback or error message
+			console.log('Canvas is not supported in this browser.');
+		}
 
 
-/* Sideview text */
-const canvastxt = document.getElementById('sideviewcasetext');
 
-// Check if the browser supports the canvas element
-if (canvastxt.getContext) {
-    // Get the 2D drawing context
-    const ctxtxt = canvastxt.getContext('2d');
 
-    // Set font properties
-    ctxtxt.font = 'bold 60px Arial'; // You can adjust the font weight, size and family
-	
-    // Set text properties
-    ctxtxt.fillStyle = 'black'; // Text color
-    ctxtxt.textAlign = 'center'; // Text alignment (centered horizontally)
-    ctxtxt.textBaseline = 'middle'; // Text baseline (centered vertically)
+		/* Sideview text */
+		const canvastxt = document.getElementById('sideviewcasetext');
 
-    // Define the text to be displayed
-    const text = 'Side view';
+		// Check if the browser supports the canvas element
+		if (canvastxt.getContext) {
+			// Get the 2D drawing context
+			const ctxtxt = canvastxt.getContext('2d');
 
-    // Get the position to place the text (in this case, centered on the canvas)
-    const x = canvas.width / 2;
-    const y = canvas.height / 2;
+			// Set font properties
+			ctxtxt.font = 'bold 60px Arial'; // You can adjust the font weight, size and family
 
-    // Draw the text on the canvas
-    ctxtxt.fillText(text, x, y);
-} else {
-    // Canvas not supported, provide a fallback or error message
-    console.log('Canvas is not supported in this browser.');
-}
+			// Set text properties
+			ctxtxt.fillStyle = 'black'; // Text color
+			ctxtxt.textAlign = 'center'; // Text alignment (centered horizontally)
+			ctxtxt.textBaseline = 'middle'; // Text baseline (centered vertically)
+
+			// Define the text to be displayed
+			const text = 'Side view';
+
+			// Get the position to place the text (in this case, centered on the canvas)
+			const x = canvas.width / 2;
+			const y = canvas.height / 2;
+
+			// Draw the text on the canvas
+			ctxtxt.fillText(text, x, y);
+		} else {
+			// Canvas not supported, provide a fallback or error message
+			console.log('Canvas is not supported in this browser.');
+		}
 
 	</script>
 </body>
