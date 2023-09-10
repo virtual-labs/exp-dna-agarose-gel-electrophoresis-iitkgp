@@ -123,12 +123,12 @@ prepare_posv = function (elId) {
     });
 
 
-    /* instance1 = jsPlumb.getInstance({
+   /*  instance1 = jsPlumb.getInstance({
         DragOptions: { cursor: 'wait', zIndex: 20 },
         Endpoint: [ "Image", { url: "./images/posedot.png" } ],
         Connector: [ "Bezier", { curviness: -40 } ],
         Container: "canvas"
-    }); */
+    });  */
 
 
     // suspend drawing and initialise.
@@ -147,11 +147,11 @@ prepare_posv = function (elId) {
      instance.bind("click", function (connection, originalEvent)
      {
 		  
-        if (((connection.sourceId=='ld1' && connection.targetId=='ld3') || (connection.sourceId=='ld3' && connection.targetId=='ld1') && confirm("Delete connection from " + connection.sourceId + " to " + connection.targetId + "?"))) {
+        if (((connection.sourceId=='ld1' && connection.targetId=='ld3') || (connection.sourceId=='ld3' && connection.targetId=='ld1') && confirm("Delete negative connection ?"))) {
            instance.deleteConnection(connection);
            
         }
-        else if (((connection.sourceId=='ld2' && connection.targetId=='ld4') || (connection.sourceId=='ld4' && connection.targetId=='ld2') && confirm("Delete connection from " + connection.sourceId + " to " + connection.targetId + "?"))) {
+        else if (((connection.sourceId=='ld2' && connection.targetId=='ld4') || (connection.sourceId=='ld4' && connection.targetId=='ld2') && confirm("Delete positive connection?"))) {
            instance.deleteConnection(connection);
            
         }
@@ -165,6 +165,9 @@ prepare_posv = function (elId) {
         
             });
     });
+
+
+   
 
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     //jsPlumb.fire("jsPlumbDemoLoaded", instance1);
@@ -309,7 +312,7 @@ prepare_posv = function (elId) {
                  document.getElementById('myCanvasvn').style.display="block";
 	   			
 	  
-            alert("RIGHT CONNECTION \n chang input voltage and set timer");
+            alert("RIGHT CONNECTION \n change input voltage and set timer");
             document.getElementById("samplerun").disabled = true;
             } else {
                alert("WRONG CONNECTION");

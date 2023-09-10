@@ -355,37 +355,39 @@ path,
 
 #sample1 {
     position: absolute;
-    width: 0.5%;
-    height: 6%;
-    top: 245%;
+    width: 12%;
+    height: 7%;
+    top: 268%;
     left: 15%;
     z-index: 10;
-    rotate: 270deg;
+   
 }
 
 #sample2 {
     position: absolute;
-    width: 0.5%;
-    height: 6%;
+    width: 12%;
+    height: 7%;
     top: 255%;
     left: 15%;
     z-index: 10;
 }
 
+
 #sample3 {
     position: absolute;
-    width: 0.5%;
-    height: 6%;
-    top: 265%;
+    width: 12%;
+    height: 7%;
+    top: 243%;
     left: 15%;
     z-index: 10;
+
 }
 
 #sample4 {
     position: absolute;
-    width: 0.5%;
-    height: 6%;
-    top: 234%;
+    width: 12%;
+    height: 7%;
+    top: 230%;
     left: 15%;
     z-index: 10;
     
