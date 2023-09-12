@@ -66,6 +66,55 @@ Developer: Prakriti Dhang
 
 }
 
+#peptitea {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 53%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptiteb {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 55.5%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptitec {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 58%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptited {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 61%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+
 #buffer {
     position: absolute;
     width: 4%;
@@ -173,7 +222,7 @@ Developer: Prakriti Dhang
     /* background-image: url(./images/littledot.png);*/
     z-index: 5;
     position: absolute;
-    border-radius: 3px;
+    border-radius: 2%;
 
 }
 
@@ -338,6 +387,7 @@ path,
     top: 141.2%;
     left: 26.2%;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -348,6 +398,7 @@ path,
     top: 165.6%;
     left: 26.3%;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -358,7 +409,7 @@ path,
     top: 141%;
     left: 34.5%;
     cursor: pointer;
-
+    display: none;
 }
 
 #myCanvasvn {
@@ -368,6 +419,7 @@ path,
     top: 155%;
     left: 34.5%;
     cursor: pointer;
+    display: none;
 
 }
 #myCanvasrn {
@@ -377,7 +429,7 @@ path,
     top: 178%;
     left: 29%;
     cursor: pointer;
-    cursor: pointer;
+    display: none;
 
 }
 

@@ -68,7 +68,7 @@ Developer: Prakriti Dhang
 							</li>
 							<li> Next Click on "Sample Loading" button, then click "Buffer" image. Buffer will submerge the gel. 
 							</li>
-							<li>Now, Click on peptite, to collect sample from sample A and load to the gel. Repeat for sample B, C, and D.</li>
+							<li>Now, Click on the dropdown and select "Load Sample A". Click on the peptite A and move the peptite near the sample to load in the gel. Repeat for sample B, C, and D.</li>
 							<li> Click on "Running of Gel" button. Next connect the negative wire of electrophorersis chamber to negative of voltage meter and
 								positive wire of electrophorersis chamber to positive wire of voltage meter.
 
@@ -89,15 +89,29 @@ Developer: Prakriti Dhang
 					<div class="card-body">
 						<div class="col-md-2 mb-2 ">
 							<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
-							<button class="btn btn-primary" type="button" id="start" onclick="start()">Click to
+							<button class="btn btn-primary" type="button"  id="start" data-bs-toggle="modal" data-bs-target="#exampleModal">Click to
 								Start</button>
 						</div>
 						<div class="col-md-4 mb-2 ">
-							<button class="btn btn-primary" type="button" id="sampleload" disabled
+							<!-- <button class="btn btn-primary" type="button" id="sampleload" disabled
 								onclick="sample_load()">Sample Loading
-							</button>
+							</button> -->
+							
+							  <div class="dropdown">
+								<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button" data-bs-toggle="dropdown" disabled>
+									Sample Loading
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" onclick="sample_load()">Buffer</a></li>
+								  <li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" >Load Sample A </a></li>
+								  <li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" >Load Sample B </a></li>
+								  <li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" >Load Sample C </a></li>
+								  <li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" >Load Sample D </a></li>
+								</ul>
+							  </div>
 						</div>
-						<div class="col-md-4 mb-2 ">
+						
+						<div class="col-md-3 mb-2 ">
 							<button class="btn btn-primary" type="button" id="gelrun" disabled
 								onclick="run_gel()">Running of Gel </button>
 						</div>
@@ -121,9 +135,9 @@ Developer: Prakriti Dhang
 		<div class="row "-->
 			<div class="col-md-6">
 				<div class="card">
-					<!-- <div class="card-header fs-5 fw-bold">
+					<div class="card-header fs-5 fw-bold">
 						Input Panel for Gel Preparation
-					</div> -->
+					</div>
 
 					<div class="card-body p-3">
 						<h4> Select correct components for gel preparation:</h3>
@@ -182,9 +196,9 @@ Developer: Prakriti Dhang
 				</div>
 
 				<div class="card">
-					<!-- <div class="card-header fs-5 fw-bold">
+					<div class="card-header fs-5 fw-bold">
 						Input Panel for Sample Preparation
-					</div> -->
+					</div>
 
 					<div class="card-body p-3">
 						<h4> Select correct components for sample preparation:</h3>
@@ -254,11 +268,21 @@ Developer: Prakriti Dhang
 
 						<img src="./images/tubes.png" id="tube" class="image-fluid" style=" display: none;">
 						<!-- Samples-->
-						<img src="./images/tubemeter.png" id="tubemeter" class="image-fluid ">
+						<img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="display: none;">
+
+						<img src="./images/peptitea.png" id="peptitea" class="image-fluid " style="display: none;">
+						<img src="./images/peptiteb.png" id="peptiteb" class="image-fluid " style="display: none;">
+
+						<img src="./images/peptitec.png" id="peptitec" class="image-fluid " style="display: none;"> 
+
+						<img src="./images/peptited.png" id="peptited" class="image-fluid " style="display: none;">
+
+
+
 						<!-- peptite-->
 						<img src="./images/buffer.png" id="buffer" class="image-fluid " style="cursor: pointer; display:none;"
 							onclick="addbuffer()" > <!-- buffer-->
-						<canvas id="buffertext" style="border:1px solid #a1a0a0;"></canvas>
+						<!-- <canvas id="buffertext" style="border:1px solid #a1a0a0;"></canvas> -->
 						<img src="./images/voltagetimer.png" id="voltage" class="image-fluid"> <!-- voltage timer -->
 
 
@@ -292,11 +316,11 @@ Developer: Prakriti Dhang
 
 
 
-						<canvas id="myCanvasv1" style="border:0px solid #535252;" onclick="voltclick()"></canvas>
-						<canvas id="myCanvast1" style="border:0px solid #535252;" onclick="timerclick()"></canvas>
-						<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()"></canvas>
-						<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()"></canvas>
-						<canvas id="myCanvasrn" style="border:0px solid #535252;" onclick="runninggel()"></canvas>
+						<canvas id="myCanvasv1" style="border:0px solid #535252;" onclick="voltclick()" ></canvas>
+						<canvas id="myCanvast1" style="border:0px solid #535252;" onclick="timerclick()" ></canvas>
+						<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()" ></canvas>
+						<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()" ></canvas>
+						<canvas id="myCanvasrn" style="border:0px solid #535252;" onclick="runninggel()" ></canvas>
 
 
 						<div id="ld1"></div> <!-- negitive side in case-->
@@ -329,6 +353,23 @@ Developer: Prakriti Dhang
 	</div>
 
 
+	<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Viewing message</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <p>A desktop or laptop is the preferred choice for an enhanced viewing experience.</p><p> When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing experience.</p>
+			</div>
+			<div class="modal-footer">
+			 
+			  <button type="button" class="btn btn-warning"  onclick="start()" data-bs-dismiss="modal">OK</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -404,7 +445,7 @@ Developer: Prakriti Dhang
 
 
 		/* buffer text */
-		const canvasbtxt = document.getElementById('buffertext');
+		/* const canvasbtxt = document.getElementById('buffertext');
 
 		// Check if the browser supports the canvas element
 		if (canvasbtxt.getContext) {
@@ -431,7 +472,7 @@ Developer: Prakriti Dhang
 		} else {
 			// Canvas not supported, provide a fallback or error message
 			console.log('Canvas is not supported in this browser.');
-		}
+		} */
 
 	</script>
 </body>
