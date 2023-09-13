@@ -796,6 +796,7 @@ function run_gel() {
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitea").style.display="none";
   document.getElementById("peptited").style.display="none";
+  document.getElementById("gelrun").disabled = true;
 
 
 }
@@ -869,7 +870,7 @@ function gelrun() {
     //ctxs1.fillRect(10,10,150,80);
     ctxgs1.lineWidth = 300;
     ctxgs1.beginPath();
-    ctxgs1.moveTo(posX, 0); /*  0-180*/
+    ctxgs1.moveTo(posX, 0); /*  */
     ctxgs1.lineTo(0, 0);
     ctxgs1.stroke();
   }
@@ -916,7 +917,7 @@ function gelrun() {
     //ctxs1.fillRect(10,10,150,80);
     ctxgs2.lineWidth = 300;
     ctxgs2.beginPath();
-    ctxgs2.moveTo(posX2, 0); /*  0-180*/
+    ctxgs2.moveTo(posX2, 0); /*  */
     ctxgs2.lineTo(0, 0);
     ctxgs2.stroke();
   }

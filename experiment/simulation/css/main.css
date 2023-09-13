@@ -304,6 +304,15 @@ path,
     z-index: -10;
 }
 
+#ladder {
+    position: absolute;
+    width: 15%;
+    top: 320%;
+    left: 45%;
+    z-index: -10;
+}
+
+
 #output {
     position: absolute;
     width: 11%;
