@@ -1042,7 +1042,9 @@ function view_sample_UVlight() {
   document.getElementById("myCanvasrn").style.display="none";
   document.getElementById("viewsample").disabled = true;
   document.getElementById("output").style.display="block";
+  document.getElementById("ladder").style.display="block";
   document.getElementById("agel1").style.display="none";
+
   canvasuv1 = document.getElementById("myCanvasuv1");
   ctxuv1 = canvasuv1.getContext("2d");
   const gradient = ctxuv1.createLinearGradient(0, 0, canvasuv1.width, 0);
