@@ -653,6 +653,7 @@ function addbuffer() {
   requestAnimationFrame(loops4);
 
   //document.getElementById("sampleload").disabled = true;
+  window.scrollBy(0, 300);
   
 }
 
@@ -1037,6 +1038,7 @@ function gelrun() {
 var canvasuv1, canvasuv2;
 var ctxuv1, ctxuv2;
 function view_sample_UVlight() {
+  window.scrollBy(0, 1000);
   document.getElementById("sampleload").disabled = true;
   document.getElementById("gelrun").disabled = true;
   document.getElementById("myCanvasrn").style.display="none";
