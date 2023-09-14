@@ -46,7 +46,7 @@ Developer: Prakriti Dhang
 
 #tube {
     position: absolute;
-    width: 15%;
+    width: 12%;
     top: 50%;
     left: 50%;
     /*display: none;*/
@@ -58,6 +58,58 @@ Developer: Prakriti Dhang
     width: 2%;
     top: 10%;
     left: 65%;
+    cursor:grabbing;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+
+#peptitea {
+    position: absolute;
+    width: 2%;
+    top: 8%;
+    left: 52.2%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptiteb {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 55.3%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptitec {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 58.2%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+#peptited {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 61%;
+    cursor:pointer;
+    z-index: 20;
+    rotate: 30deg;
     /*display: none;*/
 
 
@@ -71,6 +123,17 @@ Developer: Prakriti Dhang
     /*display: none;*/
 
 }
+
+#buffertext {
+    position: absolute;
+    width: 4%;
+    top: 61%;
+    left: 69.9%;
+    /*display: none;*/
+
+}
+
+
 
 #voltage {
 
@@ -159,7 +222,7 @@ Developer: Prakriti Dhang
     /* background-image: url(./images/littledot.png);*/
     z-index: 5;
     position: absolute;
-    border-radius: 3px;
+    border-radius: 2%;
 
 }
 
@@ -241,12 +304,49 @@ path,
     z-index: -10;
 }
 
+#ladder {
+    position: absolute;
+    width: 15%;
+    top: 320%;
+    left: 45%;
+    z-index: -10;
+}
+
+
+#output {
+    position: absolute;
+    width: 11%;
+    top: 365%;
+    left: 18.5%;
+    display: block;
+    display: none;
+
+    /*transition: transform 4s ease-in-out;*/
+}
+
 #myCanvas2 {
     position: absolute;
     width: 11%;
     top: 365%;
     left: 18.5%;
     display: block;
+}
+#myCanvasuv1{
+    position: absolute;
+    width: 15%;
+    height:120%;
+    top: 350%;
+    left: 11%;
+    display: block;
+}
+#myCanvasuv2 {
+    position: absolute;
+    width: 14%;
+    height:120%;
+    top: 350%;
+    left: 25%;
+    display: block;
+    rotate: 180deg;
 }
 
 
@@ -296,6 +396,7 @@ path,
     top: 141.2%;
     left: 26.2%;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -306,6 +407,7 @@ path,
     top: 165.6%;
     left: 26.3%;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -316,7 +418,7 @@ path,
     top: 141%;
     left: 34.5%;
     cursor: pointer;
-
+    display: none;
 }
 
 #myCanvasvn {
@@ -326,6 +428,17 @@ path,
     top: 155%;
     left: 34.5%;
     cursor: pointer;
+    display: none;
+
+}
+#myCanvasrn {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 178%;
+    left: 29%;
+    cursor: pointer;
+    display: none;
 
 }
 
@@ -353,6 +466,51 @@ path,
     left: 65%;
 }
 
+#sampledrop1 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 268%;
+    left: 15%;
+    z-index: 10;
+    color: blue;
+   display: none;
+}
+
+#sampledrop2 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 255%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+}
+
+
+#sampledrop3 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 243%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+
+}
+
+#sampledrop4 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 230%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+    
+}
+
+/* Sample migrate*/
 #sample1 {
     position: absolute;
     width: 12%;

@@ -172,7 +172,7 @@ prepare_posv = function (elId) {
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     //jsPlumb.fire("jsPlumbDemoLoaded", instance1);
 
-    document.getElementById("samplerun").addEventListener("click", function () {
+    document.getElementById("myCanvasrn").addEventListener("click", function () {
         //var d = instance.exportData();
         //console.log(instance.getAllConnections());
 
@@ -306,14 +306,11 @@ prepare_posv = function (elId) {
         if (is_connected_1_3 && is_connected_2_4 &&  !unallowed_connection_present) {
 			
 			
-			 	document.getElementById('myCanvasv1').style.display="block";
-  				document.getElementById('myCanvast1').style.display="block";
- 				document.getElementById('myCanvasvp').style.display="block";
-                 document.getElementById('myCanvasvn').style.display="block";
+			 	
 	   			
 	  
-            alert("RIGHT CONNECTION \n change input voltage and set timer");
-            document.getElementById("samplerun").disabled = true;
+            alert("RIGHT CONNECTION.");
+            //document.getElementById("samplerun").disabled = true;
             } else {
                alert("WRONG CONNECTION");
                 return;
