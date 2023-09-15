@@ -499,6 +499,7 @@ function moveImage1() {
   document.getElementById('sampledrop2').style.display = "none";
   document.getElementById('sampledrop3').style.display = "none";
   document.getElementById('sampledrop4').style.display = "none";
+  document.getElementById("viewsample").disabled = false;
 
  /*  ctxgs1.clearRect(0, 0, canvass1.width, canvass1.height);
   ctxgs2.clearRect(0, 0, canvass2.width, canvass2.height);
@@ -807,7 +808,7 @@ function run_gel() {
 
 
 function runninggel() {
-  document.getElementById("viewsample").disabled = false;
+  
 
   const canvas = document.getElementById('textvoltimer');
 
