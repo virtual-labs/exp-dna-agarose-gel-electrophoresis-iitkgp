@@ -147,11 +147,11 @@ prepare_posv = function (elId) {
      instance.bind("click", function (connection, originalEvent)
      {
 		  
-        if (((connection.sourceId=='ld1' && connection.targetId=='ld3') || (connection.sourceId=='ld3' && connection.targetId=='ld1') && confirm("Delete negative connection ?"))) {
+        if ((((connection.sourceId=='ld1' && connection.targetId=='ld3') || (connection.sourceId=='ld3' && connection.targetId=='ld1')) && alert("Delete negative connection ?"))) {
            instance.deleteConnection(connection);
            
         }
-        else if (((connection.sourceId=='ld2' && connection.targetId=='ld4') || (connection.sourceId=='ld4' && connection.targetId=='ld2') && confirm("Delete positive connection?"))) {
+        else if ((((connection.sourceId=='ld2' && connection.targetId=='ld4') || (connection.sourceId=='ld4' && connection.targetId=='ld2')) && alert("Delete positive connection?"))) {
            instance.deleteConnection(connection);
            
         }
