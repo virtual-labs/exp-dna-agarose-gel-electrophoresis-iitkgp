@@ -318,9 +318,8 @@ path,
     width: 11%;
     top: 365%;
     left: 18.5%;
-    display: block;
     display: none;
-
+    
     /*transition: transform 4s ease-in-out;*/
 }
 
