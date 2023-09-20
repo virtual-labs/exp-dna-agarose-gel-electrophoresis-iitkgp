@@ -5,6 +5,10 @@ Exp name: DNA analysis by agarose gel electrophoresis
 File name: main.css
 Developer: Prakriti Dhang
 */
+.div-inline{
+    
+    display:inline-block;
+}
 
 .card {
     margin-bottom: 5px;
@@ -263,6 +267,48 @@ Developer: Prakriti Dhang
     left: 24%;
 }
 
+#ld5 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 22.1%;
+}
+
+#ld6 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 24%;
+}
+
+#ld7 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 37%;
+}
+#ld8 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 39%;
+}
+
+
+#ld9 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 37%;
+}
+
+#ld10 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 39%;
+}
+
 path,
 .jtk-endpoint {
     cursor: pointer;
@@ -306,10 +352,9 @@ path,
 
 #ladder {
     position: absolute;
-    width: 15%;
-    top: 320%;
+    width: 8%;
+    top: 360%;
     left: 45%;
-    z-index: -10;
 }
 
 
@@ -358,6 +403,46 @@ path,
 
 }
 
+#myCanvass1A {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 268%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
+
+#myCanvass2B {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 255%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
+
+#myCanvass3C {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 243%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+    
+}
+
+#myCanvass4D {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 230%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
 
 #myCanvass2 {
     position: absolute;
@@ -472,8 +557,21 @@ path,
     top: 268%;
     left: 15%;
     z-index: 10;
-    color: blue;
+   /*  //background-image: linear-gradient(to right, #EBFCFF, #E8F8FF,#E8F8FF, #7FA9FF); */
    display: none;
+   
+   
+}
+
+
+#samplea{
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 268%;
+    left: 15%;
+    z-index: 10;
+    display: none;
 }
 
 #sampledrop2 {
@@ -485,7 +583,15 @@ path,
     z-index: 10;
     display: none;
 }
-
+#sampleb {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 255%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+}
 
 #sampledrop3 {
     position: absolute;
@@ -495,6 +601,20 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
+  
+
+}
+
+
+#samplec {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 243%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+  
 
 }
 
@@ -506,8 +626,22 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
+   
     
 }
+
+#sampled{
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 230%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+   
+    
+}
+
 
 /* Sample migrate*/
 #sample1 {
@@ -517,6 +651,7 @@ path,
     top: 268%;
     left: 15%;
     z-index: 10;
+   
    
 }
 

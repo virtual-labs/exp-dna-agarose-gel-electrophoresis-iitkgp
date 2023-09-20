@@ -15,9 +15,13 @@ function start() {
   document.getElementById('myCanvasvp').style.display = "none";
   document.getElementById('myCanvasvn').style.display = "none";
   document.getElementById('myCanvasrn').style.display = "none";
+  document.getElementById('agel1').removeAttribute("onclick");
 
 }
 
+function restartexp(){
+  location.reload()
+}
 
 function gel_prep() {
 
@@ -48,11 +52,11 @@ function sample_prep() {
   const checkboxessam = document.querySelectorAll('input[type=checkbox][name=sampleprep]:checked'); //.form-check-input
   const selectedCheckboxes = Array.from(checkboxessam).filter(checkbox => checkbox.checked);
 
-  if (selectedCheckboxes.length === 3) {
+  if (selectedCheckboxes.length === 2) {
     const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
 
     // Check if the selected values are correct
-    if (selectedValues.includes("DNA") && selectedValues.includes("Dye containing bromophenol blue") && selectedValues.includes("DNA Ladder")) {
+    if (selectedValues.includes("DNA") && selectedValues.includes("Dye containing bromophenol blue") ) {
       alert("Correct component(s) is(are) selected.");
       document.getElementById("tube").style.display = "block";
       document.getElementById("sampleprep").disabled = true;
@@ -102,9 +106,9 @@ let isDragging = false;
 function handleMouseDown(event) {
   isDragging = true;
   imagepp.style.cursor = 'pointer';
-  imageppb.style.cursor = 'grabbing';
+ /*  imageppb.style.cursor = 'grabbing';
   imageppc.style.cursor = 'grabbing';
-  imageppd.style.cursor = 'grabbing';
+  imageppd.style.cursor = 'grabbing'; */
 
   // Calculate the offset of the mouse/touch position relative to the image
   const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
@@ -122,9 +126,9 @@ function handleMouseDown(event) {
 
       const imageRect = imagepp.getBoundingClientRect();
       const canvasRect = canvassdrop1.getBoundingClientRect();
-      const canvasRect2 = canvassdrop2.getBoundingClientRect();
+     /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
       const canvasRect3 = canvassdrop3.getBoundingClientRect();
-      const canvasRect4 = canvassdrop4.getBoundingClientRect();
+      const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top &&imageRect.left <= canvasRect.left + canvasRect.width &&imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
@@ -464,6 +468,11 @@ function moveImage() {
   document.getElementById('sampledrop2').style.display = "block";
   document.getElementById('sampledrop3').style.display = "block";
   document.getElementById('sampledrop4').style.display = "block";
+
+  document.getElementById('myCanvass1A').style.display = "block";
+  document.getElementById('myCanvass2B').style.display = "block";
+  document.getElementById('myCanvass3C').style.display = "block";
+  document.getElementById('myCanvass4D').style.display = "block";
 }
 
 /* function allowDrop(event) {
@@ -491,10 +500,10 @@ function moveImage1() {
   //image1.style.transform = `translate(${top}%, ${left}%)`;
   //image1.style.width= 69 + '%';
   document.getElementById('agel').style.display = "none";
-  document.getElementById('sample1').style.display = "none";
-  document.getElementById('sample2').style.display = "none";
-  document.getElementById('sample3').style.display = "none";
-  document.getElementById('sample4').style.display = "none";
+  document.getElementById('samplea').style.display = "none";
+  document.getElementById('sampleb').style.display = "none";
+  document.getElementById('samplec').style.display = "none";
+  document.getElementById('sampled').style.display = "none";
   document.getElementById('sampledrop1').style.display = "none";
   document.getElementById('sampledrop2').style.display = "none";
   document.getElementById('sampledrop3').style.display = "none";
@@ -689,6 +698,8 @@ function sample_loadD(){
 
 function voltclick() {
 
+  document.getElementById('myCanvasvp').style.display = "block";
+  document.getElementById('myCanvasvn').style.display = "block";
   const canvas = document.getElementById('textvoltimer');
   var volt = 0;
   // Check if the browser supports the canvas element
@@ -790,10 +801,9 @@ function voltdec() {
 function run_gel() {
   document.getElementById('myCanvasv1').style.display = "block";
   document.getElementById('myCanvast1').style.display = "block";
-  document.getElementById('myCanvasvp').style.display = "block";
-  document.getElementById('myCanvasvn').style.display = "block";
+ 
   document.getElementById('myCanvasrn').style.display = "block";
-  document.getElementById("sampleload").disabled = true;
+ // document.getElementById("sampleload").disabled = true;
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitea").style.display="none";
@@ -838,199 +848,133 @@ function runninggel() {
   if (text == null) {
     alert("Give input  between 50V and 100 V.")
   }
-  else {
+  else if((volt >=50) && (volt<=100)) {
     gelrun();
   }
-
+else{
+  alert("Give input  between 50V and 100 V.")
+}
 
 }
 
 
-
+var imgobj1 = null;
+var imgobj2 = null;
+var imgobj3 = null;
+var imgobj4 = null;
 
 function gelrun() {
-  canvass1 = document.getElementById("sample1");
-  ctxgs1 = canvass1.getContext("2d");
-  var posX = 5;
-  var speed = 0.2;
+ 
+  document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
+  document.getElementById('sampledrop1').style.display = "none";
+  document.getElementById('sampledrop2').style.display = "none";
+  document.getElementById('sampledrop3').style.display = "none";
+  document.getElementById('sampledrop4').style.display = "none";
 
-
-
-  function drawLine() {
-    const gradient = ctxgs1.createLinearGradient(0, 0, canvass1.width, 0);
-
-    // Add color stops to the gradient
-    gradient.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient.addColorStop(1, '#7FA9FF');      // End color (position 1)
-
-    // Set the stroke style to the gradient
-    ctxgs1.strokeStyle = gradient;
-
-   // ctxgs1.strokeStyle = '#7FA9FF';
-    //ctxs1.fillStyle = gr;
-    //ctxs1.fillRect(10,10,150,80);
-    ctxgs1.lineWidth = 300;
-    ctxgs1.beginPath();
-    ctxgs1.moveTo(posX, 0); /*  */
-    ctxgs1.lineTo(0, 0);
-    ctxgs1.stroke();
-  }
-
-  function moveLine() {
-    posX += speed;
-
-    if (posX < 0 || posX > canvass1.width) {
-      speed = speed * -1;
+  document.getElementById("samplea").style.display="block";
+  var canvassd1 = document.getElementById("samplea");
+  var orgleft = 15; /* initial position */
+  clearInterval(imgobj1);
+  imgobj1 = setInterval(frame1, 100); /* frame is 5 denotes the speed of the movement*/
+  function frame1() {
+    if (orgleft == 26) { /* moves to 26 left positon*/
+      clearInterval(imgobj1); /* stops to 26 postion*/
+      //
+    } else {
+      orgleft++; 
+      canvassd1.style.left = orgleft + '%'; 
+     
+  
+       
     }
   }
 
-  function loop() {
-    // clear old frame;
-    // ctx.clearRect(0,0,canvas.width, canvas.height);
-    moveLine();
-    drawLine();
-    cancelani = requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
 
-
-
-  /*sample 2 */
-
-  canvass2 = document.getElementById("sample2");
-  ctxgs2 = canvass2.getContext("2d");
-  var posX2 = 5;
-  var speed2 = 0.2;
-
-
-
-  function drawLine2() {
-    const gradient = ctxgs2.createLinearGradient(0, 0, canvass2.width, 0);
-
-    // Add color stops to the gradient
-    gradient.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient.addColorStop(1, '#7FA9FF');      // End color (position 1)
-
-
-    ctxgs2.strokeStyle = gradient;
-    //ctxs1.fillStyle = gr;
-    //ctxs1.fillRect(10,10,150,80);
-    ctxgs2.lineWidth = 300;
-    ctxgs2.beginPath();
-    ctxgs2.moveTo(posX2, 0); /*  */
-    ctxgs2.lineTo(0, 0);
-    ctxgs2.stroke();
-  }
-
-  function moveLine2() {
-    posX2 += speed2;
-
-    if (posX2 < 0 || posX2 > canvass2.width) {
-      speed2 = speed2 * -1;
+  document.getElementById("sampleb").style.display="block";
+  var canvassd2 = document.getElementById("sampleb");
+  var orgleft2 = 15; /* initial position */
+  clearInterval(imgobj2);
+  imgobj2 = setInterval(frame2, 100); /* frame is 5 denotes the speed of the movement*/
+  function frame2() {
+    if (orgleft2 == 26) { /* moves to 26 left positon*/
+      clearInterval(imgobj2); /* stops to 26 postion*/
+      
+    } else {
+      orgleft2++; 
+      canvassd2.style.left = orgleft2 + '%'; 
+     
+  
+       
     }
   }
 
-  function loop2() {
-    // clear old frame;
-    // ctx.clearRect(0,0,canvas.width, canvas.height);
-    moveLine2();
-    drawLine2();
-    cancelani = requestAnimationFrame(loop2);
-  }
-  requestAnimationFrame(loop2);
-
-
-  /** sample 3 */
-
-  canvass3 = document.getElementById("sample3");
-  ctxgs3 = canvass3.getContext("2d");
-  var posX3 = 5;
-  var speed3 = 0.2;
-
-
-
-  function drawLine3() {
-    const gradient = ctxgs3.createLinearGradient(0, 0, canvass3.width, 0);
-
-    // Add color stops to the gradient
-    gradient.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient.addColorStop(1, '#7FA9FF');      // End color (position 1)
-
-
-    ctxgs3.strokeStyle = gradient;
-    //ctxs1.fillStyle = gr;
-    //ctxs1.fillRect(10,10,150,80);
-    ctxgs3.lineWidth = 300;
-    ctxgs3.beginPath();
-    ctxgs3.moveTo(posX3, 0); /*  0-180*/
-    ctxgs3.lineTo(0, 0);
-    ctxgs3.stroke();
-  }
-
-  function moveLine3() {
-    posX3 += speed3;
-
-    if (posX3 < 0 || posX3 > canvass3.width) {
-      speed3 = speed3 * -1;
+  document.getElementById("samplec").style.display="block";
+  var canvassd3 = document.getElementById("samplec");
+  var orgleft3 = 15; /* initial position */
+  clearInterval(imgobj3);
+  imgobj3 = setInterval(frame3, 100); /* frame is 5 denotes the speed of the movement*/
+  function frame3() {
+    if (orgleft3 == 26) { /* moves to 26 left positon*/
+      clearInterval(imgobj3); /* stops to 26 postion*/
+      
+    } else {
+      orgleft3++; 
+      canvassd3.style.left = orgleft3 + '%'; 
+     
+  
+       
     }
   }
 
-  function loop3() {
-    // clear old frame;
-    // ctx.clearRect(0,0,canvas.width, canvas.height);
-    moveLine3();
-    drawLine3();
-    cancelani = requestAnimationFrame(loop3);
-  }
-  requestAnimationFrame(loop3);
-
-  /** Sample 4 */
-
-  canvass4 = document.getElementById("sample4");
-  ctxgs4 = canvass4.getContext("2d");
-  var posX4 = 5;
-  var speed4 = 0.2;
-
-
-
-  function drawLine4() {
-    const gradient = ctxgs4.createLinearGradient(0, 0, canvass4.width, 0);
-
-    // Add color stops to the gradient
-    gradient.addColorStop(0, '#EBFCFF ');     // Start color (position 0)
-    gradient.addColorStop(0.9, '#E8F8FF');  // Middle color (position 0.8)
-    gradient.addColorStop(1, '#7FA9FF');      // End color (position 1)
-
-
-    ctxgs4.strokeStyle = gradient;
-    //ctxs1.fillStyle = gr;
-    //ctxs1.fillRect(10,10,150,80);
-    ctxgs4.lineWidth = 300;
-    ctxgs4.beginPath();
-    ctxgs4.moveTo(posX, 0); /*  0-180*/
-    ctxgs4.lineTo(0, 0);
-    ctxgs4.stroke();
-  }
-
-  function moveLine4() {
-    posX4 += speed4;
-
-    if (posX4 < 0 || posX4 > canvass4.width) {
-      speed4 = speed4 * -1;
+  document.getElementById("sampled").style.display="block";
+  var canvassd4 = document.getElementById("sampled");
+  var orgleft4 = 15; /* initial position */
+  clearInterval(imgobj4);
+  imgobj4 = setInterval(frame4, 100); /* frame is 5 denotes the speed of the movement*/
+  function frame4() {
+    if (orgleft4 == 26) { /* moves to 26 left positon*/
+      clearInterval(imgobj4); /* stops to 26 postion*/
+      
+    } else {
+      orgleft4++; 
+      canvassd4.style.left = orgleft4 + '%'; 
+     
+  
+       
     }
   }
 
-  function loop4() {
-    // clear old frame;
-    // ctx.clearRect(0,0,canvas.width, canvas.height);
-    moveLine4();
-    drawLine4();
-    cancelani = requestAnimationFrame(loop4);
-  }
-  requestAnimationFrame(loop4);
+
+
+
+  /* document.getElementById("sampledrop1").style.display="block";
+  var canvassd1 = document.getElementById("sampledrop1");
+  var orgwidht = 0; /* initial position */
+  /*clearInterval(imgobj1);
+  imgobj1 = setInterval(frame1, 100); /* frame is 5 denotes the speed of the movement*/
+  /*function frame1() {
+    if (orgwidht == 12) { 
+      clearInterval(imgobj1); 
+      
+    } else {
+      orgwidht++; 
+      canvassd1.style.width = orgwidht + '%'; 
+     
+  
+       
+    }
+  } */
+
+  
+
+
+  
+
+  
+
+
+
+  
   document.getElementById("viewsample").disabled = false;
 }
 
