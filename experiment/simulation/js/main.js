@@ -15,6 +15,7 @@ function start() {
   document.getElementById('myCanvasvp').style.display = "none";
   document.getElementById('myCanvasvn').style.display = "none";
   document.getElementById('myCanvasrn').style.display = "none";
+  document.getElementById('agel1').removeAttribute("onclick");
 
 }
 
@@ -102,9 +103,9 @@ let isDragging = false;
 function handleMouseDown(event) {
   isDragging = true;
   imagepp.style.cursor = 'pointer';
-  imageppb.style.cursor = 'grabbing';
+ /*  imageppb.style.cursor = 'grabbing';
   imageppc.style.cursor = 'grabbing';
-  imageppd.style.cursor = 'grabbing';
+  imageppd.style.cursor = 'grabbing'; */
 
   // Calculate the offset of the mouse/touch position relative to the image
   const offsetX = event.clientX - imagepp.getBoundingClientRect().left;
@@ -122,9 +123,9 @@ function handleMouseDown(event) {
 
       const imageRect = imagepp.getBoundingClientRect();
       const canvasRect = canvassdrop1.getBoundingClientRect();
-      const canvasRect2 = canvassdrop2.getBoundingClientRect();
+     /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
       const canvasRect3 = canvassdrop3.getBoundingClientRect();
-      const canvasRect4 = canvassdrop4.getBoundingClientRect();
+      const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top &&imageRect.left <= canvasRect.left + canvasRect.width &&imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
@@ -860,7 +861,8 @@ var imgobj3 = null;
 var imgobj4 = null;
 
 function gelrun() {
-
+ 
+  document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
   document.getElementById('sampledrop1').style.display = "none";
   document.getElementById('sampledrop2').style.display = "none";
   document.getElementById('sampledrop3').style.display = "none";
@@ -874,7 +876,7 @@ function gelrun() {
   function frame1() {
     if (orgleft == 26) { /* moves to 26 left positon*/
       clearInterval(imgobj1); /* stops to 26 postion*/
-      
+      //
     } else {
       orgleft++; 
       canvassd1.style.left = orgleft + '%'; 
