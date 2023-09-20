@@ -50,7 +50,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-4">
+			<div class="col-md-5">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -64,7 +64,7 @@ Developer: Prakriti Dhang
 
 							<li> Select correct components for preparing gel in the casting tray and click on "Gel
 								Preparation" button. </li>
-								<li>Next, click on the gel that is being solidified in the casting
+							<li>Next, click on the gel that is being solidified in the casting
 								tray. This will place in
 								the electrophoresis chamber.</li>
 
@@ -95,17 +95,20 @@ Developer: Prakriti Dhang
 			<!--/div>
 
 		<div class="row "-->
-			<div class="col-md-8">
+			<div class="col-md-7">
 				<div class="card">
 
 
 					<div class="card-body">
-						<div class="col-md-6 mb-2 ">
-							<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
-							<button class="btn btn-success" type="button" id="start" data-bs-toggle="modal"
-								data-bs-target="#exampleModal">Click to
-								Start the Experiment</button>
-						</div>
+						<!-- <div class="col-md-6 mb-2 "> -->
+						<!--div class="d-grid  d-flex flex-row d-flex justify-content-md-center gap-2"-->
+						<button class="btn btn-success " type="button" id="start" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Click to
+							Start the Experiment</button>
+						<button class="btn btn-warning " style="float:right;" type="button" id="start" data-bs-toggle="modal"
+							data-bs-target="#exampleModal" onclick="restartexp()">
+							Re-Do the Experiment</button>
+						<!-- </div> -->
 					</div>
 				</div>
 				<div class="card">
@@ -115,52 +118,52 @@ Developer: Prakriti Dhang
  -->
 					<div class="card-body p-3">
 						<h6> Select correct components for gel preparation:</h6>
-							<div class="form-check form-check-inline ">
-								<input class="form-check-input " type="checkbox" name="gelprep" value="Agarose powder"
-									id="g1">
-								<label class="form-check-label" for="g1">
-									Agarose powder
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input " type="checkbox" name="gelprep" value="TAE/TBE Buffer"
-									id="g2">
-								<label class="form-check-label" for="g2">
-									TAE/TBE Buffer
+						<div class="form-check form-check-inline ">
+							<input class="form-check-input " type="checkbox" name="gelprep" value="Agarose powder"
+								id="g1">
+							<label class="form-check-label" for="g1">
+								Agarose powder
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input " type="checkbox" name="gelprep" value="TAE/TBE Buffer"
+								id="g2">
+							<label class="form-check-label" for="g2">
+								TAE/TBE Buffer
 
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input " type="checkbox" name="gelprep"
-									value="Ethidium Bromide (EtBr)" id="g3">
-								<label class="form-check-label" for="g3">
-									Ethidium Bromide (EtBr)
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input " type="checkbox" name="gelprep" value="Distilled water"
-									id="g4">
-								<label class="form-check-label" for="g4">
-									Distilled water
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input " type="checkbox" name="gelprep"
+								value="Ethidium Bromide (EtBr)" id="g3">
+							<label class="form-check-label" for="g3">
+								Ethidium Bromide (EtBr)
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input " type="checkbox" name="gelprep" value="Distilled water"
+								id="g4">
+							<label class="form-check-label" for="g4">
+								Distilled water
 
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input " type="checkbox" name="gelprep" value="β-galactosidase"
-									id="g5">
-								<label class="form-check-label" for="g5">
-									β-galactosidase
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input " type="checkbox" name="gelprep" value="β-galactosidase"
+								id="g5">
+							<label class="form-check-label" for="g5">
+								β-galactosidase
 
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input " type="checkbox" name="gelprep" value="Gelatin powder"
-									id="g6">
-								<label class="form-check-label" for="g6">
-									Gelatin powder
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input " type="checkbox" name="gelprep" value="Gelatin powder"
+								id="g6">
+							<label class="form-check-label" for="g6">
+								Gelatin powder
 
-								</label>
-							</div>
+							</label>
+						</div>
 					</div>
 					<div class="col-md-2 mb-2 p-2">
 
@@ -176,42 +179,43 @@ Developer: Prakriti Dhang
 
 					<div class="card-body p-3">
 						<h6> Select correct components for sample preparation:</h6>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA" id="s1">
-								<label class="form-check-label" for="s1">
-									DNA
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="sampleprep"
-									value="Dye containing bromophenol blue" id="s2">
-								<label class="form-check-label" for="s2">
-									Dye containing bromophenol blue
-								</label>
-							</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA" id="s1">
+							<label class="form-check-label" for="s1">
+								DNA
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="sampleprep"
+								value="Dye containing bromophenol blue" id="s2">
+							<label class="form-check-label" for="s2">
+								Dye containing bromophenol blue
+							</label>
+						</div>
 
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="sampleprep"
-									value="Ethidum bromide" id="s4">
-								<label class="form-check-label" for="s4">
-									Ethidum bromide
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="sampleprep" value="Ethidum bromide"
+								id="s4">
+							<label class="form-check-label" for="s4">
+								Ethidum bromide
 
 
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="checkbox" name="sampleprep"
-									value="Aniline blue dye" id="s5">
-								<label class="form-check-label" for="s5">
-									Aniline blue dye
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="sampleprep" value="Aniline blue dye"
+								id="s5">
+							<label class="form-check-label" for="s5">
+								Aniline blue dye
 
-								</label>
-							</div>
+							</label>
+						</div>
 
-						
-							
+
+
 					</div>
-					<h6 class="p-2"> Note: DNA ladder is in Sample A. <br> DNA and Dye containing bromophenol blue are in Sample B, C and D. </h6>
+					<h6 class="p-2"> Note: DNA ladder is in Sample A. <br> DNA and Dye containing bromophenol blue are
+						in Sample B, C and D. </h6>
 					<div class="col-md-3 mb-2 p-2">
 						<button class="btn btn-primary" type="button" id="sampleprep" onclick="sample_prep()"
 							disabled>Sample
@@ -222,13 +226,13 @@ Developer: Prakriti Dhang
 
 
 					<div class="card-body">
-
-						<div class="col-md-6 mb-2 ">
+<!-- 
+						<div class="col-md-6 mb-2 "> -->
 							<!-- <button class="btn btn-primary" type="button" id="sampleload" disabled
 								onclick="sample_load()">Sample Loading
 							</button> -->
 
-							<div class="dropdown">
+							<div class="dropdown div-inline">
 								<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
 									data-bs-toggle="dropdown" disabled>
 									Sample Loading
@@ -245,19 +249,18 @@ Developer: Prakriti Dhang
 										</a></li>
 								</ul>
 							</div>
-						</div>
-
-						<div class="col-md-3 mb-2 ">
+					<!--  </div> --> 
+						<!-- <div class="col-md-3 mb-2 "> -->
 							<button class="btn btn-primary" type="button" id="gelrun" disabled
 								onclick="run_gel()">Running of Gel </button>
-						</div>
-						<div class="col-md-5  ">
-							<button class="btn btn-primary" type="button" id="viewsample"
+					<!-- 	</div> -->
+						<!-- <div class="col-md-5  "> -->
+							<button class="btn btn-primary" type="button" id="viewsample" 
 								onclick="view_sample_UVlight()" disabled>Visualization
 								of the DNA under UV light</button>
 
 
-						</div>
+						<!-- </div> -->
 
 
 

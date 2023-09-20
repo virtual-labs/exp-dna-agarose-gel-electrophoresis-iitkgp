@@ -19,6 +19,9 @@ function start() {
 
 }
 
+function restartexp(){
+  location.reload()
+}
 
 function gel_prep() {
 

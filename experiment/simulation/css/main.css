@@ -5,6 +5,10 @@ Exp name: DNA analysis by agarose gel electrophoresis
 File name: main.css
 Developer: Prakriti Dhang
 */
+.div-inline{
+    
+    display:inline-block;
+}
 
 .card {
     margin-bottom: 5px;
