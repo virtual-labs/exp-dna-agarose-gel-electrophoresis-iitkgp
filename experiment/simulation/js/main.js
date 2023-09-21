@@ -699,7 +699,7 @@ function sample_loadD(){
 function voltclick() {
 
   document.getElementById('myCanvasvp').style.display = "block";
-  document.getElementById('myCanvasvn').style.display = "block";
+  
   const canvas = document.getElementById('textvoltimer');
   var volt = 0;
   // Check if the browser supports the canvas element
@@ -733,7 +733,7 @@ var volt = 10;
 function voltinc() {
 
   const canvas = document.getElementById('textvoltimer');
-
+  document.getElementById('myCanvasvn').style.display = "block";
 
   // Get the 2D drawing context
   const ctx = canvas.getContext('2d');
