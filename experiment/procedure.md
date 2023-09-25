@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<img src="images/Gel setup.png" width="50%">
+<img src="images/Agarose_gel.png" width="30%">
 </div>
 
 The protocol for running an agarose gel has been described briefly in the following sections:
