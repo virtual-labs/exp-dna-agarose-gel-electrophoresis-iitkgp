@@ -28,10 +28,10 @@
     {
       "question": "3. The DNA fragments on an agarose gel can be visualized using:",
       "answers": {
-        "a": "Fungi",
-        "b": "Bacteria",
-        "c": "Algae",
-        "d": "Plants"
+        "a": "Loading dye",
+        "b": "Acetocarmine",
+        "c": "Ethidium Bromide",
+        "d": "Bromophenol blue"
       },
      
       "correctAnswer": "c",
@@ -52,7 +52,7 @@
     {
       "question": "5. The DNA fragments are separated through which of the following methods on an agarose gel?",
       "answers": {
-        "a": "Under the influence of light",
+        "a": "Under the influence of pressure",
         "b": "Diffusion across gel",
         "c": "Under the influence of electric field",
         "d": "Under the influence of light"
@@ -111,7 +111,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "10. The fluorescent dye such as Ethidium bromide (EtBr) is used for visualizing DNA. How does EtBr binds to DNA? ",
+      "question": "10. The fluorescent dye such as Ethidium bromide (EtBr) is used for visualizing DNA. How does EtBr bind to DNA? ",
       "answers": {
         "a": "Stacked between histone molecules",
         "b": "Binds to the nucleotide base",
