@@ -182,7 +182,7 @@ jsPlumb.ready(function () {
     jsPlumb.fire("jsPlumbDemoLoaded", instance);
     //jsPlumb.fire("jsPlumbDemoLoaded", instance1);
 
-    document.getElementById("myCanvasrn").addEventListener("click", function () {
+    document.getElementById("myCanvasv1").addEventListener("click", function () {
         //var d = instance.exportData();
         //console.log(instance.getAllConnections());
 
