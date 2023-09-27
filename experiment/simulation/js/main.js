@@ -834,11 +834,11 @@ function runninggel() {
   if (volt == null) {
     alert("Give input  between 50V and 100 V.")
   }
-  else if((volt >=50) || (volt<=100)) {
-    gelrun();
+  else if((volt <49) || (volt>101)) {
+   alert("Give input  between 50V and 100 V.")
   }
 else{
-  alert("Give input  between 50V and 100 V.")
+  gelrun();
 }
 
 }
