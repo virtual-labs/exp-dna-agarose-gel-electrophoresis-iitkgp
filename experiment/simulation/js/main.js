@@ -16,7 +16,12 @@ function start() {
   document.getElementById('myCanvasvn').style.display = "none";
   document.getElementById('myCanvasrn').style.display = "none";
   document.getElementById('agel1').removeAttribute("onclick");
-
+  document.getElementById("g1").disabled = false;
+  document.getElementById("g2").disabled = false;
+  document.getElementById("g3").disabled = false;
+  document.getElementById("g4").disabled = false;
+  document.getElementById("g5").disabled = false;
+  document.getElementById("g6").disabled = false;
 }
 
 function restartexp(){
@@ -68,7 +73,7 @@ function sample_prep() {
     }
   }
   else {
-    alert("Three components are require to prepare sample.");
+    alert("DNA and Dye containing bromophenol blue  are the require component to prepare sample.");
   }
 
 
@@ -473,6 +478,12 @@ function moveImage() {
   document.getElementById('myCanvass2B').style.display = "block";
   document.getElementById('myCanvass3C').style.display = "block";
   document.getElementById('myCanvass4D').style.display = "block";
+
+  document.getElementById("s1").disabled = false;
+  document.getElementById("s2").disabled = false;
+  document.getElementById("s4").disabled = false;
+  document.getElementById("s5").disabled = false;
+
 }
 
 /* function allowDrop(event) {
@@ -818,11 +829,12 @@ function run_gel() {
 
 
 function runninggel() {
+
   
-  if (text == null) {
+  if (volt == null) {
     alert("Give input  between 50V and 100 V.")
   }
-  else if((volt >=50) && (volt<=100)) {
+  else if((volt >=50) || (volt<=100)) {
     gelrun();
   }
 else{
