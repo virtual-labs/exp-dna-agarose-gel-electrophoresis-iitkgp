@@ -961,7 +961,7 @@ function gelrun() {
 
 
   
-  document.getElementById("viewsample").disabled = false;
+  
 }
 
 /**************************************************** View under UV light **********************************************************************************/
@@ -977,6 +977,10 @@ function view_sample_UVlight() {
   document.getElementById("output").style.display="block";
   document.getElementById("ladder").style.display="block";
   document.getElementById("agel1").style.display="none";
+  document.getElementById('sampledrop1').style.display = "none";
+  document.getElementById('sampledrop2').style.display = "none";
+  document.getElementById('sampledrop3').style.display = "none";
+  document.getElementById('sampledrop4').style.display = "none";
 
   canvasuv1 = document.getElementById("myCanvasuv1");
   ctxuv1 = canvasuv1.getContext("2d");
