@@ -43,7 +43,7 @@ function gel_prep() {
       document.getElementById("gelprep").disabled = true;
       document.getElementById("agel").style.display = "block";
     } else {
-      alert("Incorrect component(s) is/are selected.");
+      alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
     }
   }
   else {
@@ -65,11 +65,11 @@ function sample_prep() {
       alert("Correct component(s) is(are) selected.");
       document.getElementById("tube").style.display = "block";
       document.getElementById("sampleprep").disabled = true;
-      document.getElementById("sampleload").disabled = false;
+      document.getElementById("addbuffer").disabled = false;
     }
 
     else {
-      alert(" Incorrect component(s) is/are selected.");
+      alert(" Incorrect component(s) is/are selected. \n The correct components are DNA and DNA Dye containing bromophenol blue.");
     }
   }
   else {
@@ -532,7 +532,9 @@ function moveImage1() {
 
 
 function addbuffer() {
-  document.getElementById("gelrun").disabled = false;
+  document.getElementById("sampleload").disabled = false;
+  
+  document.getElementById("addbuffer").disabled = true;
   /**side 1 */
   canvaside1 = document.getElementById("myCanvass1");
   ctxs1 = canvaside1.getContext("2d");
@@ -684,6 +686,8 @@ function sample_loadA(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptited").style.display="none";
+  document.getElementById("gelrun").disabled = false;
+  //document.getElementById("loadsamplea").disabled=true;
 }
 
 function sample_loadB(){
@@ -691,6 +695,7 @@ function sample_loadB(){
   document.getElementById("peptitea").style.display="none";
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptited").style.display="none";
+  document.getElementById("gelrun").disabled = false;
 }
 
 function sample_loadC(){
@@ -698,6 +703,7 @@ function sample_loadC(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitea").style.display="none";
   document.getElementById("peptited").style.display="none";
+  document.getElementById("gelrun").disabled = false;
 }
 
 function sample_loadD(){
@@ -705,6 +711,7 @@ function sample_loadD(){
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptitea").style.display="none";
+  document.getElementById("gelrun").disabled = false;
 }
 
 function voltclick() {
@@ -821,7 +828,7 @@ function run_gel() {
   document.getElementById("peptited").style.display="none";
   document.getElementById("gelrun").disabled = true;
 
-
+  
 }
 
 
