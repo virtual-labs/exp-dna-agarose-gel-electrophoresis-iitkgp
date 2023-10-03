@@ -22,6 +22,11 @@ function start() {
   document.getElementById("g4").disabled = false;
   document.getElementById("g5").disabled = false;
   document.getElementById("g6").disabled = false;
+
+  document.getElementById('loadsamplea').style.pointerEvents="none";
+  document.getElementById('loadsampleb').style.pointerEvents="none";
+  document.getElementById('loadsamplec').style.pointerEvents="none";
+  document.getElementById('loadsampled').style.pointerEvents="none";
 }
 
 function restartexp(){
@@ -65,7 +70,8 @@ function sample_prep() {
       alert("Correct component(s) is(are) selected.");
       document.getElementById("tube").style.display = "block";
       document.getElementById("sampleprep").disabled = true;
-      document.getElementById("addbuffer").disabled = false;
+      document.getElementById("bufferload").disabled = false;
+      document.getElementById('loadsamplea').style.pointerEvents="auto";
     }
 
     else {
@@ -86,24 +92,22 @@ function sample_load() {
 
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
-  document.getElementById("buffertext").style.display = "none";
+  //document.getElementById("buffertext").style.display = "none";
 }
 
-
+function sample_loadA(){
+  document.getElementById("peptitea").style.display="block";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptited").style.display="none";
 
 /* Sample load using peptite tube*/
 const canvassdrop1 = document.getElementById('sampledrop1');
 const ctxsdrop1 = canvassdrop1.getContext('2d');
-const canvassdrop2 = document.getElementById('sampledrop2');
-const ctxsdrop2 = canvassdrop2.getContext('2d');
-const canvassdrop3 = document.getElementById('sampledrop3');
-const ctxsdrop3 = canvassdrop3.getContext('2d');
-const canvassdrop4 = document.getElementById('sampledrop4');
-const ctxsdrop4 = canvassdrop4.getContext('2d');
+
 const imagepp = document.getElementById('peptitea');
-const imageppb = document.getElementById('peptiteb');
-const imageppc = document.getElementById('peptitec');
-const imageppd = document.getElementById('peptited');
+
+document.getElementById('loadsampleb').style.pointerEvents="auto";
 
 let isDragging = false;
 
@@ -200,8 +204,19 @@ imagepp.addEventListener('mousedown', handleMouseDown);
 imagepp.addEventListener('touchstart', handleMouseDown);
 imagepp.addEventListener('click', changeColor);
 imagepp.addEventListener('touchend', changeColor);
+}
 
+function sample_loadB(){
+  document.getElementById("peptiteb").style.display="block";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById('loadsamplec').style.pointerEvents="auto";
+  const imageppb = document.getElementById('peptiteb');
+  const canvassdrop2 = document.getElementById('sampledrop2');
+const ctxsdrop2 = canvassdrop2.getContext('2d');
 
+ 
 /** Sample 2 */
 
 let isDraggingb = false;
@@ -252,8 +267,7 @@ function handleMouseDownb(event) {
   }
 
   // Function to handle mouse/touch up event
-  function handleMouseUpb
-  () {
+  function handleMouseUpb() {
     isDraggingb = false;
     imageppb.style.cursor = 'pointer';
     // Remove the event listeners when dragging is complete
@@ -283,8 +297,18 @@ imageppb.addEventListener('click', changeColorb);
 imageppb.addEventListener('touchend', changeColorb);
 /*** Sample 2 load ends */
 
+}
+function sample_loadC(){
+  document.getElementById("peptitec").style.display="block";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptitea").style.display="none";
+  document.getElementById("peptited").style.display="none";
+  document.getElementById('loadsampled').style.pointerEvents="auto";
+  const imageppc = document.getElementById('peptitec');
+  const canvassdrop3 = document.getElementById('sampledrop3');
+const ctxsdrop3 = canvassdrop3.getContext('2d');
 
-
+  
 /** Sample 3 */
 
 let isDraggingc = false;
@@ -364,7 +388,17 @@ imageppc.addEventListener('touchstart', handleMouseDownc);
 imageppc.addEventListener('click', changeColorc);
 imageppc.addEventListener('touchend', changeColorc);
 /*** Sample 3 load ends */
+}
 
+function sample_loadD(){
+  document.getElementById("gelrun").disabled = false;
+  document.getElementById("peptited").style.display="block";
+  document.getElementById("peptiteb").style.display="none";
+  document.getElementById("peptitec").style.display="none";
+  document.getElementById("peptitea").style.display="none";
+  const imageppd = document.getElementById('peptited');
+  const canvassdrop4 = document.getElementById('sampledrop4');
+const ctxsdrop4 = canvassdrop4.getContext('2d');
 /** Sample 4 */
 
 let isDraggingd = false;
@@ -444,6 +478,8 @@ imageppd.addEventListener('touchstart', handleMouseDownd);
 imageppd.addEventListener('click', changeColord);
 imageppd.addEventListener('touchend', changeColord);
 /*** Sample 4 load ends */
+
+}
 
 /** Move gel to electrophoresis chamber */
 var image;
@@ -533,8 +569,12 @@ function moveImage1() {
 
 function addbuffer() {
   document.getElementById("sampleload").disabled = false;
+
+  document.getElementById("bufferload").disabled = true;
+
   
   document.getElementById("addbuffer").disabled = true;
+
   /**side 1 */
   canvaside1 = document.getElementById("myCanvass1");
   ctxs1 = canvaside1.getContext("2d");
@@ -681,6 +721,7 @@ function addbuffer() {
 }
 
 /******************************************************* Load Sample  *****************************************************************/
+
 function sample_loadA(){
   document.getElementById("peptitea").style.display="block";
   document.getElementById("peptiteb").style.display="none";
@@ -713,6 +754,7 @@ function sample_loadD(){
   document.getElementById("peptitea").style.display="none";
   document.getElementById("gelrun").disabled = false;
 }
+
 
 function voltclick() {
 
@@ -828,7 +870,8 @@ function run_gel() {
   document.getElementById("peptited").style.display="none";
   document.getElementById("gelrun").disabled = true;
 
-  
+
+  document.getElementById("sampleload").disabled = true;
 }
 
 
