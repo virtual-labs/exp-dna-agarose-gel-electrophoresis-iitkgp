@@ -87,19 +87,20 @@ function sample_prep() {
 
 }
 
-function sample_load() {
+ function buffer_load() {
 
 
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
   //document.getElementById("buffertext").style.display = "none";
-}
+} 
 
 function sample_loadA(){
   document.getElementById("peptitea").style.display="block";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitec").style.display="none";
   document.getElementById("peptited").style.display="none";
+  document.getElementById('loadsampleb').style.pointerEvents="auto";
 
 /* Sample load using peptite tube*/
 const canvassdrop1 = document.getElementById('sampledrop1');
@@ -107,7 +108,7 @@ const ctxsdrop1 = canvassdrop1.getContext('2d');
 
 const imagepp = document.getElementById('peptitea');
 
-document.getElementById('loadsampleb').style.pointerEvents="auto";
+
 
 let isDragging = false;
 
@@ -298,6 +299,7 @@ imageppb.addEventListener('touchend', changeColorb);
 /*** Sample 2 load ends */
 
 }
+
 function sample_loadC(){
   document.getElementById("peptitec").style.display="block";
   document.getElementById("peptiteb").style.display="none";
@@ -573,7 +575,7 @@ function addbuffer() {
   document.getElementById("bufferload").disabled = true;
 
   
-  document.getElementById("addbuffer").disabled = true;
+  //document.getElementById("addbuffer").disabled = true;
 
   /**side 1 */
   canvaside1 = document.getElementById("myCanvass1");
@@ -722,38 +724,6 @@ function addbuffer() {
 
 /******************************************************* Load Sample  *****************************************************************/
 
-function sample_loadA(){
-  document.getElementById("peptitea").style.display="block";
-  document.getElementById("peptiteb").style.display="none";
-  document.getElementById("peptitec").style.display="none";
-  document.getElementById("peptited").style.display="none";
-  document.getElementById("gelrun").disabled = false;
-  //document.getElementById("loadsamplea").disabled=true;
-}
-
-function sample_loadB(){
-  document.getElementById("peptiteb").style.display="block";
-  document.getElementById("peptitea").style.display="none";
-  document.getElementById("peptitec").style.display="none";
-  document.getElementById("peptited").style.display="none";
-  document.getElementById("gelrun").disabled = false;
-}
-
-function sample_loadC(){
-  document.getElementById("peptitec").style.display="block";
-  document.getElementById("peptiteb").style.display="none";
-  document.getElementById("peptitea").style.display="none";
-  document.getElementById("peptited").style.display="none";
-  document.getElementById("gelrun").disabled = false;
-}
-
-function sample_loadD(){
-  document.getElementById("peptited").style.display="block";
-  document.getElementById("peptiteb").style.display="none";
-  document.getElementById("peptitec").style.display="none";
-  document.getElementById("peptitea").style.display="none";
-  document.getElementById("gelrun").disabled = false;
-}
 
 
 function voltclick() {
