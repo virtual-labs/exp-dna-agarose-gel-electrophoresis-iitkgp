@@ -526,6 +526,18 @@ path,
 
 }
 
+#myCanvasstp {
+    position: absolute;
+    width: 1.8%;
+    height: 8%;
+    top: 178%;
+    left: 26.1%;
+    cursor: pointer;
+    display: none;
+
+}
+
+
 #textvoltimer {
     position: absolute;
     width: 4%;

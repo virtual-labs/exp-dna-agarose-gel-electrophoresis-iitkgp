@@ -859,6 +859,7 @@ function runninggel() {
   }
 else{
   gelrun();
+  document.getElementById("myCanvasstp").style.display = "block";
 }
 
 }
@@ -871,7 +872,7 @@ var imgobj4 = null;
 
 function gelrun() {
  
-  document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
+  
   document.getElementById('sampledrop1').style.display = "none";
   document.getElementById('sampledrop2').style.display = "none";
   document.getElementById('sampledrop3').style.display = "none";
