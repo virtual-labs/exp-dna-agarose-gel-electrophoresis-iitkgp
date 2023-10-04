@@ -75,22 +75,25 @@ Developer: Prakriti Dhang
 							</li>
 							<li>Now, Click on the dropdown and select "Load Sample A". Click on the peptite A and drag
 								the peptite near the sample A to load in the gel. Repeat for sample B, C, and D.</li>
-							<li> Click on "Setting up Electrophoresis" button. Next connect the negative wire of electrophorersis
+							<li> Click on "Setting up Electrophoresis" button. Next connect the negative wire of
+								electrophorersis
 								chamber to negative of voltage meter and
-								positive wire of electrophorersis chamber to positive wire of voltage meter.
+								positive wire of electrophorersis chamber to positive wire of voltage meter. (To delete
+								the connection click on the wire.)
 
 							</li>
 							<li> Now click on "V" and "+" sign to set the voltage. Range is 50 V to 100 V.</li>
 							<li> Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
-							<li> Click on the gel to move the gel in the UV
-								light. Next Click on "Visualization
+							<li>Click on the stop icon button to switch off the power.</li>
+							<li> Click on the gel. The gel will be placed in the UV machine.</li>
+							<li>Next Click on "Visualization
 								of the DNA under UV light" to turn on UV light</li>
 
-								
+
 
 						</ol>
-						<b>Note:</b> Click on "Re-do the experiment" button to re-do the experiment.
+						<b>Note:</b> To repeat the experiment, click on the "Re-Do the Experiment" button.
 					</div>
 				</div>
 
@@ -111,7 +114,8 @@ Developer: Prakriti Dhang
 						<button class="btn btn-success " type="button" id="start" data-bs-toggle="modal"
 							data-bs-target="#exampleModal">Click to
 							Start the Experiment</button>
-						<button class="btn btn-warning " style="float:right;" type="button" id="restart"  onclick="restartexp()">
+						<button class="btn btn-warning " style="float:right;" type="button" id="restart"
+							onclick="restartexp()">
 							Re-Do the Experiment</button>
 						<!-- </div> -->
 					</div>
@@ -185,7 +189,8 @@ Developer: Prakriti Dhang
 					<div class="card-body p-3">
 						<h6> Select the components for sample B, C and D.</h6>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA" id="s1" disabled>
+							<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA" id="s1"
+								disabled>
 							<label class="form-check-label" for="s1">
 								DNA
 							</label>
@@ -201,7 +206,7 @@ Developer: Prakriti Dhang
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" name="sampleprep" value="Ethidum bromide"
 								id="s4" disabled>
-							<label class="form-check-label" for="s4" >
+							<label class="form-check-label" for="s4">
 								Ethidum bromide
 
 
@@ -230,38 +235,42 @@ Developer: Prakriti Dhang
 
 
 					<div class="card-body">
-<!-- 
+						<!-- 
 						<div class="col-md-6 mb-2 "> -->
-							<button class="btn btn-primary" type="button" id="bufferload" disabled
-								onclick="buffer_load()">Add Buffer
-							</button> 
+						<button class="btn btn-primary" type="button" id="bufferload" disabled
+							onclick="buffer_load()">Add Buffer
+						</button>
 
-							<div class="dropdown div-inline">
-								<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
-									data-bs-toggle="dropdown" disabled>
-									Sample Loading
-								</button>
-								<ul class="dropdown-menu">
-									
-									<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()" style="cursor: pointer;">Load Sample A
-										</a></li>
-									<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()" style="cursor: pointer;">Load Sample B
-										</a></li>
-									<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()" style="cursor: pointer;">Load Sample C
-										</a></li>
-									<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()" style="cursor: pointer;">Load Sample D
-										</a></li>
-								</ul>
-							</div>
-					<!--  </div> --> 
+						<div class="dropdown div-inline">
+							<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
+								data-bs-toggle="dropdown" disabled>
+								Sample Loading
+							</button>
+							<ul class="dropdown-menu">
+
+								<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
+										style="cursor: pointer;">Load Sample A
+									</a></li>
+								<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
+										style="cursor: pointer;">Load Sample B
+									</a></li>
+								<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
+										style="cursor: pointer;">Load Sample C
+									</a></li>
+								<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()"
+										style="cursor: pointer;">Load Sample D
+									</a></li>
+							</ul>
+						</div>
+						<!--  </div> -->
 						<!-- <div class="col-md-3 mb-2 "> -->
-							<button class="btn btn-primary" type="button" id="gelrun" disabled
-								onclick="run_gel()">Setting up Electrophoresis </button>
-					<!-- 	</div> -->
+						<button class="btn btn-primary" type="button" id="gelrun" disabled onclick="run_gel()">Setting
+							up Electrophoresis </button>
+						<!-- 	</div> -->
 						<!-- <div class="col-md-5  "> -->
-							<button class="btn btn-primary" type="button" id="viewsample" 
-								onclick="view_sample_UVlight()" disabled>Visualization
-								 under UV light</button>
+						<button class="btn btn-primary" type="button" id="viewsample" onclick="view_sample_UVlight()"
+							disabled>Visualization
+							under UV light</button>
 
 
 						<!-- </div> -->
@@ -351,6 +360,7 @@ Developer: Prakriti Dhang
 						<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()"></canvas>
 						<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()"></canvas>
 						<canvas id="myCanvasrn" style="border:0px solid #535252;" onclick="runninggel()"></canvas>
+						<canvas id="myCanvasstp" style="border:0px solid #535252;" onclick="stopgel()"></canvas>
 
 
 						<div id="ld1"></div> <!-- negitive side in case-->
