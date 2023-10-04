@@ -759,9 +759,9 @@ function voltclick() {
 
 /**************************************************** Increase voltage value **********************************************************************************/
 
-var volt = 10;
+var volt = 0;
 function voltinc() {
-
+  volt = volt + 10;
   const canvas = document.getElementById('textvoltimer');
   document.getElementById('myCanvasvn').style.display = "block";
 
@@ -787,7 +787,7 @@ function voltinc() {
   // Draw the text on the canvas
   ctx.fillText(text, x, y);
 
-  volt = volt + 10;
+  
 }
 
 
