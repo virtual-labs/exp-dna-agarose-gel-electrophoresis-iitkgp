@@ -145,23 +145,7 @@ function handleMouseDown(event) {
         canvassdrop1.style.backgroundColor = '#7FA9FF';
         document.getElementById("gelrun").disabled = false;
       } 
-      /* if (imageRect.left + imageRect.width >= canvasRect2.left &&imageRect.top + imageRect.height >= canvasRect2.top &&imageRect.left <= canvasRect2.left + canvasRect2.width &&imageRect.top <= canvasRect2.top + canvasRect2.height) {
-        // Change the canvas color when the image touches it
-        
-        canvassdrop2.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
-      } 
-      if (imageRect.left + imageRect.width >= canvasRect3.left &&imageRect.top + imageRect.height >= canvasRect3.top &&imageRect.left <= canvasRect3.left + canvasRect3.width &&imageRect.top <= canvasRect3.top + canvasRect3.height) {
-        // Change the canvas color when the image touches it
-       
-        canvassdrop3.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
-      } 
-      if (imageRect.left + imageRect.width >= canvasRect4.left &&imageRect.top + imageRect.height >= canvasRect4.top &&imageRect.left <= canvasRect4.left + canvasRect4.width &&imageRect.top <= canvasRect4.top + canvasRect4.height) {
-        // Change the canvas color when the image touches it
-        document.getElementById("gelrun").disabled = false;
-        canvassdrop4.style.backgroundColor = '#7FA9FF';
-      }  */
+     
       
       
     
@@ -183,16 +167,16 @@ function handleMouseDown(event) {
     // Remove the event listeners when dragging is complete
     window.removeEventListener('mousemove', handleMouseMove);
     window.removeEventListener('mouseup', handleMouseUp);
-    imagepp.removeEventListener('touchmove', handleMouseMove);
-    imagepp.removeEventListener('touchend', handleMouseUp);
+ //   imagepp.removeEventListener('touchmove', handleMouseMove);
+  //  imagepp.removeEventListener('touchend', handleMouseUp);
     
   }
 
   // Add event listeners for mouse/touch move and up events
   window.addEventListener('mousemove', handleMouseMove);
   window.addEventListener('mouseup', handleMouseUp);
-  imagepp.addEventListener('touchmove', handleMouseMove);
-  imagepp.addEventListener('touchend', handleMouseUp);
+ // imagepp.addEventListener('touchmove', handleMouseMove);
+ // imagepp.addEventListener('touchend', handleMouseUp);
 }
 
 // Function to change the color when clicked/touched
@@ -202,9 +186,68 @@ function changeColor() {
 
 // Add event listeners for mouse/touch down and click/touch events
 imagepp.addEventListener('mousedown', handleMouseDown);
-imagepp.addEventListener('touchstart', handleMouseDown);
+//imagepp.addEventListener('touchstart', handleMouseDown);
 imagepp.addEventListener('click', changeColor);
 imagepp.addEventListener('touchend', changeColor);
+
+/*********************************************** Touch sample a********************************************* */
+
+function handleTouchStart(event) {
+  console.log('Touchstart event triggered');
+  const touch = event.touches[0];
+  const boundingRect = imagepp.getBoundingClientRect();
+
+  isDragging = true;
+
+  // Store the initial touch coordinates as properties on the image element
+  imagepp.initialTouchX = touch.clientX;
+  imagepp.initialTouchY = touch.clientY;
+
+  // Calculate the offset of the touch point relative to the image
+  imagepp.offsetX = touch.clientX - boundingRect.left;
+  imagepp.offsetY = touch.clientY - boundingRect.top;
+
+  // Add a touchmove and touchend event listener
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchMove(event) {
+  console.log('Touchmove event triggered');
+  const touch = event.touches[0];
+
+  if (isDragging) {
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imagepp.offsetX;
+      const imageY = touch.clientY - imagepp.offsetY;
+
+      // Update the position of the image based on touch position
+      imagepp.style.left = imageX + 'px';
+      imagepp.style.top = imageY + 'px';
+
+      const imageRect = imagepp.getBoundingClientRect();
+      const canvasRect = canvassdrop1.getBoundingClientRect();
+   
+
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop1.style.backgroundColor = '#7FA9FF';
+
+      }
+  }
+}
+
+function handleTouchEnd() {
+  console.log('Touchend event triggered');
+  isDragging = false;
+
+  // Remove the touchmove and touchend event listeners when dragging is complete
+  window.removeEventListener('touchmove', handleTouchMove);
+  window.removeEventListener('touchend', handleTouchEnd);
+}
+
+imagepp.addEventListener('touchstart', handleTouchStart);
+
 }
 
 function sample_loadB(){
@@ -252,7 +295,7 @@ function handleMouseDownb(event) {
         // Change the canvas color when the image touches it
         
         canvassdrop2.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
+       // document.getElementById("gelrun").disabled = false;
      
       }
     
@@ -274,16 +317,16 @@ function handleMouseDownb(event) {
     // Remove the event listeners when dragging is complete
     window.removeEventListener('mousemove', handleMouseMoveb);
     window.removeEventListener('mouseup', handleMouseUpb);
-    imageppb.removeEventListener('touchmove', handleMouseMoveb);
-    imageppb.removeEventListener('touchend', handleMouseUpb);
+   // imageppb.removeEventListener('touchmove', handleMouseMoveb);
+  //  imageppb.removeEventListener('touchend', handleMouseUpb);
     
   }
 
   // Add event listeners for mouse/touch move and up events
   window.addEventListener('mousemove', handleMouseMoveb);
   window.addEventListener('mouseup', handleMouseUpb);
-  imageppb.addEventListener('touchmove', handleMouseMoveb);
-  imageppb.addEventListener('touchend', handleMouseUpb);
+  //imageppb.addEventListener('touchmove', handleMouseMoveb);
+  //imageppb.addEventListener('touchend', handleMouseUpb);
 }
 
 // Function to change the color when clicked/touched
@@ -293,10 +336,68 @@ function changeColorb() {
 
 // Add event listeners for mouse/touch down and click/touch events
 imageppb.addEventListener('mousedown', handleMouseDownb);
-imageppb.addEventListener('touchstart', handleMouseDownb);
+//imageppb.addEventListener('touchstart', handleMouseDownb);
 imageppb.addEventListener('click', changeColorb);
 imageppb.addEventListener('touchend', changeColorb);
 /*** Sample 2 load ends */
+
+/*********************************************** Touch sample b********************************************* */
+
+function handleTouchStart(event) {
+  console.log('Touchstart event triggered');
+  const touch = event.touches[0];
+  const boundingRect = imageppb.getBoundingClientRect();
+
+  isDraggingb = true;
+
+  // Store the initial touch coordinates as properties on the image element
+  imageppb.initialTouchX = touch.clientX;
+  imageppb.initialTouchY = touch.clientY;
+
+  // Calculate the offset of the touch point relative to the image
+  imageppb.offsetX = touch.clientX - boundingRect.left;
+  imageppb.offsetY = touch.clientY - boundingRect.top;
+
+  // Add a touchmove and touchend event listener
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchMove(event) {
+  console.log('Touchmove event triggered');
+  const touch = event.touches[0];
+
+  if (isDraggingb) {
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imageppb.offsetX;
+      const imageY = touch.clientY - imageppb.offsetY;
+
+      // Update the position of the image based on touch position
+      imageppb.style.left = imageX + 'px';
+      imageppb.style.top = imageY + 'px';
+
+      const imageRect = imageppb.getBoundingClientRect();
+      const canvasRect = canvassdrop2.getBoundingClientRect();
+   
+
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop2.style.backgroundColor = '#7FA9FF';
+
+      }
+  }
+}
+
+function handleTouchEnd() {
+  console.log('Touchend event triggered');
+  isDraggingb = false;
+
+  // Remove the touchmove and touchend event listeners when dragging is complete
+  window.removeEventListener('touchmove', handleTouchMove);
+  window.removeEventListener('touchend', handleTouchEnd);
+}
+
+imageppb.addEventListener('touchstart', handleTouchStart);
 
 }
 
@@ -367,16 +468,16 @@ function handleMouseDownc(event) {
     // Remove the event listeners when dragging is complete
     window.removeEventListener('mousemove', handleMouseMovec);
     window.removeEventListener('mouseup', handleMouseUpc);
-    imageppc.removeEventListener('touchmove', handleMouseMovec);
-    imageppc.removeEventListener('touchend', handleMouseUpc);
+    //imageppc.removeEventListener('touchmove', handleMouseMovec);
+   // imageppc.removeEventListener('touchend', handleMouseUpc);
     
   }
 
   // Add event listeners for mouse/touch move and up events
   window.addEventListener('mousemove', handleMouseMovec);
   window.addEventListener('mouseup', handleMouseUpc);
-  imageppc.addEventListener('touchmove', handleMouseMovec);
-  imageppc.addEventListener('touchend', handleMouseUpc);
+ // imageppc.addEventListener('touchmove', handleMouseMovec);
+ // imageppc.addEventListener('touchend', handleMouseUpc);
 }
 
 // Function to change the color when clicked/touched
@@ -386,10 +487,69 @@ function changeColorc() {
 
 // Add event listeners for mouse/touch down and click/touch events
 imageppc.addEventListener('mousedown', handleMouseDownc);
-imageppc.addEventListener('touchstart', handleMouseDownc);
+//imageppc.addEventListener('touchstart', handleMouseDownc);
 imageppc.addEventListener('click', changeColorc);
 imageppc.addEventListener('touchend', changeColorc);
 /*** Sample 3 load ends */
+/*********************************************** Touch sample c********************************************* */
+
+
+function handleTouchStart(event) {
+  console.log('Touchstart event triggered');
+  const touch = event.touches[0];
+  const boundingRect = imageppc.getBoundingClientRect();
+
+  isDraggingc = true;
+
+  // Store the initial touch coordinates as properties on the image element
+  imageppc.initialTouchX = touch.clientX;
+  imageppc.initialTouchY = touch.clientY;
+
+  // Calculate the offset of the touch point relative to the image
+  imageppc.offsetX = touch.clientX - boundingRect.left;
+  imageppc.offsetY = touch.clientY - boundingRect.top;
+
+  // Add a touchmove and touchend event listener
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchMove(event) {
+  console.log('Touchmove event triggered');
+  const touch = event.touches[0];
+
+  if (isDraggingc) {
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imageppc.offsetX;
+      const imageY = touch.clientY - imageppc.offsetY;
+
+      // Update the position of the image based on touch position
+      imageppc.style.left = imageX + 'px';
+      imageppc.style.top = imageY + 'px';
+
+      const imageRect = imageppc.getBoundingClientRect();
+      const canvasRect = canvassdrop3.getBoundingClientRect();
+   
+
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop3.style.backgroundColor = '#7FA9FF';
+
+      }
+  }
+}
+
+function handleTouchEnd() {
+  console.log('Touchend event triggered');
+  isDraggingc = false;
+
+  // Remove the touchmove and touchend event listeners when dragging is complete
+  window.removeEventListener('touchmove', handleTouchMove);
+  window.removeEventListener('touchend', handleTouchEnd);
+}
+
+imageppc.addEventListener('touchstart', handleTouchStart);
+
 }
 
 function sample_loadD(){
@@ -435,7 +595,7 @@ function handleMouseDownd(event) {
         // Change the canvas color when the image touches it
         
         canvassdrop4.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
+      //  document.getElementById("gelrun").disabled = false;
      
       }
     
@@ -457,16 +617,16 @@ function handleMouseDownd(event) {
     // Remove the event listeners when dragging is complete
     window.removeEventListener('mousemove', handleMouseMoved);
     window.removeEventListener('mouseup', handleMouseUpd);
-    imageppd.removeEventListener('touchmove', handleMouseMoved);
-    imageppd.removeEventListener('touchend', handleMouseUpd);
+    //imageppd.removeEventListener('touchmove', handleMouseMoved);
+    //imageppd.removeEventListener('touchend', handleMouseUpd);
     
   }
 
   // Add event listeners for mouse/touch move and up events
   window.addEventListener('mousemove', handleMouseMoved);
   window.addEventListener('mouseup', handleMouseUpd);
-  imageppd.addEventListener('touchmove', handleMouseMoved);
-  imageppd.addEventListener('touchend', handleMouseUpd);
+  //imageppd.addEventListener('touchmove', handleMouseMoved);
+ // imageppd.addEventListener('touchend', handleMouseUpd);
 }
 
 // Function to change the color when clicked/touched
@@ -476,10 +636,67 @@ function changeColord() {
 
 // Add event listeners for mouse/touch down and click/touch events
 imageppd.addEventListener('mousedown', handleMouseDownd);
-imageppd.addEventListener('touchstart', handleMouseDownd);
+//imageppd.addEventListener('touchstart', handleMouseDownd);
 imageppd.addEventListener('click', changeColord);
 imageppd.addEventListener('touchend', changeColord);
 /*** Sample 4 load ends */
+/*********************************************** Touch sample d********************************************* */
+function handleTouchStart(event) {
+  console.log('Touchstart event triggered');
+  const touch = event.touches[0];
+  const boundingRect = imageppd.getBoundingClientRect();
+
+  isDraggingd = true;
+
+  // Store the initial touch coordinates as properties on the image element
+  imageppd.initialTouchX = touch.clientX;
+  imageppd.initialTouchY = touch.clientY;
+
+  // Calculate the offset of the touch point relative to the image
+  imageppd.offsetX = touch.clientX - boundingRect.left;
+  imageppd.offsetY = touch.clientY - boundingRect.top;
+
+  // Add a touchmove and touchend event listener
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchMove(event) {
+  console.log('Touchmove event triggered');
+  const touch = event.touches[0];
+
+  if (isDraggingd) {
+      // Use the stored initial touch coordinates to calculate the image position
+      const imageX = touch.clientX - imageppd.offsetX;
+      const imageY = touch.clientY - imageppd.offsetY;
+
+      // Update the position of the image based on touch position
+      imageppd.style.left = imageX + 'px';
+      imageppd.style.top = imageY + 'px';
+
+      const imageRect = imageppd.getBoundingClientRect();
+      const canvasRect = canvassdrop4.getBoundingClientRect();
+   
+
+      if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
+        // Change the canvas color when the image touches it
+        canvassdrop4.style.backgroundColor = '#7FA9FF';
+
+      }
+  }
+}
+
+function handleTouchEnd() {
+  console.log('Touchend event triggered');
+  isDraggingd = false;
+
+  // Remove the touchmove and touchend event listeners when dragging is complete
+  window.removeEventListener('touchmove', handleTouchMove);
+  window.removeEventListener('touchend', handleTouchEnd);
+}
+
+imageppd.addEventListener('touchstart', handleTouchStart);
+
 
 }
 
