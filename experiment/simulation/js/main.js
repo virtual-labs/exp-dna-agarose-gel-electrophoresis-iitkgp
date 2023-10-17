@@ -93,7 +93,7 @@ function sample_prep() {
 
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
-  window.scrollBy(0,600);
+  window.scrollBy(0,500);
   //document.getElementById("buffertext").style.display = "none";
 } 
 
