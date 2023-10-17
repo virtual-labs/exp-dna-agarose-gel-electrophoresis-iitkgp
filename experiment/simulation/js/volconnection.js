@@ -617,7 +617,7 @@ jsPlumb.ready(function () {
 
     document.getElementById('myCanvasstp').addEventListener('click', function () {
         // Delete all connections
-        instance.deleteEveryConnection();
+        //instance.deleteEveryConnection();
 
         document.getElementById("viewsample").disabled=false;
         document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
