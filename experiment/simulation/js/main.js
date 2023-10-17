@@ -72,6 +72,7 @@ function sample_prep() {
       document.getElementById("sampleprep").disabled = true;
       document.getElementById("bufferload").disabled = false;
       document.getElementById('loadsamplea').style.pointerEvents="auto";
+      window.scrollBy(0,600);
     }
 
     else {
@@ -92,6 +93,7 @@ function sample_prep() {
 
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
+  window.scrollBy(0,600);
   //document.getElementById("buffertext").style.display = "none";
 } 
 
@@ -143,7 +145,7 @@ function handleMouseDown(event) {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top &&imageRect.left <= canvasRect.left + canvasRect.width &&imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop1.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
+        //document.getElementById("gelrun").disabled = false;
       } 
      
       
@@ -446,7 +448,7 @@ function handleMouseDownc(event) {
         // Change the canvas color when the image touches it
         
         canvassdrop3.style.backgroundColor = '#7FA9FF';
-        document.getElementById("gelrun").disabled = false;
+        //document.getElementById("gelrun").disabled = false;
      
       }
     
@@ -935,7 +937,7 @@ function addbuffer() {
   requestAnimationFrame(loops4);
 
   //document.getElementById("sampleload").disabled = true;
-  window.scrollBy(0, 300);
+  window.scrollBy(0, 500);
   
 }
 
