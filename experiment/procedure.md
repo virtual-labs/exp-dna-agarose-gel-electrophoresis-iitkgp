@@ -52,7 +52,7 @@ small DNA fragments.
 
 4. Visualization under UV light
 
-After the gel is run, it is examined under UV light. The DNA bands can be visualized due
+   1. After the gel is run, it is examined under UV light. The DNA bands can be visualized due
 to the increase in fluorescence of the ethidium bromide upon binding to the DNA.
     <div align="center">
      <img src="images/AGE_6.png" width="20%">

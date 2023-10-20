@@ -8,7 +8,7 @@ Agarose gel electrophoresis is used to resolve DNA fragments on the basis of the
 
 ## Theory
 
-Gel electrophoresis is the standard lab procedure for separating DNA by size (length is measured by base pairs) for visualization and purification. It is one of the most widely-used techniques in biochemistry and molecular biology. Agarose is a linear polymer composed of alternative residues of D-galactose and 3,6-anhydro-L-galactopyranose joined by α (1→3) and β (1→4) glycosidic linkages as shown in the figure below. It is extracted and purified from seaweed (red algae).. Agarose forms a gel matrix of agarose molecules which has channels and pores through which molecules are able to pass. 
+Gel electrophoresis is the standard lab procedure for separating DNA by size (length is measured by base pairs) for visualization and purification. It is one of the most widely-used techniques in biochemistry and molecular biology. Agarose is a linear polymer composed of alternative residues of D-galactose and 3,6-anhydro-L-galactopyranose joined by α (1→3) and β (1→4) glycosidic linkages as shown in the figure below. It is extracted and purified from seaweed (red algae). Agarose forms a gel matrix of agarose molecules which has channels and pores through which molecules are able to pass. 
 
 <div align="center">
 <img src="images/Gel.png" width="50%">
@@ -41,6 +41,6 @@ Since DNA is colourless, the loaded sample need to be tracked. This is achieved 
 - TAE 
 - Agarose
 - Ethidium bromide (EtBr)
-- 6X gel loading buffer,
-- DNA sample,
+- 6X gel loading buffer
+- DNA sample
 - DNA ladder
