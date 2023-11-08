@@ -2,37 +2,123 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Which of the following method is commonly used for separation of DNA by electrophoresis? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Agarose- horizontal",
+        "b": "PAGE- vertical",
+        "c": "Agarose- vertical",
+        "d": "PAGE- horizontal"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. What is the criterion for the movement of DNA fragments on agarose gel during gel electrophoresis?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The larger the fragment size, the farther it moves",
+        "b": "The smaller the fragment size, the farther it moves",
+        "c": "Positively charged fragments move to farther end",
+        "d": "Negatively charged fragments do not move"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. For the preparation of agarose gel in electrophoresis, agarose is dissolved in",
+      "answers": {
+        "a": "TAE buffer",
+        "b": "Distilled water",
+        "c": "Oil based emulsion",
+        "d": "Alcohol"
       },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What applications can gel electrophoresis be used for?",
+      "answers": {
+        "a": "Parental Testing",
+        "b": "Criminal Investigations",
+        "c": "Comparing relationships of species",
+        "d": "All of the above"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The separated DNA fragments can be visualized after staining with _____, followed by exposure with _____.",
+      "answers": {
+        "a": "β-galactosidase, gamma radiation",
+        "b": "Ethidium bromide, UV radiation",
+        "c": "β-galactosidase, UV radiation",
+        "d": "Ethidium bromide, gamma radiation"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. The type and density of the gel are important because",
+      "answers": {
+        "a": "Some DNA nucleotides may be lost due to chemical reactions with the gel ",
+        "b": "They may cause some DNA molecules to replicate",
+        "c": "They influence the rate of migration of the fragments ",
+        "d": "Some DNA molecules may sink to the bottom and not migrate"
+      },
+      
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Identify the correct sequence of events of agarose gel electrophoresis.",
+      "answers": {
+        "a": "Gel preparation → casting the gel → forming wells using comb → cooling the gel → removing comb → loading sample in the wells → turning on power → eluting band to get gene of interest",
+        "b": "Gel preparation → casting the gel → cooling the gel → inserting combs into well → removing comb → turning on power → loading sample in the wells → eluting band to get gene of interest",
+        "c": "Gel preparation → casting the gel → cooling the gel → inserting combs into well → removing comb → loading sample in the wells → turning on power → eluting band to get gene of interest",
+        "d": "Gel preparation → casting the gel → cooling the gel → inserting combs into well → loading sample in the wells → removing comb → turning on power → eluting band to get gene of interest"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. Why do the fragments of DNA in gel electrophoresis travel away from the negative electrode?",
+      "answers": {
+        "a": "DNA is negatively charged so is attracted to the positive end of the unit",
+        "b": "DNA is positively charged so is attracted to the negative end of the unit",
+        "c": "The agarose gel is negatively charged",
+        "d": "The agarose gel is positively charged"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. The electrophoresis apparatus consists of:",
+      "answers": {
+        "a": "Electrophoresis unit and DNA separator",
+        "b": "Gel, power pack and buffer chamber",
+        "c": "Electrophoresis unit and buffer chamber",
+        "d": "Power pack and Electrophoresis unit"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. What is the purpose of loading a DNA ladder in agarose gel electrophoresis?",
+      "answers": {
+        "a": "To measure the size of DNA molecules",
+        "b": "To provide a reference for estimating migration distance",
+        "c": "To separate the DNA molecules",
+        "d": "To determine the charge of DNA molecules"
+      },
+      
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

@@ -1,24 +1,39 @@
 ## Introduction
 
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b>School of Bioscience
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Experimental Biochemistry
+<b> Experiment|     <b> DNA analysis by agarose gel electrophoresis and experiment number 3
 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
+Agarose gel electrophoresis is used to resolve DNA fragments on the basis of their molecular weight on an agarose gel. The smaller sized fragments migrate faster than larger ones; the distance migrated on the gel varies inversely with the logarithm of the molecular weight. In this experiment, we have three main objectives listed as follows:
+1. Preparation of an agarose gel
+2. Running an agarose gel 
+3. Visualization of DNA 
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+### Subject Matter Experts
+
+<b>Name of Developer | <b> Prof. Soumya De 
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  somde@iitkgp.ac.in
+<b> Department |  School of Bioscience
+
+<b>Name of Developer | <b>  Prof. Dibyendu Samanta 
+:--|:--|
+<b> Institute | <b>  IIT Kharagpur
+<b> Email id|     <b>  dibyendu.samanta@iitkgp.ac.in
+<b> Department |  School of Bioscience
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+SrNo | Name  | Designation | Department| Institute| 
+:--|:--|:--|:--|:--|
+1 | **Prakriti Dhang** | Developer and Integration Engineer| Department of Mechanical Engineering | IIT Kharagpur |
+2 | **Puja Kumari** | Research Scholar | School of Bioscience | IIT Kharagpur |
+
