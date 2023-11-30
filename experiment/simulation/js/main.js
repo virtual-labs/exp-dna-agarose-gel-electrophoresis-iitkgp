@@ -43,16 +43,21 @@ function gel_prep() {
 
     // Check if the selected values are correct
     if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer") && selectedValues.includes("Ethidium Bromide (EtBr)")) {
-      alert("Correct component(s) is(are) selected.");
-
+     // alert("Correct component(s) is(are) selected.");
+      $('#voltalertmessage').modal('show');
+      $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("gelprep").disabled = true;
       document.getElementById("agel").style.display = "block";
     } else {
-      alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
+      //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
+      $('#voltalertmessage').modal('show');
+      $('.modal-body').text('Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr).');
     }
   }
   else {
-    alert("Three components are require for preparing gel.");
+    //alert("Three components are require for preparing gel.");
+    $('#voltalertmessage').modal('show');
+    $('.modal-body').text('Three components are require for preparing gel.');
   }
 }
 
@@ -67,7 +72,8 @@ function sample_prep() {
 
     // Check if the selected values are correct
     if (selectedValues.includes("DNA") && selectedValues.includes("Dye containing bromophenol blue") ) {
-      alert("Correct component(s) is(are) selected.");
+      $('#voltalertmessage').modal('show');
+      $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("tube").style.display = "block";
       document.getElementById("sampleprep").disabled = true;
       document.getElementById("bufferload").disabled = false;
@@ -76,11 +82,15 @@ function sample_prep() {
     }
 
     else {
-      alert(" Incorrect component(s) is/are selected. \n The correct components are DNA and DNA Dye containing bromophenol blue.");
+      //alert(" Incorrect component(s) is/are selected. \n The correct components are DNA and DNA Dye containing bromophenol blue.");
+      $('#voltalertmessage').modal('show');
+      $('.modal-body').text('Incorrect component(s) is/are selected. \n The correct components are DNA and DNA Dye containing bromophenol blue.');
     }
   }
   else {
-    alert("DNA and Dye containing bromophenol blue  are the require component to prepare sample.");
+     $('#voltalertmessage').modal('show');
+      $('.modal-body').text('DNA and Dye containing bromophenol blue  are the require component to prepare sample.');
+   // alert("DNA and Dye containing bromophenol blue  are the require component to prepare sample.");
   }
 
 
@@ -1071,10 +1081,14 @@ function runninggel() {
 
   
   if (volt == null) {
-    alert("Give input  between 50V and 100 V.")
+    $('#voltalertmessage').modal('show');
+    $('.modal-body').text('Give input between 50V and 100 V.');
+    //alert("Give input  between 50V and 100 V.")
   }
   else if((volt <49) || (volt>101)) {
-   alert("Give input  between 50V and 100 V.")
+   //alert("Give input  between 50V and 100 V.")
+   $('#voltalertmessage').modal('show');
+   $('.modal-body').text('Give input between 50V and 100 V.');
   }
 else{
   gelrun();
@@ -1083,6 +1097,11 @@ else{
 
 }
 
+
+function delvolttimer() {
+  document.getElementById("voltalertmessage").style.display = "none";
+  document.getElementById("voltalertmessage").classList.remove("show");
+}
 
 var imgobj1 = null;
 var imgobj2 = null;

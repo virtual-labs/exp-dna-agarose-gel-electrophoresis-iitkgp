@@ -579,12 +579,14 @@ jsPlumb.ready(function () {
 
 
 
+            $('#voltalertmessage').modal('show');
+            $('.modal-body').text('RIGHT CONNECTION.');
 
-
-            alert("RIGHT CONNECTION.");
+           // alert("RIGHT CONNECTION.");
             //document.getElementById("samplerun").disabled = true;
         } else {
-            alert("WRONG CONNECTION");
+            $('#voltalertmessage').modal('show');
+            $('.modal-body').text('WRONG CONNECTION.');
             const canvas = document.getElementById('textvoltimer');
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
