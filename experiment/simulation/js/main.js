@@ -1082,13 +1082,13 @@ function runninggel() {
   
   if (volt == null) {
     $('#voltalertmessage').modal('show');
-    $('.modal-body').text('Give input between 50V and 100 V.');
+    $('.modal-body').text('Give input voltage between 50V and 100 V.');
     //alert("Give input  between 50V and 100 V.")
   }
   else if((volt <49) || (volt>101)) {
    //alert("Give input  between 50V and 100 V.")
    $('#voltalertmessage').modal('show');
-   $('.modal-body').text('Give input between 50V and 100 V.');
+   $('.modal-body').text('Give input voltage between 50V and 100 V.');
   }
 else{
   gelrun();
