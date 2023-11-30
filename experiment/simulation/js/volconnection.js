@@ -580,13 +580,13 @@ jsPlumb.ready(function () {
 
 
             $('#voltalertmessage').modal('show');
-            $('.modal-body').text('RIGHT CONNECTION.');
+            $('.modal-body').text('Connection is correct.');
 
            // alert("RIGHT CONNECTION.");
             //document.getElementById("samplerun").disabled = true;
         } else {
             $('#voltalertmessage').modal('show');
-            $('.modal-body').text('WRONG CONNECTION.');
+            $('.modal-body').text('Connection is wrong.');
             const canvas = document.getElementById('textvoltimer');
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
