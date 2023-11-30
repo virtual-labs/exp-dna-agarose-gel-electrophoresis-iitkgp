@@ -157,11 +157,11 @@ jsPlumb.ready(function () {
         //delete clicked connection
         instance.bind("click", function (connection, originalEvent) {
 
-            if ((((connection.sourceId == 'ld1' && (connection.targetId == 'ld3' || connection.targetId == 'ld5' || connection.targetId == 'ld7' || connection.targetId == 'ld9')) || (connection.sourceId == 'ld3' && connection.targetId == 'ld1')) && alert("Delete negative connection ?"))) {
+            if ((((connection.sourceId == 'ld1' && (connection.targetId == 'ld3' || connection.targetId == 'ld5' || connection.targetId == 'ld7' || connection.targetId == 'ld9')) || (connection.sourceId == 'ld3' && connection.targetId == 'ld1')) )) {
                 instance.deleteConnection(connection);
 
             }
-            else if ((((connection.sourceId == 'ld2' && (connection.targetId == 'ld4' || connection.targetId == 'ld6' || connection.targetId == 'ld8' || connection.targetId == 'ld10')) || (connection.sourceId == 'ld4' && connection.targetId == 'ld2')) && alert("Delete positive connection?"))) {
+            else if ((((connection.sourceId == 'ld2' && (connection.targetId == 'ld4' || connection.targetId == 'ld6' || connection.targetId == 'ld8' || connection.targetId == 'ld10')) || (connection.sourceId == 'ld4' && connection.targetId == 'ld2')) )) {
                 instance.deleteConnection(connection);
 
             }
