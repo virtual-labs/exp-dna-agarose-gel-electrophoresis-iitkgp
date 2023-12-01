@@ -70,22 +70,22 @@ Developer: Prakriti Dhang
 
 							<li> Now, click on "Sample preparation" button after selecting the components.
 							</li>
-							<li> Next Click buffer from "Sample Loading" dropdown button, then click on "Buffer" bottle image.
-								Buffer will submerge the gel.
+							<li> Next Click "Add Buffer" button, and on "Buffer" bottle image to immerse the gel with the buffer.
+								
 							</li>
 							<li>Now, Click on the dropdown and select "Load Sample A". Click on the pipette A and drag
 								the pipette near the lane A in the electrophorersis chamber. Repeat for sample B, C, and D.</li>
-							<li> Click on "Setting up Electrophoresis" button. Next to connect, click and drag the negative of
+							<li> Click on "Setting up Electrophoresis" button. Next to connect, click and drag the negative electrode of
 								electrophorersis
-								chamber to negative of voltage meter. To connect, click and drag
-								positive  of electrophorersis chamber to positive of voltage meter. (To delete
+								chamber to negative electrode of power supply. To connect, click and drag
+								positive electrode  of electrophorersis chamber to positive electrode of power supply. (To delete
 								the connection click on the wire.)
 
 							</li>
-							<li> Now click on "V" button of the voltage meter to switch on the power. And "+" sign button of the voltage meter to set the voltage between 50 V and  100 V.</li>
+							<li> Now click on "V" button of the power supply to switch ON the power. And "+" sign button of the power supply to set the voltage between 50 V and  100 V.</li>
 							<li> Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
-							<li>Click on the stop icon button to switch off the power.</li>
+							<li>Click on the stop icon button to switch OFF the power.</li>
 							<li> Click on the gel. The gel will be placed in the UV machine.</li>
 							<li>Next Click on "Visualization
 								of the DNA under UV light" to turn on UV light</li>
@@ -295,10 +295,10 @@ Developer: Prakriti Dhang
 					</div>
 					<div class=""> -->
 					<div class="img-container">
-						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid">
+						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid" data-toggle="tooltip" data-placement="top" title="Casting tray">
 						<!-- Agarose gel case-->
 						<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()"
-							style="cursor: pointer; display: none;"> <!--draggable="true" ondragstart="drag(event)"-->
+							style="cursor: pointer; display: none;" data-toggle="tooltip" data-placement="top" title="Agarose gel"> <!--draggable="true" ondragstart="drag(event)"-->
 						<!-- Agarose gel -->
 
 						<img src="./images/tubesabcd.png" id="tube" class="image-fluid" style=" display: none;">
@@ -318,10 +318,10 @@ Developer: Prakriti Dhang
 						<img src="./images/buffer.png" id="buffer" class="image-fluid "
 							style="cursor: pointer; display:none;" onclick="addbuffer()"> <!-- buffer-->
 						<!-- <canvas id="buffertext" style="border:1px solid #a1a0a0;"></canvas> -->
-						<img src="./images/voltagetimer.png" id="voltage" class="image-fluid"> <!-- voltage timer -->
+						<img src="./images/voltagetimer.png" id="voltage" class="image-fluid" data-toggle="tooltip" data-placement="top" title="Power supply"> <!-- voltage timer -->
 
 
-						<img src="./images/case.png" id="case" class="image-fluid"> <!-- case -->
+						<img src="./images/case.png" id="case" class="image-fluid" data-toggle="tooltip" data-placement="top" title="Top view of Electrophoresis chamber"> <!-- case -->
 						<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"></canvas>
 						<!--ondrop="drop(event)" ondragover="allowDrop(event)"-->
 
@@ -335,9 +335,9 @@ Developer: Prakriti Dhang
 						<img src="./images/posdot.png" id="vpositivedot" class="image-fluid">  -->
 
 
-						<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid"> <!-- sideviewcase-->
+						<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid" data-toggle="tooltip" data-placement="top" title="Side view of Electrophoresis chamber"> <!-- sideviewcase-->
 
-						<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid "> <!-- uv machine -->
+						<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid"> <!-- uv machine -->
 
 						<canvas id="myCanvas2" width="21" height="21" style="border:0px solid #535252;"
 							ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
@@ -671,7 +671,9 @@ Developer: Prakriti Dhang
 			// Canvas not supported, provide a fallback or error message
 			console.log('Canvas is not supported in this browser.');
 		} */
-
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 	</script>
 </body>
 
