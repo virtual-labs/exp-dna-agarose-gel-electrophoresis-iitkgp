@@ -78,7 +78,7 @@ small DNA fragments.
 to the increase in fluorescence of the ethidium bromide upon binding to the DNA.
 
 <div align="center">
-     <img src="images/uv.png" class="img-fluid">
+     <img src="images/uvmachine.png" class="img-fluid">
     </div>
 
  <!--div align="center">

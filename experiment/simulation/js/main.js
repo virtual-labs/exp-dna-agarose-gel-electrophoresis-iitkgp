@@ -565,7 +565,7 @@ imageppc.addEventListener('touchstart', handleTouchStart);
 }
 
 function sample_loadD(){
-  document.getElementById("gelrun").disabled = false;
+  document.getElementById("coverele").disabled = false;
   document.getElementById("peptited").style.display="block";
   document.getElementById("peptiteb").style.display="none";
   document.getElementById("peptitec").style.display="none";
@@ -1053,7 +1053,13 @@ function voltdec() {
 
 }
 
-
+function coverelecham(){
+  document.getElementById("gelrun").disabled = false;
+  document.getElementById("casecoverimg").style.display = "block";
+  document.getElementById("coverele").disabled = true;
+  document.getElementById("sampleload").disabled = true;
+  scrollBy(0,700);
+}
 
 /**************************************************** On click running of gel button voltmer buttons get activated **********************************************************************************/
 
@@ -1068,9 +1074,9 @@ function run_gel() {
   document.getElementById("peptitea").style.display="none";
   document.getElementById("peptited").style.display="none";
   document.getElementById("gelrun").disabled = true;
+  document.getElementById("casecoverimg").style.display = "block";
 
-
-  document.getElementById("sampleload").disabled = true;
+  
 }
 
 
@@ -1091,8 +1097,9 @@ function runninggel() {
    $('.modal-body').text('Give input voltage between 50V and 100 V.');
   }
 else{
-  gelrun();
   document.getElementById("myCanvasstp").style.display = "block";
+ 
+  gelrun();
 }
 
 }
