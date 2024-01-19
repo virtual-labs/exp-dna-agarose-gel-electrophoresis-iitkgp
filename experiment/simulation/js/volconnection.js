@@ -620,7 +620,7 @@ jsPlumb.ready(function () {
     document.getElementById('myCanvasstp').addEventListener('click', function () {
         // Delete all connections
         //instance.deleteEveryConnection();
-
+        document.getElementById("casecoverimg").style.display = "none";
         document.getElementById("viewsample").disabled=false;
         document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
         const canvas = document.getElementById('textvoltimer');

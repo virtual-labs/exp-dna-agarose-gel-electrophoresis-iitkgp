@@ -50,7 +50,7 @@ Developer: Prakriti Dhang
 
 
 		<div class="row ">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Instructions
@@ -77,6 +77,9 @@ Developer: Prakriti Dhang
 							<li>Now, Click on the dropdown and select "Load Sample A". Click on the pipette A and drag
 								the pipette near the lane (or well) A in the electrophorersis chamber. Repeat for sample
 								B, C, and D.</li>
+							<li>
+								Click on "Cover the electrophorersis chamber" button.
+							</li>
 							<li> Click on "Setting up Electrophoresis" button. Next to connect, click and drag the
 								negative connector of
 								electrophorersis
@@ -90,7 +93,7 @@ Developer: Prakriti Dhang
 								of the power supply to set the voltage between 50 V and 100 V.</li>
 							<li> Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
-							<li>Click on the stop icon button to switch OFF the power.</li>
+							<li>Click on the stop icon button to switch OFF the power. </li>
 							<li> Click on the gel. The gel will be placed in the UV machine.</li>
 							<li>Next Click on "Visualization
 								of the DNA under UV light" to turn on UV light</li>
@@ -106,7 +109,7 @@ Developer: Prakriti Dhang
 			<!--/div>
 
 		<div class="row "-->
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">
 						Input Panels
@@ -130,21 +133,21 @@ Developer: Prakriti Dhang
 								<td>
 									Step 1
 								</td>
-								<td >
+								<td>
 									<h6> Select components for gel preparation:</h6>
 									<div class="form-check form-check-inline ">
-										<input class="form-check-input " type="checkbox" name="gelprep" value="Agarose powder"
-											id="g1" disabled>
+										<input class="form-check-input " type="checkbox" name="gelprep"
+											value="Agarose powder" id="g1" disabled>
 										<label class="form-check-label" for="g1">
 											Agarose powder
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input " type="checkbox" name="gelprep" value="TAE/TBE Buffer"
-											id="g2" disabled>
+										<input class="form-check-input " type="checkbox" name="gelprep"
+											value="TAE/TBE Buffer" id="g2" disabled>
 										<label class="form-check-label" for="g2">
 											TAE/TBE Buffer
-			
+
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
@@ -155,46 +158,47 @@ Developer: Prakriti Dhang
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input " type="checkbox" name="gelprep" value="Distilled water"
-											id="g4" disabled>
+										<input class="form-check-input " type="checkbox" name="gelprep"
+											value="Distilled water" id="g4" disabled>
 										<label class="form-check-label" for="g4">
 											Distilled water
-			
+
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input " type="checkbox" name="gelprep" value="β-galactosidase"
-											id="g5" disabled>
+										<input class="form-check-input " type="checkbox" name="gelprep"
+											value="β-galactosidase" id="g5" disabled>
 										<label class="form-check-label" for="g5">
 											β-galactosidase
-			
+
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input " type="checkbox" name="gelprep" value="Gelatin powder"
-											id="g6" disabled>
+										<input class="form-check-input " type="checkbox" name="gelprep"
+											value="Gelatin powder" id="g6" disabled>
 										<label class="form-check-label" for="g6">
 											Gelatin powder
-			
+
 										</label>
 									</div>
-								
-								<div class="col-md-4 p-2" >
-			
-									<button class="btn btn-primary " type="button" id="gelprep" onclick="gel_prep()" disabled>Gel
-										Preparation</button>
-								</div>
+
+									<div class="col-md-4 p-2">
+
+										<button class="btn btn-primary " type="button" id="gelprep" onclick="gel_prep()"
+											disabled>Gel
+											Preparation</button>
+									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									Step 2
 								</td>
-								<td >
+								<td>
 									<h6> Select the components for sample B, C and D.</h6>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA" id="s1"
-											disabled>
+										<input class="form-check-input" type="checkbox" name="sampleprep" value="DNA"
+											id="s1" disabled>
 										<label class="form-check-label" for="s1">
 											DNA
 										</label>
@@ -206,34 +210,34 @@ Developer: Prakriti Dhang
 											Dye containing bromophenol blue
 										</label>
 									</div>
-			
+
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" name="sampleprep" value="Ethidum bromide"
-											id="s4" disabled>
+										<input class="form-check-input" type="checkbox" name="sampleprep"
+											value="Ethidum bromide" id="s4" disabled>
 										<label class="form-check-label" for="s4">
 											Ethidum bromide
-			
-			
+
+
 										</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" name="sampleprep" value="Aniline blue dye"
-											id="s5" disabled>
+										<input class="form-check-input" type="checkbox" name="sampleprep"
+											value="Aniline blue dye" id="s5" disabled>
 										<label class="form-check-label" for="s5">
 											Aniline blue dye
-			
+
 										</label>
 									</div>
-			
-			
-			
-							
-								<h6 class="p-2"> Note: DNA ladder is in sample A. </h6>
-								<div class="col-md-4 p-2" >
-									<button class="btn btn-primary" type="button" id="sampleprep" onclick="sample_prep()"
-										disabled>Sample
-										Preparation</button>
-								</div>
+
+
+
+
+									<h6 class="p-2"> Note: DNA ladder is in sample A. </h6>
+									<div class="col-md-4 p-2">
+										<button class="btn btn-primary" type="button" id="sampleprep"
+											onclick="sample_prep()" disabled>Sample
+											Preparation</button>
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -242,31 +246,31 @@ Developer: Prakriti Dhang
 								</td>
 								<td>
 									<button class="btn btn-primary" type="button" id="bufferload" disabled
-									onclick="buffer_load()">Add Buffer
-								</button>
-								
-		
-								<div class="dropdown div-inline">
-									<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
-										data-bs-toggle="dropdown" disabled>
-										Sample Loading
+										onclick="buffer_load()">Add Buffer
 									</button>
-									<ul class="dropdown-menu">
-		
-										<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
-												style="cursor: pointer;">Load Sample A
-											</a></li>
-										<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
-												style="cursor: pointer;">Load Sample B
-											</a></li>
-										<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
-												style="cursor: pointer;">Load Sample C
-											</a></li>
-										<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()"
-												style="cursor: pointer;">Load Sample D
-											</a></li>
-									</ul>
-								</div>
+
+
+									<div class="dropdown div-inline">
+										<button class="btn btn-primary dropdown-toggle" id="sampleload" type="button"
+											data-bs-toggle="dropdown" disabled>
+											Sample Loading
+										</button>
+										<ul class="dropdown-menu">
+
+											<li><a class="dropdown-item" id="loadsamplea" onclick="sample_loadA()"
+													style="cursor: pointer;">Load Sample A
+												</a></li>
+											<li><a class="dropdown-item" id="loadsampleb" onclick="sample_loadB()"
+													style="cursor: pointer;">Load Sample B
+												</a></li>
+											<li><a class="dropdown-item" id="loadsamplec" onclick="sample_loadC()"
+													style="cursor: pointer;">Load Sample C
+												</a></li>
+											<li><a class="dropdown-item" id="loadsampled" onclick="sample_loadD()"
+													style="cursor: pointer;">Load Sample D
+												</a></li>
+										</ul>
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -274,17 +278,21 @@ Developer: Prakriti Dhang
 									Step 4
 								</td>
 								<td>
-									<button class="btn btn-primary" type="button" id="gelrun" disabled onclick="run_gel()">Setting
+									<button class="btn btn-primary" type="button" id="coverele" disabled
+										onclick="coverelecham()">Cover the electrophorersis chamber</button>
+
+									<button class="btn btn-primary" type="button" id="gelrun" disabled
+										onclick="run_gel()">Setting
 										up Electrophoresis </button>
-								
-									<button class="btn btn-primary" type="button" id="viewsample" onclick="view_sample_UVlight()"
-										disabled>Visualization
+
+									<button class="btn btn-primary" type="button" id="viewsample"
+										onclick="view_sample_UVlight()" disabled>Visualization
 										under UV light</button>
 								</td>
 							</tr>
 						</table>
 					</div>
-						<!--
+					<!--
 						<button class="btn btn-success " type="button" id="start" data-bs-toggle="modal"
 							data-bs-target="#exampleModal">
 							Start the Experiment</button>
@@ -445,137 +453,140 @@ Developer: Prakriti Dhang
 
 
 
-					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
 
-		<div class="row ">
-			<div class="col-md-12">
-				<div class="card card-body border border-0">
-					<!-- <div class="card-header fs-5 fw-bold">
+	<div class="row ">
+		<div class="col-md-12">
+			<div class="card card-body border border-0">
+				<!-- <div class="card-header fs-5 fw-bold">
 						Experimental Setup
 					</div>
 					<div class=""> -->
-					<div class="img-container">
-						<img src="./images/agel-making-case.png" id="agelcase" class="image-fluid" data-toggle="tooltip"
-							data-placement="top" title="Casting tray">
-						<!-- Agarose gel case-->
-						<img src="./images/agarose gel.png" id="agel" class="image-fluid" onclick="moveImage()"
-							style="cursor: pointer; display: none;" data-toggle="tooltip" data-placement="top"
-							title="Agarose gel"> <!--draggable="true" ondragstart="drag(event)"-->
-						<!-- Agarose gel -->
+				<div class="img-container">
+					<img src="./images/gel-making-case.png" id="agelcase" data-toggle="tooltip" data-placement="top"
+						title="Casting tray">
+					<img src="./images/comb.png" id="comb" data-toggle="tooltip" data-placement="top" title="Comb">
+					<!-- Agarose gel case-->
+					<img src="./images/agarose gel.png" id="agel" onclick="moveImage()"
+						style="cursor: pointer; display: none;" data-toggle="tooltip" data-placement="top"
+						title="Agarose gel"> <!--draggable="true" ondragstart="drag(event)"-->
+					<!-- Agarose gel -->
 
-						<img src="./images/tubesabcd.png" id="tube" class="image-fluid" style=" display: none;">
-						<!-- Samples-->
-						<!-- <img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="display: none;">
+					<img src="./images/tubesabcd.png" id="tube" style=" display: none;">
+					<!-- Samples-->
+					<!-- <img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="display: none;">
  -->
-						<img src="./images/peptitea.png" id="peptitea" class="image-fluid " style="display: none;">
-						<img src="./images/peptiteb.png" id="peptiteb" class="image-fluid " style="display: none;">
+					<img src="./images/peptitea.png" id="peptitea" style="display: none;">
+					<img src="./images/peptiteb.png" id="peptiteb" style="display: none;">
 
-						<img src="./images/peptitec.png" id="peptitec" class="image-fluid " style="display: none;">
+					<img src="./images/peptitec.png" id="peptitec" style="display: none;">
 
-						<img src="./images/peptited.png" id="peptited" class="image-fluid " style="display: none;">
-
-
-
-						<!-- peptite-->
-						<img src="./images/buffer.png" id="buffer" class="image-fluid "
-							style="cursor: pointer; display:none;" onclick="addbuffer()"> <!-- buffer-->
-						<!-- <canvas id="buffertext" style="border:1px solid #a1a0a0;"></canvas> -->
-						<img src="./images/voltagetimer.png" id="voltage" class="image-fluid" data-toggle="tooltip"
-							data-placement="top" title="Power supply"> <!-- voltage timer -->
+					<img src="./images/peptited.png" id="peptited" style="display: none;">
 
 
-						<img src="./images/case.png" id="case" class="image-fluid" data-toggle="tooltip"
-							data-placement="top" title="Top view of Electrophoresis chamber"> <!-- case -->
-						<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"></canvas>
-						<!--ondrop="drop(event)" ondragover="allowDrop(event)"-->
 
-						<img src="./images/agarosegel1.png" id="agel1" class="image-fluid" onclick="moveImage1()"
-							style="cursor: pointer; display:none;"> <!-- Agarose gel -->
+					<!-- peptite-->
+					<img src="./images/buffer.png" id="buffer" style="cursor: pointer; display:none;"
+						onclick="addbuffer()"> <!-- buffer-->
+					<!-- <canvas id="buffertext" style="border:1px solid #a1a0a0;"></canvas> -->
+					<img src="./images/voltagetimer.png" id="voltage" data-toggle="tooltip" data-placement="top"
+						title="Power supply"> <!-- voltage timer -->
 
-						<!-- <img src="./images/negvedot.png" id="negativedot" class="image-fluid"> 
+					<img src="./images/casecover.png" id="casecoverimg" class="" data-toggle="tooltip"
+						data-placement="top" title="Cover of Electrophoresis chamber">
+
+					<img src="./images/case.png" id="case" data-toggle="tooltip" data-placement="top"
+						title="Top view of Electrophoresis chamber"> <!-- case -->
+					<canvas id="myCanvas1" width="21" height="18" style="border:0px solid #535252;"></canvas>
+					<!--ondrop="drop(event)" ondragover="allowDrop(event)"-->
+
+					<img src="./images/agarosegel1.png" id="agel1" onclick="moveImage1()"
+						style="cursor: pointer; display:none;"> <!-- Agarose gel -->
+
+					<!-- <img src="./images/negvedot.png" id="negativedot" class="image-fluid"> 
 						<img src="./images/posdot.png" id="positivedot" class="image-fluid"> 
 
 						<img src="./images/negvedot.png" id="vnegativedot" class="image-fluid"> 
 						<img src="./images/posdot.png" id="vpositivedot" class="image-fluid">  -->
 
 
-						<img src="./images/sideviewcase.png" id="sideviewcase" class="image-fluid" data-toggle="tooltip"
-							data-placement="top" title="Side view of Electrophoresis chamber"> <!-- sideviewcase-->
+					<img src="./images/sideviewcase.png" id="sideviewcase" data-toggle="tooltip" data-placement="top"
+						title="Side view of Electrophoresis chamber"> <!-- sideviewcase-->
 
-						<img src="./images/uv-machine.png" id="uvmachine" class="image-fluid" data-toggle="tooltip"
-							data-placement="top" title="UV transilluminator machine"> <!-- uv machine -->
+					<img src="./images/uv-machine.png" id="uvmachine" data-toggle="tooltip" data-placement="top"
+						title="UV transilluminator machine"> <!-- uv machine -->
 
-						<canvas id="myCanvas2" width="21" height="21" style="border:0px solid #535252;"
-							ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
+					<canvas id="myCanvas2" width="21" height="21" style="border:0px solid #535252;"
+						ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
 
-						<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvasuv1" width="21" height="21" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvasuv2" width="21" height="21" style="border:0px solid #535252;"></canvas>
 
-						<canvas id="myCanvass1" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass2" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass3" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass4" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass1" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass2" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass3" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass4" style="border:0px solid #535252;"></canvas>
 
-						<canvas id="myCanvass1A" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass2B" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass3C" style="border:0px solid #535252;"></canvas>
-						<canvas id="myCanvass4D" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass1A" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass2B" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass3C" style="border:0px solid #535252;"></canvas>
+					<canvas id="myCanvass4D" style="border:0px solid #535252;"></canvas>
 
-						<canvas id="myCanvasv1" style="border:0px solid #535252;" onclick="voltclick()"></canvas>
-						<canvas id="myCanvast1" style="border:0px solid #535252;" onclick="timerclick()"></canvas>
-						<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()"></canvas>
-						<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()"></canvas>
-						<canvas id="myCanvasrn" style="border:0px solid #535252;" onclick="runninggel()"></canvas>
-						<canvas id="myCanvasstp" style="border:0px solid #535252;" onclick="stopgel()"></canvas>
+					<canvas id="myCanvasv1" style="border:0px solid #535252;" onclick="voltclick()"></canvas>
+					<canvas id="myCanvast1" style="border:0px solid #535252;" onclick="timerclick()"></canvas>
+					<canvas id="myCanvasvp" style="border:0px solid #535252;" onclick="voltinc()"></canvas>
+					<canvas id="myCanvasvn" style="border:0px solid #535252;" onclick="voltdec()"></canvas>
+					<canvas id="myCanvasrn" style="border:0px solid #535252;" onclick="runninggel()"></canvas>
+					<canvas id="myCanvasstp" style="border:0px solid #535252;" onclick="stopgel()"></canvas>
 
 
-						<div id="ld1"></div> <!-- negitive side in case-->
-						<div id="ld2"></div> <!-- positive side in casse-->
-						<div id="ld3"></div> <!-- negitive side in voltmeter-->
-						<div id="ld4"></div> <!-- positive side in voltmeter-->
-						<div id="ld5"></div> <!-- negitive side in voltmeter-->
-						<div id="ld6"></div> <!-- positive side in voltmeter-->
+					<div id="ld1"></div> <!-- negitive side in case-->
+					<div id="ld2"></div> <!-- positive side in casse-->
+					<div id="ld3"></div> <!-- negitive side in voltmeter-->
+					<div id="ld4"></div> <!-- positive side in voltmeter-->
+					<div id="ld5"></div> <!-- negitive side in voltmeter-->
+					<div id="ld6"></div> <!-- positive side in voltmeter-->
 
-						<div id="ld7"></div> <!-- negitive side in voltmeter-->
-						<div id="ld8"></div> <!-- positive side in voltmeter-->
-						<div id="ld9"></div> <!-- negitive side in voltmeter-->
-						<div id="ld10"></div> <!-- positive side in voltmeter-->
+					<div id="ld7"></div> <!-- negitive side in voltmeter-->
+					<div id="ld8"></div> <!-- positive side in voltmeter-->
+					<div id="ld9"></div> <!-- negitive side in voltmeter-->
+					<div id="ld10"></div> <!-- positive side in voltmeter-->
 
-						<canvas id="textvoltimer" style="border:0px solid #535252;"></canvas>
-						<!--canvas id="sideviewcasetext" style="border:1px solid #535252;"></canvas-->
+					<canvas id="textvoltimer" style="border:0px solid #535252;"></canvas>
+					<!--canvas id="sideviewcasetext" style="border:1px solid #535252;"></canvas-->
 
-						<canvas id="sampledrop1" style="border:1px solid #a1a0a0;"></canvas>
-						<img src="./images/samplea.png" id="samplea" class="image-fluid">
+					<canvas id="sampledrop1" style="border:1px solid #a1a0a0;"></canvas>
+					<img src="./images/samplea.png" id="samplea" class="image-fluid">
 
-						<canvas id="sampledrop2" style="border:1px solid #a1a0a0;"></canvas>
-						<img src="./images/sampleb.png" id="sampleb" class="image-fluid">
-						<canvas id="sampledrop3" style="border:1px solid #a1a0a0;"></canvas>
-						<img src="./images/samplec.png" id="samplec" class="image-fluid">
-						<canvas id="sampledrop4" style="border:1px solid #a1a0a0;"></canvas>
-						<img src="./images/sampled.png" id="sampled" class="image-fluid">
+					<canvas id="sampledrop2" style="border:1px solid #a1a0a0;"></canvas>
+					<img src="./images/sampleb.png" id="sampleb" class="image-fluid">
+					<canvas id="sampledrop3" style="border:1px solid #a1a0a0;"></canvas>
+					<img src="./images/samplec.png" id="samplec" class="image-fluid">
+					<canvas id="sampledrop4" style="border:1px solid #a1a0a0;"></canvas>
+					<img src="./images/sampled.png" id="sampled" class="image-fluid">
 
-						<!-- <canvas id="sample1" style="border:0px solid #a1a0a0;"></canvas>
+					<!-- <canvas id="sample1" style="border:0px solid #a1a0a0;"></canvas>
 						<canvas id="sample2" style="border:0px solid #a1a0a0;"></canvas>
 						<canvas id="sample3" style="border:0px solid #a1a0a0;"></canvas>
 						<canvas id="sample4" style="border:0px solid #a1a0a0;"></canvas> -->
 
-						<img src="./images/outputgel.png" id="output" class="image-fluid"> <!-- output-->
-						<img src="./images/ladder.png" id="ladder" class="image-fluid" style="display: none;">
-						<!-- ladder-->
+					<img src="./images/outputgel.png" id="output" class="image-fluid"> <!-- output-->
+					<img src="./images/ladder.png" id="ladder" class="image-fluid" style="display: none;">
+					<!-- ladder-->
 
-
-					</div>
-					<!-- </div> -->
 
 				</div>
+				<!-- </div> -->
+
 			</div>
 		</div>
+	</div>
 	</div>
 
 
