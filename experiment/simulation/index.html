@@ -64,6 +64,7 @@ Developer: Prakriti Dhang
 
 							<li> Select correct components for preparing gel in the casting tray and click on "Gel
 								Preparation" button. </li>
+								<li>Next click on "Place comb" button for formation of wells on the gel. And "Remove comb" button to view the wells.</li>
 							<li>Next, click on the gel that is being solidified in the casting
 								tray. This will place in
 								the electrophoresis chamber.</li>
@@ -186,7 +187,11 @@ Developer: Prakriti Dhang
 
 										<button class="btn btn-primary " type="button" id="gelprep" onclick="gel_prep()"
 											disabled>Gel
-											Preparation</button>
+											Preparation</button> 
+											<button class="btn btn-primary " type="button" id="placecomb" onclick="place_comb()"
+											disabled>Place comb</button>
+											<button class="btn btn-primary " type="button" id="removecomb" onclick="remove_comb()"
+											disabled>Remove comb</button>
 									</div>
 								</td>
 							</tr>
@@ -473,10 +478,12 @@ Developer: Prakriti Dhang
 						title="Casting tray">
 					<img src="./images/comb.png" id="comb" data-toggle="tooltip" data-placement="top" title="Comb">
 					<!-- Agarose gel case-->
-					<img src="./images/agarose gel.png" id="agel" onclick="moveImage()"
+					<img src="./images/agarose gel.png" id="agel" 
 						style="cursor: pointer; display: none;" data-toggle="tooltip" data-placement="top"
 						title="Agarose gel"> <!--draggable="true" ondragstart="drag(event)"-->
 					<!-- Agarose gel -->
+
+					<img src="./images/wells.png" id="wells" data-toggle="tooltip" data-placement="top" title="wells">
 
 					<img src="./images/tubesabcd.png" id="tube" style=" display: none;">
 					<!-- Samples-->

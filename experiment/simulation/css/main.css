@@ -41,7 +41,7 @@ Developer: Prakriti Dhang
     width: 12%;
    
     top: 19%;
-    left: 6.3%;
+    left: 6.45%;
     /*animation: age1 10s linear;*/
     transition: transform 4s ease-in-out;
     cursor: pointer;
@@ -55,9 +55,19 @@ Developer: Prakriti Dhang
     left: 4.4%;
     z-index: 2;
     cursor: pointer;
-
+display:none;
 }
 
+#wells {
+    position: absolute;
+    width: 10%;
+    height: 3%;
+    top: 25%;
+    left: 7%;
+    z-index: 2;
+    cursor: pointer;
+display:none;
+}
 
 #tube {
     position: absolute;
