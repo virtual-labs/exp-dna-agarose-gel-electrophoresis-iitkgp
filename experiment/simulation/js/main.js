@@ -48,6 +48,7 @@ function gel_prep() {
       $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("gelprep").disabled = true;
       document.getElementById("agel").style.display = "block";
+      window.scrollBy(0,600);
     } else {
       //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
       $('#voltalertmessage').modal('show');
