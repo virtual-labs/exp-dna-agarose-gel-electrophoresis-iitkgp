@@ -40,7 +40,7 @@ function gel_prep() {
 
   if (selectedCheckboxes.length === 3) {
     const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
-
+    
     // Check if the selected values are correct
     if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer") && selectedValues.includes("Ethidium Bromide (EtBr)")) {
      // alert("Correct component(s) is(are) selected.");
@@ -48,7 +48,8 @@ function gel_prep() {
       $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("gelprep").disabled = true;
       document.getElementById("agel").style.display = "block";
-      window.scrollBy(0,600);
+      document.getElementById("placecomb").disabled = false;
+      
     } else {
       //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
       $('#voltalertmessage').modal('show');
@@ -62,6 +63,20 @@ function gel_prep() {
   }
 }
 
+
+function place_comb(){
+  document.getElementById("comb").style.display = "block";
+  document.getElementById("placecomb").disabled = true;
+  document.getElementById("removecomb").disabled = false;
+  window.scrollBy(0,500);
+}
+
+function remove_comb(){
+  document.getElementById("comb").style.display = "none";
+  document.getElementById("removecomb").disabled = true;
+  document.getElementById("wells").style.display = "block";
+  document.getElementById("agel").setAttribute("onclick", "moveImage()");
+}
 
 function sample_prep() {
 
@@ -730,6 +745,7 @@ function moveImage() {
   document.getElementById('agel1').style.display = "block";
   document.getElementById('agel').style.display = "none";
   document.getElementById("sampleprep").disabled = false;
+  document.getElementById("wells").style.display = "none";
   //imageag.style.display="block";
   //image1.style.display = "block";
   //image.style.transform=`translate(${topimg}%, ${lefting}%)`;
