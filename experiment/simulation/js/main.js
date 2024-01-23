@@ -48,7 +48,9 @@ function gel_prep() {
       $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("gelprep").disabled = true;
       document.getElementById("agel").style.display = "block";
-      document.getElementById("placecomb").disabled = false;
+     
+      document.getElementById("removecomb").disabled = false;
+     // document.getElementById("placecomb").disabled = false;
       
     } else {
       //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
@@ -64,18 +66,19 @@ function gel_prep() {
 }
 
 
-function place_comb(){
+/*function place_comb(){
   document.getElementById("comb").style.display = "block";
   document.getElementById("placecomb").disabled = true;
   document.getElementById("removecomb").disabled = false;
   window.scrollBy(0,500);
-}
+}*/
 
 function remove_comb(){
   document.getElementById("comb").style.display = "none";
   document.getElementById("removecomb").disabled = true;
   document.getElementById("wells").style.display = "block";
   document.getElementById("agel").setAttribute("onclick", "moveImage()");
+  window.scrollBy(0,500);
 }
 
 function sample_prep() {
