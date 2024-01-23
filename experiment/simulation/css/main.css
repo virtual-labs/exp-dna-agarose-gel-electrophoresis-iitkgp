@@ -55,7 +55,7 @@ Developer: Prakriti Dhang
     left: 4.4%;
     z-index: 2;
     cursor: pointer;
-display:none;
+display:block;
 }
 
 #wells {
@@ -743,3 +743,4 @@ path,
     z-index: 10;
 
 }
+
