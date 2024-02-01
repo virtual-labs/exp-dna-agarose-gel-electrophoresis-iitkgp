@@ -74,7 +74,8 @@ display:none;
     width: 12%;
     top: 50%;
     left: 50%;
-    /*display: none;*/
+    z-index: 21;
+    display: none;
 
 }
 
@@ -93,54 +94,92 @@ display:none;
 
 #peptitea {
     position: absolute;
-    width: 2%;
-    top: 8%;
-    left: 52.2%;
+    width: 1.6%; /* 2*/
+    top: 1%; 
+    left: 51.3%;
     cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
+    /*rotate: 30deg;*/
     /*display: none;*/
+ 
+}
 
-
+#peptitea1 {
+    position: absolute;
+    width: 1.5%; /* 2*/
+    top: 4%; 
+    left: 51%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
+ 
 }
 
 #peptiteb {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 55.3%;
+    width: 1.6%;
+    top: 1%;
+    left: 54.5%;
     cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
+    /*rotate: 30deg;
+    display: none;*/
+}
 
-
+#peptiteb1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left:54.2%; /*54.2%; */
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
 }
 
 #peptitec {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 58.2%;
+    width: 1.6%;
+    top: 1%;
+    left: 57.5%;
     cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
+   /* rotate: 30deg;
+    display: none;*/
+}
 
-
+#peptitec1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left:57%; /*57 */
+    cursor: pointer;
+    z-index: 20;
+   /* rotate: 30deg;*/
+   display: none;
 }
 
 #peptited {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 61%;
+    width: 1.6%;
+    top: 1%;
+    left: 60%;
     cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
+    /*rotate: 30deg;
+    display: none;*/
+}
 
-
+#peptited1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left: 59.8%; /* 59.8*/
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+   display: none;
 }
 
 #buffer {
