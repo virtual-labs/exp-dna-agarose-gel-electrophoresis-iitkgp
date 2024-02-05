@@ -122,7 +122,7 @@ function buffer_load() {
 
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
-  window.scrollBy(0, 500);
+  window.scrollBy(0, 300);
   //document.getElementById("buffertext").style.display = "none";
 }
 
