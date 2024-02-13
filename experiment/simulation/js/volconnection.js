@@ -580,7 +580,7 @@ jsPlumb.ready(function () {
 
 
             $('#voltalertmessage').modal('show');
-            $('.modal-body').text('Connection is correct.');
+            $('.modal-body').html('Connection is correct. <br> Click on "V" button of the power supply to switch ON the power. And "+" sign button of the power supply to set the voltage between 50 V and 100 V.');
 
            // alert("RIGHT CONNECTION.");
             //document.getElementById("samplerun").disabled = true;
