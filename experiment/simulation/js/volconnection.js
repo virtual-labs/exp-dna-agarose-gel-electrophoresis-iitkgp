@@ -622,7 +622,8 @@ jsPlumb.ready(function () {
         //instance.deleteEveryConnection();
         document.getElementById("casecoverimg").style.display = "none";
         document.getElementById("viewsample").disabled=false;
-        document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
+        document.getElementById('agel1a').setAttribute('onclick', "moveImage1()");
+        
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);

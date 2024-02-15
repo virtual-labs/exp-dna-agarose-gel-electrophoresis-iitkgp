@@ -890,6 +890,7 @@ function moveImage() {
   image.style.left = lefting + '%';
   document.getElementById('agel1').style.display = "block";
   document.getElementById('agel').style.display = "none";
+  
   document.getElementById("sampleprep").disabled = false;
   document.getElementById("wells").style.display = "none";
   //imageag.style.display="block";
@@ -941,6 +942,7 @@ function moveImage1() {
   //image1.style.transform = `translate(${top}%, ${left}%)`;
   //image1.style.width= 69 + '%';
   document.getElementById('agel').style.display = "none";
+  document.getElementById('agel1a').style.display = "none";
   document.getElementById('samplea').style.display = "none";
   document.getElementById('sampleb').style.display = "none";
   document.getElementById('samplec').style.display = "none";
@@ -950,6 +952,7 @@ function moveImage1() {
   document.getElementById('sampledrop3').style.display = "none";
   document.getElementById('sampledrop4').style.display = "none";
   document.getElementById("viewsample").disabled = false;
+  document.getElementById('agel1a').style.opacity="0";
 
   /*  ctxgs1.clearRect(0, 0, canvass1.width, canvass1.height);
    ctxgs2.clearRect(0, 0, canvass2.width, canvass2.height);
@@ -1119,6 +1122,7 @@ function addbuffer() {
   function fillbuffer(){
     document.getElementById("bufferloadimg").style.display="block";
     document.getElementById("bufferintopimg").style.display="block";
+    document.getElementById('agel1a').style.display = "block";
   }
 
 }
@@ -1308,6 +1312,7 @@ function gelrun() {
   function frame1() {
     if (orgleft == 26) { /* moves to 26 left positon*/
       clearInterval(imgobj1); /* stops to 26 postion*/
+      
       //
     } else {
       orgleft++;

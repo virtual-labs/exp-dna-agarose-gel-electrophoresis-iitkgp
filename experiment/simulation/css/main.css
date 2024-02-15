@@ -412,6 +412,7 @@ path,
     left: 52%;
     cursor: pointer;
     opacity: 70%;
+    
 }
 
 #bufferintopimg{
@@ -421,7 +422,7 @@ path,
     left: 8%;
     cursor: pointer;
     opacity: 100%;
-    z-index: 10;
+    z-index:9;
 }
 
 #sideviewcase {
@@ -439,7 +440,20 @@ path,
     width: 13%;
     z-index: 10;
     cursor: pointer;
+    
+    /*transition: transform 4s ease-in-out;*/
+}
 
+#agel1a {
+    position: absolute;
+    top: 224%;
+    left: 14.5%;
+    width: 13%;
+    z-index: 11;
+    opacity: 80%;
+    cursor: pointer;
+    
+    
     /*transition: transform 4s ease-in-out;*/
 }
 
