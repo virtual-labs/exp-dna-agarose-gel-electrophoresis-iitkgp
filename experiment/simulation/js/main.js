@@ -123,6 +123,7 @@ function buffer_load() {
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
   window.scrollBy(0, 300);
+  
   //document.getElementById("buffertext").style.display = "none";
 }
 
@@ -976,8 +977,8 @@ function addbuffer() {
 
   function drawLine() {
 
-    ctxs1.strokeStyle = '#E0FCFF  ';
-    ctxs1.globalAlpha = 0.02;
+    ctxs1.strokeStyle = '#CCFFFF ';
+    ctxs1.globalAlpha = 0.03;
     ctxs1.lineWidth = 600;
     ctxs1.beginPath();
     ctxs1.moveTo(0, posY); /*  0-130*/
@@ -1011,8 +1012,8 @@ function addbuffer() {
 
   function drawLines2() {
 
-    ctxs2.strokeStyle = '#E0FCFF ';
-    ctxs2.globalAlpha = 0.02;
+    ctxs2.strokeStyle = '#CCFFFF ';
+    ctxs2.globalAlpha = 0.03;
     ctxs2.lineWidth = 600;
     ctxs2.beginPath();
     ctxs2.moveTo(0, posYs2); /*  0-130*/
@@ -1041,6 +1042,8 @@ function addbuffer() {
 
 
   /**side 3 */
+
+  
   canvasside3 = document.getElementById("myCanvass3");
   ctxs3 = canvasside3.getContext("2d");
   var posYs3 = 135;
@@ -1048,8 +1051,8 @@ function addbuffer() {
 
   function drawLines3() {
 
-    ctxs3.strokeStyle = '#E0FCFF ';
-    ctxs3.globalAlpha = 0.02;
+    ctxs3.strokeStyle = '#CCFFFF '; /*E0FCFF*/ 
+    ctxs3.globalAlpha = 0.03;
     ctxs3.lineWidth = 600;
     ctxs3.beginPath();
     ctxs3.moveTo(0, posYs3); /*  0-130*/
@@ -1082,8 +1085,8 @@ function addbuffer() {
 
   function drawLines4() {
 
-    ctxs4.strokeStyle = '#E0FCFF ' //'#D0F7FF';
-    ctxs4.globalAlpha = 0.02;
+    ctxs4.strokeStyle = '#CCFFFF ' //'#D0F7FF';
+    ctxs4.globalAlpha = 0.03;
     ctxs4.lineWidth = 600;
     ctxs4.beginPath();
     ctxs4.moveTo(0, posYs4); /*  0-130*/
@@ -1107,9 +1110,16 @@ function addbuffer() {
     cancelani = requestAnimationFrame(loops4);
   }
   requestAnimationFrame(loops4);
-
+  
   //document.getElementById("sampleload").disabled = true;
   window.scrollBy(0, 500);
+
+  setInterval(fillbuffer, 2000);
+
+  function fillbuffer(){
+    document.getElementById("bufferloadimg").style.display="block";
+    document.getElementById("bufferintopimg").style.display="block";
+  }
 
 }
 
