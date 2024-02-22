@@ -7,7 +7,8 @@ Developer: Prakriti Dhang
 */
 
 function start() {
-  document.getElementById("gelprep").disabled = false;
+  
+  document.getElementById("heatmix").disabled = false;
   //alert("A desktop or laptop is the preferred choice for an enhanced viewing experience. \n  When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing experience.")
   document.getElementById("start").disabled = true;
   document.getElementById('myCanvasv1').style.display = "none";
@@ -33,38 +34,117 @@ function restartexp() {
   location.reload()
 }
 
-function gel_prep() {
-
+function heatmix(){
+  
   const checkboxesgel = document.querySelectorAll('input[type=checkbox][name=gelprep]:checked'); //.form-check-input
   const selectedCheckboxes = Array.from(checkboxesgel).filter(checkbox => checkbox.checked);
 
-  if (selectedCheckboxes.length === 3) {
+  if (selectedCheckboxes.length === 2) {
     const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
 
     // Check if the selected values are correct
-    if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer") && selectedValues.includes("Ethidium Bromide (EtBr)")) {
+    if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer") ) {
       // alert("Correct component(s) is(are) selected.");
-      $('#voltalertmessage').modal('show');
+      $('#heatalertmessage').modal('show');
       $('.modal-body').text('Correct component(s) is(are) selected.');
       document.getElementById("gelprep").disabled = true;
-      document.getElementById("agel").style.display = "block";
-
-      document.getElementById("removecomb").disabled = false;
+      document.getElementById("microwave").style.display = "block";
+      document.getElementById("emptymicrowave").style.display = "none";
+      //document.getElementById("agel").style.display = "block";
+     
+     
+     
+      document.getElementById("heatmix").disabled = true;
+      cancelmicro= setInterval(changemicrowaveliq, 2000);
       // document.getElementById("placecomb").disabled = false;
 
     } else {
       //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
       $('#voltalertmessage').modal('show');
-      $('.modal-body').text('Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr).');
+      $('.modal-body').text('Incorrect component(s) is/are selected.\n The correct components are Agarose powder, and TAE/TBE Buffer.');
     }
   }
   else {
     //alert("Three components are require for preparing gel.");
     $('#voltalertmessage').modal('show');
-    $('.modal-body').text('Three components are require for preparing gel.');
+    $('.modal-body').text('Two components are require for preparing gel mixture.');
   }
 }
 
+function changemicrowaveliq(){
+  document.getElementById("microwave").style.display = "none";
+  document.getElementById("microwaveliq").style.display = "block";
+  
+  document.getElementById("microwaveliq").setAttribute("onclick", "mgelliq()");
+clearInterval(cancelmicro);
+}
+
+function mgelliq(){
+  document.getElementById("microwave").style.display = "none";
+  document.getElementById("microwaveliq").style.display = "none";
+  document.getElementById("emptymicrowave").style.display = "block";
+  document.getElementById("gel_liq").style.display = "block";
+ 
+  
+}
+
+function addetbr(){
+  document.getElementById("gel_liqetbr").style.display = "block";
+  document.getElementById("gel_liq").style.display = "none";
+  document.getElementById("gelprep").disabled = false;
+  window.scrollBy(0, 600);
+}
+
+function gel_prep() {
+
+  //const checkboxesgel = document.querySelectorAll('input[type=checkbox][name=gelprep1]:checked'); //.form-check-input
+  //const selectedCheckboxes = Array.from(checkboxesgel).filter(checkbox => checkbox.checked);
+
+ // if (selectedCheckboxes.length === 1) {
+  //  const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
+
+   // // Check if the selected values are correct
+   // if (selectedValues.includes("Ethidium Bromide (EtBr)") ) {
+      // alert("Correct component(s) is(are) selected.");
+   //   $('#voltalertmessage').modal('show');
+   //   $('.modal-body').text('Correct component(s) is(are) selected.');
+   document.getElementById("gel_liqetbr").setAttribute("onclick", "gelliqetbr()");
+   document.getElementById("gelprep").disabled = true;
+      // document.getElementById("placecomb").disabled = false;
+
+    //} else {
+      //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
+   //   $('#voltalertmessage').modal('show');
+   //   $('.modal-body').text('Incorrect component is selected.\n The correct component is  Ethidium Bromide (EtBr).');
+   // }
+  //}
+ // else {
+    //alert("Three components are require for preparing gel.");
+  //  $('#voltalertmessage').modal('show');
+  //  $('.modal-body').text('One component is require for preparing gel.');
+  //}
+}
+
+function gelliqetbr(){
+  document.getElementById("gelprep").disabled = true;
+  document.getElementById("agel").style.display = "block";
+  document.getElementById("emptyflask").style.display = "none";
+  document.getElementById("gel_liq").style.display = "none";
+  document.getElementById("gel_liqetbr").style.display = "block";
+  document.getElementById("removecomb").disabled = true;
+  document.getElementById("gel_liqetbr").style.left= 15 + "%";
+  document.getElementById("gel_liqetbr").style.transform="rotate(-60deg)";
+  cancelgeltrat= setInterval(gelpourtray, 1000);
+
+}
+
+function gelpourtray(){
+  document.getElementById("emptyflask").style.display = "block";
+  document.getElementById("gel_liq").style.display = "none";
+  document.getElementById("gel_liqetbr").style.display = "none";
+  document.getElementById("removecomb").disabled = false;
+  clearInterval(cancelgeltrat);
+}
 
 /*function place_comb(){
   document.getElementById("comb").style.display = "block";
@@ -1289,6 +1369,13 @@ function runninggel() {
 function delvolttimer() {
   document.getElementById("voltalertmessage").style.display = "none";
   document.getElementById("voltalertmessage").classList.remove("show");
+ 
+}
+
+function heataltmsg() {
+  document.getElementById("heatalertmessage").style.display = "none";
+  document.getElementById("heatalertmessage").classList.remove("show");
+  window.scrollBy(0,600);
 }
 
 var imgobj1 = null;

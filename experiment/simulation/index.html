@@ -61,15 +61,17 @@ Developer: Prakriti Dhang
 						<ol id="inst1">
 							<li>Click on "Start the Experiment" button to start the experiment.
 							</li>
-
-							<li> Select correct components for preparing gel in the casting tray and click on "Gel
-								Preparation" button. </li>
-								<li> Click on "Remove comb" button to view the wells.</li>
+							<li> Select components for preparing the mixture and click on "Heat the mixture"
+								button. </li>
+								<li>Next click on the microwave image. </li>
+							<li> Select "Add Ethidium Bromide (EtBr)" checkbox. Next click on "Gel
+								Preparation" button and on conical flask image. This will pour the prepared gel in the casting tray. Allow the gel to solidify at room temperature. </li>
+							<li> Click on "Remove comb" button to view the wells.</li>
 							<li>Next, click on the gel that is being solidified in the casting
-								tray. This will place in
-								the electrophoresis chamber.</li>
+								tray. On clicking, the gel will be placed in
+								the electrophoresis chamber. </li>
 
-							<li> Now, click on "Sample preparation" button after selecting the components.
+							<li> Now, select the components for preparing the samples and click on "Sample preparation" button.
 							</li>
 							<li> Next Click "Add Buffer" button, and on "Buffer" bottle image to immerse the gel with
 								the buffer.
@@ -90,7 +92,8 @@ Developer: Prakriti Dhang
 								colored red, whereas the negative connector is colored black.)
 
 							</li>
-							<li> Now click on "V" button of the power supply to switch ON the power. Click on "+" sign button
+							<li> Now click on "V" button of the power supply to switch ON the power. Click on "+" sign
+								button
 								of the power supply to set the voltage between 50 V and 100 V.</li>
 							<li> Click on the run icon button to run the gel. The sample will move from negative to
 								positive side. It will stop once it reaches the positive end.</li>
@@ -131,7 +134,7 @@ Developer: Prakriti Dhang
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td rowspan="3">
 									Step 1
 								</td>
 								<td>
@@ -151,13 +154,13 @@ Developer: Prakriti Dhang
 
 										</label>
 									</div>
-									<div class="form-check form-check-inline">
+									<!--div class="form-check form-check-inline">
 										<input class="form-check-input " type="checkbox" name="gelprep"
 											value="Ethidium Bromide (EtBr)" id="g3" disabled>
 										<label class="form-check-label" for="g3">
 											Ethidium Bromide (EtBr)
 										</label>
-									</div>
+									</div-->
 									<div class="form-check form-check-inline">
 										<input class="form-check-input " type="checkbox" name="gelprep"
 											value="Distilled water" id="g4" disabled>
@@ -184,14 +187,44 @@ Developer: Prakriti Dhang
 									</div>
 
 									<div class="col-md-4 p-2">
-
-										<button class="btn btn-primary " type="button" id="gelprep" onclick="gel_prep()" disabled>Gel Preparation</button> 
-											<!--button class="btn btn-primary " type="button" id="placecomb" onclick="place_comb()"
-											> Comb</button-->
-											<button class="btn btn-secondary " type="button" id="removecomb" onclick="remove_comb()" disabled>Remove comb</button>
+										<button class="btn btn-primary " type="button" id="heatmix" onclick="heatmix()"
+											disabled>Heat the mixture</button>
+										
 									</div>
 								</td>
 							</tr>
+							<tr>
+								<td>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input " type="checkbox" name="gelprep1"
+											value="Ethidium Bromide (EtBr)" id="g3" disabled onclick="addetbr()">
+										<label class="form-check-label" for="g3">
+											Add Ethidium Bromide (EtBr)
+										</label>
+									</div>
+									<!-- <div class="form-check form-check-inline">
+										<input class="form-check-input " type="checkbox" name="gelprep1"
+											value=" Cooled mixture (Agarose powder and TAE/TBE Buffer)" id="g31" disabled>
+										<label class="form-check-label" for="g31">
+											Cooled mixture (Agarose powder and TAE/TBE Buffer)
+										</label>
+									</div> -->
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-md-4 p-2">
+										<button class="btn btn-primary " type="button" id="gelprep" onclick="gel_prep()"
+												disabled>Gel Preparation</button>
+											<!--button class="btn btn-primary " type="button" id="placecomb" onclick="place_comb()"
+												> Comb</button-->
+											<button class="btn btn-secondary " type="button" id="removecomb"
+												onclick="remove_comb()" disabled>Remove comb</button>
+											</div>
+								</td>
+							</tr>
+							
 							<tr>
 								<td>
 									Step 2
@@ -475,28 +508,42 @@ Developer: Prakriti Dhang
 						title="Casting tray">
 					<img src="./images/comb.png" id="comb" data-toggle="tooltip" data-placement="top" title="Comb">
 					<!-- Agarose gel case-->
-					<img src="./images/agarose gel.png" id="agel" 
-						style="cursor: pointer; display: none;" data-toggle="tooltip" data-placement="top"
-						title="Agarose gel"> <!--draggable="true" ondragstart="drag(event)"-->
+					<img src="./images/agarose gel.png" id="agel" style="cursor: pointer; display: none;"
+						data-toggle="tooltip" data-placement="top" title="Agarose gel">
+					<!--draggable="true" ondragstart="drag(event)"-->
 					<!-- Agarose gel -->
 
 					<img src="./images/wells.png" id="wells" data-toggle="tooltip" data-placement="top" title="wells">
+					<img src="./images/empty microwave.png" id="emptymicrowave" data-toggle="tooltip"
+						data-placement="top" title="Microwave">
+					<img src="./images/microwave.png" id="microwave" data-toggle="tooltip" data-placement="top"
+						title="Microwave">
+						<img src="./images/microwaveliq.png" id="microwaveliq" data-toggle="tooltip" data-placement="top"
+						title="Microwave">
+					<img src="./images/gel_liq.png" id="gel_liq" data-toggle="tooltip" data-placement="top"
+						title="Mixture (Agarose powder and TAE/TBE Buffer)">
+						<img src="./images/gel_liq_etbr.png" id="gel_liqetbr" data-toggle="tooltip" data-placement="top"
+						title="Gel mixed with EtBr">
+					<img src="./images/conicalflaskimg.png" id="emptyflask">
+
+
+
 
 					<img src="./images/tubesabcd.png" id="tube">
 					<!-- Samples-->
 					<!-- <img src="./images/tubemeter.png" id="tubemeter" class="image-fluid " style="display: none;">
  -->
 					<img src="./images/micropipette_1.png" id="peptitea" style="display: none;">
-					<img src="./images/micropipette_2.png" id="peptitea1" >
+					<img src="./images/micropipette_2.png" id="peptitea1">
 
 					<img src="./images/micropipette_1.png" id="peptiteb" style="display: none;">
-					<img src="./images/micropipette_2.png" id="peptiteb1" >
+					<img src="./images/micropipette_2.png" id="peptiteb1">
 
 					<img src="./images/micropipette_1.png" id="peptitec" style="display: none;">
-					<img src="./images/micropipette_2.png" id="peptitec1" >
+					<img src="./images/micropipette_2.png" id="peptitec1">
 
 					<img src="./images/micropipette_1.png" id="peptited" style="display: none;">
-					<img src="./images/micropipette_2.png" id="peptited1" >
+					<img src="./images/micropipette_2.png" id="peptited1">
 
 					<!--img src="./images/peptitea.png" id="peptitea" style="display: none;"-->
 					<!--img src="./images/peptiteb.png" id="peptiteb" style="display: none;">
@@ -524,8 +571,7 @@ Developer: Prakriti Dhang
 
 					<img src="./images/agarosegel1.png" id="agel1" onclick="moveImage1()"
 						style="cursor: pointer; display:none;"> <!-- Agarose gel -->
-						<img src="./images/agarosegel1a.png" id="agel1a" 
-						style="cursor: pointer; display:none;">
+					<img src="./images/agarosegel1a.png" id="agel1a" style="cursor: pointer; display:none;">
 
 					<!-- <img src="./images/negvedot.png" id="negativedot" class="image-fluid"> 
 						<img src="./images/posdot.png" id="positivedot" class="image-fluid"> 
@@ -537,10 +583,8 @@ Developer: Prakriti Dhang
 					<img src="./images/sideviewcase.png" id="sideviewcase" data-toggle="tooltip" data-placement="top"
 						title="Side view of Electrophoresis chamber"> <!-- sideviewcase-->
 
-						<img src="./images/bufferload.png" id="bufferloadimg" 
-						style="cursor: pointer; display:none;">
-						<img src="./images/bufferintop.png" id="bufferintopimg" 
-						style="cursor: pointer; display:none;">
+					<img src="./images/bufferload.png" id="bufferloadimg" style="cursor: pointer; display:none;">
+					<img src="./images/bufferintop.png" id="bufferintopimg" style="cursor: pointer; display:none;">
 
 					<img src="./images/uv-machine.png" id="uvmachine" data-toggle="tooltip" data-placement="top"
 						title="UV transilluminator machine"> <!-- uv machine -->
@@ -648,6 +692,26 @@ Developer: Prakriti Dhang
 				<div class="modal-footer">
 
 					<button type="button" class="btn btn-warning" onclick="delvolttimer()"
+						data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="heatalertmessage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alert Message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-warning" onclick="heataltmsg()"
 						data-bs-dismiss="modal">OK</button>
 				</div>
 			</div>
