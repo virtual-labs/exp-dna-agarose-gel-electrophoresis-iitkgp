@@ -55,7 +55,7 @@ function heatmix(){
      
      
       document.getElementById("heatmix").disabled = true;
-      cancelmicro= setInterval(changemicrowaveliq, 2000);
+      cancelmicro= setInterval(changemicrowaveliq, 4000);
       // document.getElementById("placecomb").disabled = false;
 
     } else {
