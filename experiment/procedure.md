@@ -24,6 +24,7 @@ small DNA fragments.
        </div>
 
    4. Pour it into a casting tray with a sample comb inserted on it. Allow the gel to solidify at room temperature. 
+   
 <div align="center">
       <img src="images/step1.png" class="img-fluid">
        </div>
