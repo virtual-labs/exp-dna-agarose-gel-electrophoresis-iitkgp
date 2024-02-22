@@ -69,6 +69,68 @@ display:block;
 display:none;
 }
 
+#emptymicrowave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    cursor:pointer;
+    
+    
+
+}
+
+#microwave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+#microwaveliq {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liq {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liqetbr {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+    
+
+}
+
+#emptyflask {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+  
+
+}
+
 #tube {
     position: absolute;
     width: 12%;
@@ -186,7 +248,7 @@ display:none;
     position: absolute;
     width: 4%;
     top: 40%;
-    left: 70%;
+    left: 65%;
     /*display: none;*/
 
 }
