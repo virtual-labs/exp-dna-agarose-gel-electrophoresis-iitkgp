@@ -79,6 +79,8 @@ function changemicrowaveliq() {
   document.getElementById("microwave").style.display = "none";
   document.getElementById("microwaveliq").style.display = "block";
   document.getElementById("microwaveliq").setAttribute("onclick", "mgelliq()");
+  $('#voltalertmessage').modal('show');
+  $('.modal-body').text('Mixture has been melted. Click on the microwave image.');
   clearInterval(cancelmicro);
 
 }
@@ -88,7 +90,7 @@ function mgelliq() {
   document.getElementById("microwaveliq").style.display = "none";
   document.getElementById("emptymicrowave").style.display = "block";
   document.getElementById("gel_liq").style.display = "block";
-  cancelliqcool = setInterval(liqcool, 4000);
+  cancelliqcool = setInterval(liqcool, 3000);
 
   
 
