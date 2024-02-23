@@ -7,7 +7,7 @@ Developer: Prakriti Dhang
 */
 
 function start() {
-  
+
   document.getElementById("heatmix").disabled = false;
   //alert("A desktop or laptop is the preferred choice for an enhanced viewing experience. \n  When using a phone, it is recommended to enable the auto-rotate feature for an improved viewing experience.")
   document.getElementById("start").disabled = true;
@@ -34,8 +34,8 @@ function restartexp() {
   location.reload()
 }
 
-function heatmix(){
-  
+function heatmix() {
+
   const checkboxesgel = document.querySelectorAll('input[type=checkbox][name=gelprep]:checked'); //.form-check-input
   const selectedCheckboxes = Array.from(checkboxesgel).filter(checkbox => checkbox.checked);
 
@@ -43,19 +43,11 @@ function heatmix(){
     const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
 
     // Check if the selected values are correct
-    if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer") ) {
+    if (selectedValues.includes("Agarose powder") && selectedValues.includes("TAE/TBE Buffer")) {
       // alert("Correct component(s) is(are) selected.");
       $('#heatalertmessage').modal('show');
       $('.modal-body').text('Correct component(s) is(are) selected.');
-      document.getElementById("gelprep").disabled = true;
-      document.getElementById("microwave").style.display = "block";
-      document.getElementById("emptymicrowave").style.display = "none";
-      //document.getElementById("agel").style.display = "block";
-     
-     
-     
-      document.getElementById("heatmix").disabled = true;
-      cancelmicro= setInterval(changemicrowaveliq, 4000);
+
       // document.getElementById("placecomb").disabled = false;
 
     } else {
@@ -71,24 +63,45 @@ function heatmix(){
   }
 }
 
-function changemicrowaveliq(){
-  document.getElementById("microwave").style.display = "none";
-  document.getElementById("microwaveliq").style.display = "block";
-  
-  document.getElementById("microwaveliq").setAttribute("onclick", "mgelliq()");
-clearInterval(cancelmicro);
+function heataltmsg() {
+  document.getElementById("heatalertmessage").style.display = "none";
+  document.getElementById("heatalertmessage").classList.remove("show");
+  window.scrollBy(0, 600);
+  document.getElementById("gelprep").disabled = true;
+  document.getElementById("microwave").style.display = "block";
+  document.getElementById("emptymicrowave").style.display = "none";
+  //document.getElementById("agel").style.display = "block";
+  document.getElementById("heatmix").disabled = true;
+  cancelmicro = setInterval(changemicrowaveliq, 2500);
 }
 
-function mgelliq(){
+function changemicrowaveliq() {
+  document.getElementById("microwave").style.display = "none";
+  document.getElementById("microwaveliq").style.display = "block";
+  document.getElementById("microwaveliq").setAttribute("onclick", "mgelliq()");
+  clearInterval(cancelmicro);
+
+}
+
+function mgelliq() {
   document.getElementById("microwave").style.display = "none";
   document.getElementById("microwaveliq").style.display = "none";
   document.getElementById("emptymicrowave").style.display = "block";
   document.getElementById("gel_liq").style.display = "block";
- 
+  cancelliqcool = setInterval(liqcool, 4000);
+
   
+
+
 }
 
-function addetbr(){
+function liqcool(){
+  $('#voltalertmessage').modal('show');
+  $('.modal-body').text('Mixture has been cooled. Click on "Add Ethidium Bromide (EtBr)" check box.');
+  clearInterval(cancelliqcool);
+}
+
+function addetbr() {
   document.getElementById("gel_liqetbr").style.display = "block";
   document.getElementById("gel_liq").style.display = "none";
   document.getElementById("gelprep").disabled = false;
@@ -100,45 +113,45 @@ function gel_prep() {
   //const checkboxesgel = document.querySelectorAll('input[type=checkbox][name=gelprep1]:checked'); //.form-check-input
   //const selectedCheckboxes = Array.from(checkboxesgel).filter(checkbox => checkbox.checked);
 
- // if (selectedCheckboxes.length === 1) {
+  // if (selectedCheckboxes.length === 1) {
   //  const selectedValues = selectedCheckboxes.map(checkbox => checkbox.value);
 
-   // // Check if the selected values are correct
-   // if (selectedValues.includes("Ethidium Bromide (EtBr)") ) {
-      // alert("Correct component(s) is(are) selected.");
-   //   $('#voltalertmessage').modal('show');
-   //   $('.modal-body').text('Correct component(s) is(are) selected.');
-   document.getElementById("gel_liqetbr").setAttribute("onclick", "gelliqetbr()");
-   document.getElementById("gelprep").disabled = true;
-      // document.getElementById("placecomb").disabled = false;
+  // // Check if the selected values are correct
+  // if (selectedValues.includes("Ethidium Bromide (EtBr)") ) {
+  // alert("Correct component(s) is(are) selected.");
+  //   $('#voltalertmessage').modal('show');
+  //   $('.modal-body').text('Correct component(s) is(are) selected.');
+  document.getElementById("gel_liqetbr").setAttribute("onclick", "gelliqetbr()");
+  document.getElementById("gelprep").disabled = true;
+  // document.getElementById("placecomb").disabled = false;
 
-    //} else {
-      //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
-   //   $('#voltalertmessage').modal('show');
-   //   $('.modal-body').text('Incorrect component is selected.\n The correct component is  Ethidium Bromide (EtBr).');
-   // }
+  //} else {
+  //alert("Incorrect component(s) is/are selected.\n The correct components are Agarose powder, TAE/TBE Buffer, and Ethidium Bromide (EtBr)");
+  //   $('#voltalertmessage').modal('show');
+  //   $('.modal-body').text('Incorrect component is selected.\n The correct component is  Ethidium Bromide (EtBr).');
+  // }
   //}
- // else {
-    //alert("Three components are require for preparing gel.");
+  // else {
+  //alert("Three components are require for preparing gel.");
   //  $('#voltalertmessage').modal('show');
   //  $('.modal-body').text('One component is require for preparing gel.');
   //}
 }
 
-function gelliqetbr(){
+function gelliqetbr() {
   document.getElementById("gelprep").disabled = true;
   document.getElementById("agel").style.display = "block";
   document.getElementById("emptyflask").style.display = "none";
   document.getElementById("gel_liq").style.display = "none";
   document.getElementById("gel_liqetbr").style.display = "block";
   document.getElementById("removecomb").disabled = true;
-  document.getElementById("gel_liqetbr").style.left= 15 + "%";
-  document.getElementById("gel_liqetbr").style.transform="rotate(-60deg)";
-  cancelgeltrat= setInterval(gelpourtray, 1000);
+  document.getElementById("gel_liqetbr").style.left = 15 + "%";
+  document.getElementById("gel_liqetbr").style.transform = "rotate(-60deg)";
+  cancelgeltrat = setInterval(gelpourtray, 1000);
 
 }
 
-function gelpourtray(){
+function gelpourtray() {
   document.getElementById("emptyflask").style.display = "block";
   document.getElementById("gel_liq").style.display = "none";
   document.getElementById("gel_liqetbr").style.display = "none";
@@ -203,7 +216,7 @@ function buffer_load() {
   //document.getElementById("tubemeter").style.display = "block";
   document.getElementById("buffer").style.display = "block";
   window.scrollBy(0, 300);
-  
+
   //document.getElementById("buffertext").style.display = "none";
 }
 
@@ -260,39 +273,39 @@ function sample_loadA() {
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
-        //  clearInterval(clearmpcnge);
+          //  clearInterval(clearmpcnge);
           canvassdrop1.style.backgroundColor = '#7FA9FF';
 
-         /*  clearmp1a = setInterval(changempc, 200);
+          /*  clearmp1a = setInterval(changempc, 200);
+ 
+ 
+           function changempc() {
+             document.getElementById("peptitea").style.display = "none";
+             document.getElementById("peptitea1").style.display = "block";
+             document.getElementById("peptitea1").style.top = 205 + '%';
+             document.getElementById("peptitea1").style.left = 14.7 + '%';
+             canvassdrop1.style.backgroundColor = '#7FA9FF';
+             
+             clearmpaorg = setInterval(changempcorg, 200);
+           }
+          
+           function changempcorg() {
+ 
+          // document.getElementById("peptitea").style.display = "block";
+          //  document.getElementById("peptitea1").style.display = "none";
+          ////  document.getElementById("peptitea").style.top = 4 + '%';
+           // document.getElementById("peptitea").style.left = 51 + '%';
+           clearInterval(clearmp1a);
+ 
+           } */
 
-
-          function changempc() {
-            document.getElementById("peptitea").style.display = "none";
-            document.getElementById("peptitea1").style.display = "block";
-            document.getElementById("peptitea1").style.top = 205 + '%';
-            document.getElementById("peptitea1").style.left = 14.7 + '%';
-            canvassdrop1.style.backgroundColor = '#7FA9FF';
-            
-            clearmpaorg = setInterval(changempcorg, 200);
-          }
-         
-          function changempcorg() {
-
-         // document.getElementById("peptitea").style.display = "block";
-         //  document.getElementById("peptitea1").style.display = "none";
-         ////  document.getElementById("peptitea").style.top = 4 + '%';
-          // document.getElementById("peptitea").style.left = 51 + '%';
-          clearInterval(clearmp1a);
-
-          } */
-         
           /*clearInterval(clearmpaorg);
 
           clearInterval(clearmp1a);*/
         }
-        
 
-        
+
+
 
         /* else {
           document.getElementById("gelrun").disabled = true;
@@ -303,9 +316,9 @@ function sample_loadA() {
           canvassdrop4.style.backgroundColor = 'white'; 
         }  */
       }
-      
+
     }
-   
+
     // Function to handle mouse/touch up event
     function handleMouseUp() {
 
@@ -348,7 +361,7 @@ function sample_loadA() {
   /*********************************************** Touch sample a********************************************* */
 
   function handleTouchStart(event) {
-   
+
     const touch = event.touches[0];
     const boundingRect = imagepp.getBoundingClientRect();
 
@@ -368,7 +381,7 @@ function sample_loadA() {
   }
 
   function handleTouchMove(event) {
-   
+
     const touch = event.touches[0];
 
     if (isDragging) {
@@ -393,7 +406,7 @@ function sample_loadA() {
   }
 
   function handleTouchEnd() {
-    
+
     isDragging = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -408,7 +421,7 @@ function sample_loadA() {
 function sample_loadB() {
   //clearInterval(clearmp1a);
   document.getElementById("peptiteb").style.display = "block";
- 
+
   document.getElementById("peptitea").style.display = "none";
   document.getElementById("peptitec").style.display = "none";
   document.getElementById("peptited").style.display = "none";
@@ -456,27 +469,27 @@ function sample_loadB() {
           // Change the canvas color when the image touches it
 
           canvassdrop2.style.backgroundColor = '#7FA9FF';
-         /*  clearInterval(clearmpcnge2);
-          
-
-          clearmp1a2 = setInterval(changempc2, 200);
-
-
-          function changempc2() {
-            document.getElementById("peptiteb").style.display = "none";
-            document.getElementById("peptiteb1").style.display = "block";
-            document.getElementById("peptiteb1").style.top = 190 + '%';
-            document.getElementById("peptiteb1").style.left = 14.7 + '%';
-            canvassdrop2.style.backgroundColor = '#7FA9FF';
-            clearmpaorg2 = setInterval(changempcorg2, 200);
-          }
-
-          function changempcorg2() {
-
-            
-             clearInterval(clearmp1a2);
-   
-             } */
+          /*  clearInterval(clearmpcnge2);
+           
+ 
+           clearmp1a2 = setInterval(changempc2, 200);
+ 
+ 
+           function changempc2() {
+             document.getElementById("peptiteb").style.display = "none";
+             document.getElementById("peptiteb1").style.display = "block";
+             document.getElementById("peptiteb1").style.top = 190 + '%';
+             document.getElementById("peptiteb1").style.left = 14.7 + '%';
+             canvassdrop2.style.backgroundColor = '#7FA9FF';
+             clearmpaorg2 = setInterval(changempcorg2, 200);
+           }
+ 
+           function changempcorg2() {
+ 
+             
+              clearInterval(clearmp1a2);
+    
+              } */
 
         }
 
@@ -532,8 +545,8 @@ function sample_loadB() {
   /*********************************************** Touch sample b********************************************* */
 
   function handleTouchStart(event) {
-   
-    
+
+
     const touch = event.touches[0];
     const boundingRect = imageppb.getBoundingClientRect();
 
@@ -553,8 +566,8 @@ function sample_loadB() {
   }
 
   function handleTouchMove(event) {
-   
-    
+
+
     const touch = event.touches[0];
 
     if (isDraggingb) {
@@ -579,8 +592,8 @@ function sample_loadB() {
   }
 
   function handleTouchEnd() {
-   
-    
+
+
     isDraggingb = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -598,7 +611,7 @@ function sample_loadC() {
   document.getElementById("peptiteb").style.display = "none";
   document.getElementById("peptitea").style.display = "none";
   document.getElementById("peptited").style.display = "none";
-  
+
   document.getElementById("peptitea1").style.visibility = "hidden";
   document.getElementById("peptiteb1").style.visibility = "hidden";
   document.getElementById("peptited1").style.visibility = "hidden";
@@ -641,27 +654,27 @@ function sample_loadC() {
         if (imageRectc.left + imageRectc.width >= canvasRect3.left && imageRectc.top + imageRectc.height >= canvasRect3.top && imageRectc.left <= canvasRect3.left + canvasRect3.width && imageRectc.top <= canvasRect3.top + canvasRect3.height) {
           // Change the canvas color when the image touches it
           canvassdrop3.style.backgroundColor = '#7FA9FF';
-         
-         // clearInterval(clearmpcnge3);
-          
-         /*  clearmp1a3 = setInterval(changempc3, 200);
 
+          // clearInterval(clearmpcnge3);
 
-          function changempc3() {
-            document.getElementById("peptitec").style.display = "none";
-            document.getElementById("peptitec1").style.display = "block";
-            document.getElementById("peptitec1").style.top = 178 + '%';
-            document.getElementById("peptitec1").style.left = 14.6 + '%';
-            canvassdrop3.style.backgroundColor = '#7FA9FF';
-            clearmpaorg3 = setInterval(changempcorg3, 200);
-          }
-
-          function changempcorg3() {
-
-            
-            clearInterval(clearmp1a3);
-  
-            } */
+          /*  clearmp1a3 = setInterval(changempc3, 200);
+ 
+ 
+           function changempc3() {
+             document.getElementById("peptitec").style.display = "none";
+             document.getElementById("peptitec1").style.display = "block";
+             document.getElementById("peptitec1").style.top = 178 + '%';
+             document.getElementById("peptitec1").style.left = 14.6 + '%';
+             canvassdrop3.style.backgroundColor = '#7FA9FF';
+             clearmpaorg3 = setInterval(changempcorg3, 200);
+           }
+ 
+           function changempcorg3() {
+ 
+             
+             clearInterval(clearmp1a3);
+   
+             } */
 
 
         }
@@ -718,7 +731,7 @@ function sample_loadC() {
 
 
   function handleTouchStart(event) {
-   
+
     const touch = event.touches[0];
     const boundingRect = imageppc.getBoundingClientRect();
 
@@ -738,7 +751,7 @@ function sample_loadC() {
   }
 
   function handleTouchMove(event) {
-    
+
     const touch = event.touches[0];
 
     if (isDraggingc) {
@@ -763,7 +776,7 @@ function sample_loadC() {
   }
 
   function handleTouchEnd() {
-    
+
     isDraggingc = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -821,8 +834,8 @@ function sample_loadD() {
         if (imageRectd.left + imageRectd.width >= canvasRect4.left && imageRectd.top + imageRectd.height >= canvasRect4.top && imageRectd.left <= canvasRect4.left + canvasRect4.width && imageRectd.top <= canvasRect4.top + canvasRect4.height) {
           // Change the canvas color when the image touches it
           canvassdrop4.style.backgroundColor = '#7FA9FF';
-         
-         // clearInterval(clearmpcnge4);
+
+          // clearInterval(clearmpcnge4);
           //canvassdrop1.style.backgroundColor = '#7FA9FF';
 
           /* clearmp1a4 = setInterval(changempc4, 200);
@@ -896,7 +909,7 @@ function sample_loadD() {
   /*** Sample 4 load ends */
   /*********************************************** Touch sample d********************************************* */
   function handleTouchStart(event) {
-   
+
     const touch = event.touches[0];
     const boundingRect = imageppd.getBoundingClientRect();
 
@@ -916,7 +929,7 @@ function sample_loadD() {
   }
 
   function handleTouchMove(event) {
- 
+
     const touch = event.touches[0];
 
     if (isDraggingd) {
@@ -941,7 +954,7 @@ function sample_loadD() {
   }
 
   function handleTouchEnd() {
-    
+
     isDraggingd = false;
 
     // Remove the touchmove and touchend event listeners when dragging is complete
@@ -970,7 +983,7 @@ function moveImage() {
   image.style.left = lefting + '%';
   document.getElementById('agel1').style.display = "block";
   document.getElementById('agel').style.display = "none";
-  
+
   document.getElementById("sampleprep").disabled = false;
   document.getElementById("wells").style.display = "none";
   //imageag.style.display="block";
@@ -1032,7 +1045,7 @@ function moveImage1() {
   document.getElementById('sampledrop3').style.display = "none";
   document.getElementById('sampledrop4').style.display = "none";
   document.getElementById("viewsample").disabled = false;
-  document.getElementById('agel1a').style.opacity="0";
+  document.getElementById('agel1a').style.opacity = "0";
 
   /*  ctxgs1.clearRect(0, 0, canvass1.width, canvass1.height);
    ctxgs2.clearRect(0, 0, canvass2.width, canvass2.height);
@@ -1126,7 +1139,7 @@ function addbuffer() {
 
   /**side 3 */
 
-  
+
   canvasside3 = document.getElementById("myCanvass3");
   ctxs3 = canvasside3.getContext("2d");
   var posYs3 = 135;
@@ -1134,7 +1147,7 @@ function addbuffer() {
 
   function drawLines3() {
 
-    ctxs3.strokeStyle = '#CCFFFF '; /*E0FCFF*/ 
+    ctxs3.strokeStyle = '#CCFFFF '; /*E0FCFF*/
     ctxs3.globalAlpha = 0.03;
     ctxs3.lineWidth = 600;
     ctxs3.beginPath();
@@ -1193,15 +1206,15 @@ function addbuffer() {
     cancelani = requestAnimationFrame(loops4);
   }
   requestAnimationFrame(loops4);
-  
+
   //document.getElementById("sampleload").disabled = true;
   window.scrollBy(0, 500);
 
   setInterval(fillbuffer, 2000);
 
-  function fillbuffer(){
-    document.getElementById("bufferloadimg").style.display="block";
-    document.getElementById("bufferintopimg").style.display="block";
+  function fillbuffer() {
+    document.getElementById("bufferloadimg").style.display = "block";
+    document.getElementById("bufferintopimg").style.display = "block";
     document.getElementById('agel1a').style.display = "block";
   }
 
@@ -1369,14 +1382,10 @@ function runninggel() {
 function delvolttimer() {
   document.getElementById("voltalertmessage").style.display = "none";
   document.getElementById("voltalertmessage").classList.remove("show");
- 
+
 }
 
-function heataltmsg() {
-  document.getElementById("heatalertmessage").style.display = "none";
-  document.getElementById("heatalertmessage").classList.remove("show");
-  window.scrollBy(0,600);
-}
+
 
 var imgobj1 = null;
 var imgobj2 = null;
@@ -1399,7 +1408,7 @@ function gelrun() {
   function frame1() {
     if (orgleft == 26) { /* moves to 26 left positon*/
       clearInterval(imgobj1); /* stops to 26 postion*/
-      
+
       //
     } else {
       orgleft++;
