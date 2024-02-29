@@ -157,11 +157,11 @@ jsPlumb.ready(function () {
         //delete clicked connection
         instance.bind("click", function (connection, originalEvent) {
 
-            if ((((connection.sourceId == 'ld1' && (connection.targetId == 'ld3' || connection.targetId == 'ld5' || connection.targetId == 'ld7' || connection.targetId == 'ld9')) || (connection.sourceId == 'ld3' && connection.targetId == 'ld1')) && alert("Delete negative connection ?"))) {
+            if ((((connection.sourceId == 'ld1' && (connection.targetId == 'ld3' || connection.targetId == 'ld5' || connection.targetId == 'ld7' || connection.targetId == 'ld9')) || (connection.sourceId == 'ld3' && connection.targetId == 'ld1')) )) {
                 instance.deleteConnection(connection);
 
             }
-            else if ((((connection.sourceId == 'ld2' && (connection.targetId == 'ld4' || connection.targetId == 'ld6' || connection.targetId == 'ld8' || connection.targetId == 'ld10')) || (connection.sourceId == 'ld4' && connection.targetId == 'ld2')) && alert("Delete positive connection?"))) {
+            else if ((((connection.sourceId == 'ld2' && (connection.targetId == 'ld4' || connection.targetId == 'ld6' || connection.targetId == 'ld8' || connection.targetId == 'ld10')) || (connection.sourceId == 'ld4' && connection.targetId == 'ld2')) )) {
                 instance.deleteConnection(connection);
 
             }
@@ -579,12 +579,14 @@ jsPlumb.ready(function () {
 
 
 
+            $('#voltalertmessage').modal('show');
+            $('.modal-body').html('Connection is correct. <br> Click on "+" sign button of the power supply to set the voltage between 50 V and 100 V.');
 
-
-            alert("RIGHT CONNECTION.");
+           // alert("RIGHT CONNECTION.");
             //document.getElementById("samplerun").disabled = true;
         } else {
-            alert("WRONG CONNECTION");
+            $('#voltalertmessage').modal('show');
+            $('.modal-body').text('Connection is wrong.');
             const canvas = document.getElementById('textvoltimer');
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -618,9 +620,10 @@ jsPlumb.ready(function () {
     document.getElementById('myCanvasstp').addEventListener('click', function () {
         // Delete all connections
         //instance.deleteEveryConnection();
-
+        document.getElementById("casecoverimg").style.display = "none";
         document.getElementById("viewsample").disabled=false;
-        document.getElementById('agel1').setAttribute('onclick', "moveImage1()");;
+        document.getElementById('agel1a').setAttribute('onclick', "moveImage1()");
+        
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);

@@ -1,13 +1,12 @@
-
 /*  
 Lab name: Experimental Biochemistry
 Exp name: DNA analysis by agarose gel electrophoresis
 File name: main.css
 Developer: Prakriti Dhang
 */
-.div-inline{
-    
-    display:inline-block;
+.div-inline {
+
+    display: inline-block;
 }
 
 .card {
@@ -33,27 +32,112 @@ Developer: Prakriti Dhang
     width: 17%;
     top: 1%;
     left: 4%;
+    cursor: pointer;
 
 }
 
 #agel {
     position: absolute;
-    width: 9.6%;
-    top: 24%;
-    left: 7.8%;
+    width: 12%;
+   
+    top: 19%;
+    left: 6.45%;
     /*animation: age1 10s linear;*/
     transition: transform 4s ease-in-out;
-    z-index: 5;
+    cursor: pointer;
 }
 
+#comb {
+    position: absolute;
+    width: 16%;
+    height: 6%;
+    top: 24%;
+    left: 4.4%;
+    z-index: 2;
+    cursor: pointer;
+display:block;
+}
 
+#wells {
+    position: absolute;
+    width: 10%;
+    height: 3%;
+    top: 25%;
+    left: 7%;
+    z-index: 2;
+    cursor: pointer;
+display:none;
+}
+
+#emptymicrowave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    cursor:pointer;
+    
+    
+
+}
+
+#microwave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+#microwaveliq {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liq {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liqetbr {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+    
+
+}
+
+#emptyflask {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+  
+
+}
 
 #tube {
     position: absolute;
     width: 12%;
     top: 50%;
     left: 50%;
-    /*display: none;*/
+    z-index: 21;
+    display: none;
 
 }
 
@@ -62,7 +146,7 @@ Developer: Prakriti Dhang
     width: 2%;
     top: 10%;
     left: 65%;
-    cursor:grabbing;
+    cursor: grabbing;
     z-index: 20;
     rotate: 30deg;
     /*display: none;*/
@@ -72,58 +156,99 @@ Developer: Prakriti Dhang
 
 #peptitea {
     position: absolute;
-    width: 2%;
-    top: 8%;
-    left: 52.2%;
-    cursor:pointer;
+    width: 1.6%; /* 2*/
+    top: 1%; 
+    left: 51.3%;
+    cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
+    /*rotate: 30deg;*/
     /*display: none;*/
-
-
+ 
 }
+
+#peptitea1 {
+    position: absolute;
+    width: 1.5%; /* 2*/
+    top: 4%; 
+    left: 51%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
+ 
+}
+
 #peptiteb {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 55.3%;
-    cursor:pointer;
+    width: 1.6%;
+    top: 1%;
+    left: 54.5%;
+    cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
-
-
+    /*rotate: 30deg;
+    display: none;*/
 }
+
+#peptiteb1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left:54.2%; /*54.2%; */
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
+}
+
 #peptitec {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 58.2%;
-    cursor:pointer;
+    width: 1.6%;
+    top: 1%;
+    left: 57.5%;
+    cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
-
-
+   /* rotate: 30deg;
+    display: none;*/
 }
+
+#peptitec1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left:57%; /*57 */
+    cursor: pointer;
+    z-index: 20;
+   /* rotate: 30deg;*/
+   display: none;
+}
+
 #peptited {
     position: absolute;
-    width: 2%;
-    top: 9%;
-    left: 61%;
-    cursor:pointer;
+    width: 1.6%;
+    top: 1%;
+    left: 60%;
+    cursor: pointer;
     z-index: 20;
-    rotate: 30deg;
-    /*display: none;*/
+    /*rotate: 30deg;
+    display: none;*/
+}
 
-
+#peptited1 {
+    position: absolute;
+    width: 1.5%;
+    top: 4%;
+    left: 59.8%; /* 59.8*/
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+   display: none;
 }
 
 #buffer {
     position: absolute;
     width: 4%;
     top: 40%;
-    left: 70%;
+    left: 65%;
     /*display: none;*/
 
 }
@@ -145,7 +270,7 @@ Developer: Prakriti Dhang
     width: 22%;
     top: 120%;
     left: 20%;
-
+    cursor: pointer;
 }
 
 #case {
@@ -153,8 +278,22 @@ Developer: Prakriti Dhang
     width: 35%;
     top: 220%;
     left: 2%;
-
+    cursor: pointer;
 }
+
+#casecoverimg {
+    position: absolute;
+    width: 25.8%;
+    height: 72%;
+    top: 218%;
+    left: 6.5%;
+    opacity: 60%;
+    z-index: 13;
+    display: none;
+    cursor: pointer;
+}
+
+
 
 #myCanvas1 {
     position: absolute;
@@ -211,7 +350,7 @@ Developer: Prakriti Dhang
 }
 
 .jtk-connector {
-    z-index: 10;
+    z-index: 13;
 }
 
 
@@ -287,6 +426,7 @@ Developer: Prakriti Dhang
     top: 145.5%;
     left: 37%;
 }
+
 #ld8 {
     position: absolute;
     width: 0.8%;
@@ -323,13 +463,36 @@ path,
 
 
 
+
 /* JS plumb connection ends*/
+
+
+#bufferloadimg{
+    position: absolute;
+    width: 30%;
+    top: 222%;
+    left: 52%;
+    cursor: pointer;
+    opacity: 70%;
+    
+}
+
+#bufferintopimg{
+    position: absolute;
+    width: 23%;
+    top: 222%;
+    left: 8%;
+    cursor: pointer;
+    opacity: 100%;
+    z-index:9;
+}
 
 #sideviewcase {
     position: absolute;
     width: 35%;
     top: 220%;
     left: 50%;
+    cursor: pointer;
 }
 
 #agel1 {
@@ -338,7 +501,21 @@ path,
     left: 14.5%;
     width: 13%;
     z-index: 10;
+    cursor: pointer;
+    
+    /*transition: transform 4s ease-in-out;*/
+}
 
+#agel1a {
+    position: absolute;
+    top: 224%;
+    left: 14.5%;
+    width: 13%;
+    z-index: 11;
+    opacity: 80%;
+    cursor: pointer;
+    
+    
     /*transition: transform 4s ease-in-out;*/
 }
 
@@ -348,6 +525,7 @@ path,
     top: 320%;
     left: 10%;
     z-index: -10;
+    cursor: pointer;
 }
 
 #ladder {
@@ -364,7 +542,7 @@ path,
     top: 365%;
     left: 18.5%;
     display: none;
-    
+    opacity: 65%;
     /*transition: transform 4s ease-in-out;*/
 }
 
@@ -375,18 +553,21 @@ path,
     left: 18.5%;
     display: block;
 }
-#myCanvasuv1{
+
+#myCanvasuv1 {
     position: absolute;
     width: 15%;
-    height:120%;
+    height: 120%;
     top: 350%;
     left: 11%;
     display: block;
+
 }
+
 #myCanvasuv2 {
     position: absolute;
     width: 14%;
-    height:120%;
+    height: 120%;
     top: 350%;
     left: 25%;
     display: block;
@@ -400,6 +581,7 @@ path,
     height: 31%;
     top: 238%;
     left: 52.95%;
+    opacity: 50%;
 
 }
 
@@ -431,7 +613,7 @@ path,
     left: 13%;
     z-index: 10;
     display: none;
-    
+
 }
 
 #myCanvass4D {
@@ -450,6 +632,7 @@ path,
     height: 31%;
     top: 238%;
     left: 74%;
+    opacity: 50%;
 
 }
 
@@ -459,6 +642,7 @@ path,
     height: 9.4%;
     top: 229%;
     left: 50.1%;
+    opacity: 50%;
 
 }
 
@@ -469,6 +653,7 @@ path,
     top: 238%;
     left: 61.5%;
     z-index: 1;
+    opacity: 50%;
 
 }
 
@@ -515,6 +700,7 @@ path,
     display: none;
 
 }
+
 #myCanvasrn {
     position: absolute;
     width: 1.2%;
@@ -569,14 +755,14 @@ path,
     top: 268%;
     left: 15%;
     z-index: 10;
-   /*  //background-image: linear-gradient(to right, #EBFCFF, #E8F8FF,#E8F8FF, #7FA9FF); */
-   display: none;
-   
-   
+    /*  //background-image: linear-gradient(to right, #EBFCFF, #E8F8FF,#E8F8FF, #7FA9FF); */
+    display: none;
+
+
 }
 
 
-#samplea{
+#samplea {
     position: absolute;
     width: 0.5%;
     height: 7%;
@@ -595,6 +781,7 @@ path,
     z-index: 10;
     display: none;
 }
+
 #sampleb {
     position: absolute;
     width: 0.5%;
@@ -613,7 +800,7 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
-  
+
 
 }
 
@@ -626,7 +813,7 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
-  
+
 
 }
 
@@ -638,11 +825,11 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
-   
-    
+
+
 }
 
-#sampled{
+#sampled {
     position: absolute;
     width: 0.5%;
     height: 7%;
@@ -650,8 +837,8 @@ path,
     left: 15%;
     z-index: 10;
     display: none;
-   
-    
+
+
 }
 
 
@@ -663,8 +850,8 @@ path,
     top: 268%;
     left: 15%;
     z-index: 10;
-   
-   
+
+
 }
 
 #sample2 {
@@ -694,6 +881,6 @@ path,
     top: 230%;
     left: 15%;
     z-index: 10;
-    
+
 }
 
