@@ -7,8 +7,7 @@ The protocol for running an agarose gel has been described briefly in the follow
 
 1. **Agarose Gel Preparation**
 
-
-     i. Mix the agarose powder with electrophoresis buffer, TAE or TBE to the required concentration. Heat the mixture in a microwave oven to melt it. 
+   i. Mix the agarose powder with electrophoresis buffer, TAE or TBE to the required concentration. Heat the mixture in a microwave oven to melt it. 
 
 <div align="center">
       <img src="images/microwave.png" class="img-fluid">
