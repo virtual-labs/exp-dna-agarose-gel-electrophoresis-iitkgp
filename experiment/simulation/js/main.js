@@ -99,7 +99,7 @@ function mgelliq() {
 
 function liqcool(){
   $('#voltalertmessage').modal('show');
-  $('.modal-body').text('Mixture has been cooled. Click on "Add Ethidium Bromide (EtBr)" check box.');
+  $('.modal-body').text('Mixture has been cooled. Click on "Add Ethidium Bromide (EtBr)" checkbox.');
   clearInterval(cancelliqcool);
 }
 
