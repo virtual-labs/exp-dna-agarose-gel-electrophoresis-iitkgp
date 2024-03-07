@@ -15,7 +15,7 @@ The protocol for running an agarose gel has been described briefly in the follow
 
    ii. The agarose percentage used depends on the size of the fragments to be settled. The agarose gels are normally in the range of 0.2 – 3.0%. Low agarose concentrations are used to
 resolve large DNA fragments, while high agarose concentrations allow the separation of
-small DNA fragments.
+small DNA fragments.  
    iii. Once the mixture is cooled, add EtBr to the gel to facilitate visualization of DNA after electrophoresis. 
    
    <div align="center">
