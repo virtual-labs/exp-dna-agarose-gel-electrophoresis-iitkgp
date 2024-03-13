@@ -188,7 +188,10 @@ function sample_prep() {
     if (selectedValues.includes("DNA") && selectedValues.includes("Dye containing bromophenol blue")) {
       $('#voltalertmessage').modal('show');
       $('.modal-body').text('Correct component(s) is(are) selected.');
-      document.getElementById("tube").style.display = "block";
+      document.getElementById("tubea").style.display = "block";
+      document.getElementById("tubeb").style.display = "block";
+      document.getElementById("tubec").style.display = "block";
+      document.getElementById("tubed").style.display = "block";
       document.getElementById("sampleprep").disabled = true;
       document.getElementById("bufferload").disabled = false;
       document.getElementById('loadsamplea').style.pointerEvents = "auto";
@@ -231,7 +234,8 @@ function sample_loadA() {
   document.getElementById("peptitec1").style.display = "none";
   document.getElementById("peptited1").style.display = "none";
   document.getElementById('loadsampleb').style.pointerEvents = "auto";
-
+  document.getElementById("tubeao").style.display = "block";
+  document.getElementById("tubea").style.display = "none";
   /* Sample load using peptite tube*/
   const canvassdrop1 = document.getElementById('sampledrop1');
   const ctxsdrop1 = canvassdrop1.getContext('2d');
@@ -272,12 +276,13 @@ function sample_loadA() {
         /*  const canvasRect2 = canvassdrop2.getBoundingClientRect();
          const canvasRect3 = canvassdrop3.getBoundingClientRect();
          const canvasRect4 = canvassdrop4.getBoundingClientRect(); */
+        
 
         if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
           // Change the canvas color when the image touches it
           //  clearInterval(clearmpcnge);
           canvassdrop1.style.backgroundColor = '#7FA9FF';
-
+          
           /*  clearmp1a = setInterval(changempc, 200);
  
  
@@ -331,7 +336,7 @@ function sample_loadA() {
       window.removeEventListener('mouseup', handleMouseUp);
       //   imagepp.removeEventListener('touchmove', handleMouseMove);
       //  imagepp.removeEventListener('touchend', handleMouseUp);
-
+      
     }
 
     // Add event listeners for mouse/touch move and up events
@@ -398,11 +403,12 @@ function sample_loadA() {
       const imageRect = imagepp.getBoundingClientRect();
       const canvasRect = canvassdrop1.getBoundingClientRect();
 
+      
 
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop1.style.backgroundColor = '#7FA9FF';
-
+        
       }
     }
   }
@@ -435,8 +441,10 @@ function sample_loadB() {
   const imageppb = document.getElementById('peptiteb');
   const canvassdrop2 = document.getElementById('sampledrop2');
   const ctxsdrop2 = canvassdrop2.getContext('2d');
-
-
+  document.getElementById("tubebo").style.display = "block";
+  document.getElementById("tubeb").style.display = "none";
+  document.getElementById("tubeao").style.display = "none";
+  document.getElementById("tubea").style.display = "block";
   /** Sample 2 */
 
   let isDraggingb = false;
@@ -471,6 +479,7 @@ function sample_loadB() {
           // Change the canvas color when the image touches it
 
           canvassdrop2.style.backgroundColor = '#7FA9FF';
+         
           /*  clearInterval(clearmpcnge2);
            
  
@@ -588,7 +597,7 @@ function sample_loadB() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop2.style.backgroundColor = '#7FA9FF';
-
+      
       }
     }
   }
@@ -621,8 +630,10 @@ function sample_loadC() {
   const imageppc = document.getElementById('peptitec');
   const canvassdrop3 = document.getElementById('sampledrop3');
   const ctxsdrop3 = canvassdrop3.getContext('2d');
-
-
+  document.getElementById("tubeco").style.display = "block";
+  document.getElementById("tubec").style.display = "none";
+  document.getElementById("tubebo").style.display = "none";
+  document.getElementById("tubeb").style.display = "block";
   /** Sample 3 */
 
   let isDraggingc = false;
@@ -656,7 +667,7 @@ function sample_loadC() {
         if (imageRectc.left + imageRectc.width >= canvasRect3.left && imageRectc.top + imageRectc.height >= canvasRect3.top && imageRectc.left <= canvasRect3.left + canvasRect3.width && imageRectc.top <= canvasRect3.top + canvasRect3.height) {
           // Change the canvas color when the image touches it
           canvassdrop3.style.backgroundColor = '#7FA9FF';
-
+          
           // clearInterval(clearmpcnge3);
 
           /*  clearmp1a3 = setInterval(changempc3, 200);
@@ -772,7 +783,7 @@ function sample_loadC() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop3.style.backgroundColor = '#7FA9FF';
-
+       
       }
     }
   }
@@ -800,6 +811,10 @@ function sample_loadD() {
   document.getElementById("peptitea1").style.visibility = "hidden";
   document.getElementById("peptitec1").style.visibility = "hidden";
   document.getElementById("peptiteb1").style.visibility = "hidden";
+  document.getElementById("tubedo").style.display = "block";
+  document.getElementById("tubed").style.display = "none";
+  document.getElementById("tubeco").style.display = "none";
+  document.getElementById("tubec").style.display = "block";
   const imageppd = document.getElementById('peptited');
   const canvassdrop4 = document.getElementById('sampledrop4');
   const ctxsdrop4 = canvassdrop4.getContext('2d');
@@ -836,7 +851,8 @@ function sample_loadD() {
         if (imageRectd.left + imageRectd.width >= canvasRect4.left && imageRectd.top + imageRectd.height >= canvasRect4.top && imageRectd.left <= canvasRect4.left + canvasRect4.width && imageRectd.top <= canvasRect4.top + canvasRect4.height) {
           // Change the canvas color when the image touches it
           canvassdrop4.style.backgroundColor = '#7FA9FF';
-
+          document.getElementById("tubedo").style.display = "none";
+        document.getElementById("tubed").style.display = "block";
           // clearInterval(clearmpcnge4);
           //canvassdrop1.style.backgroundColor = '#7FA9FF';
 
@@ -950,7 +966,8 @@ function sample_loadD() {
       if (imageRect.left + imageRect.width >= canvasRect.left && imageRect.top + imageRect.height >= canvasRect.top && imageRect.left <= canvasRect.left + canvasRect.width && imageRect.top <= canvasRect.top + canvasRect.height) {
         // Change the canvas color when the image touches it
         canvassdrop4.style.backgroundColor = '#7FA9FF';
-
+        document.getElementById("tubedo").style.display = "none";
+        document.getElementById("tubed").style.display = "block";
       }
     }
   }
