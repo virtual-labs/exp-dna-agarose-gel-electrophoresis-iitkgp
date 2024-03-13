@@ -41,7 +41,7 @@ small DNA fragments.
      i. Mix the sample containing DNA with the loading buffer in particular concentrations and then pipette it into the sample wells.  
 
 <div align="center">
-     <img src="images/sampleabcdp.png" class="img-fluid">
+     <img src="images/samplepabcd.png" class="img-fluid">
 </div>
 
 <div align="center">
