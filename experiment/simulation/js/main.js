@@ -19,7 +19,7 @@ function start() {
   document.getElementById('agel1').removeAttribute("onclick");
   document.getElementById("g1").disabled = false;
   document.getElementById("g2").disabled = false;
-  document.getElementById("g3").disabled = false;
+ 
   document.getElementById("g4").disabled = false;
   document.getElementById("g5").disabled = false;
   document.getElementById("g6").disabled = false;
@@ -100,6 +100,7 @@ function mgelliq() {
 function liqcool(){
   $('#voltalertmessage').modal('show');
   $('.modal-body').text('Mixture has been cooled. Click on "Add Ethidium Bromide (EtBr)" checkbox.');
+  document.getElementById("g3").disabled = false;
   clearInterval(cancelliqcool);
 }
 
