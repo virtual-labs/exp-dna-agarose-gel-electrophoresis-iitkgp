@@ -19,7 +19,7 @@ function start() {
   document.getElementById('agel1').removeAttribute("onclick");
   document.getElementById("g1").disabled = false;
   document.getElementById("g2").disabled = false;
-  document.getElementById("g3").disabled = false;
+ 
   document.getElementById("g4").disabled = false;
   document.getElementById("g5").disabled = false;
   document.getElementById("g6").disabled = false;
@@ -100,15 +100,21 @@ function mgelliq() {
 function liqcool(){
   $('#voltalertmessage').modal('show');
   $('.modal-body').text('Mixture has been cooled. Click on "Add Ethidium Bromide (EtBr)" checkbox.');
+  document.getElementById("g3").disabled = false;
   clearInterval(cancelliqcool);
 }
 
 function addetbr() {
+  
   document.getElementById("gel_liqetbr").style.display = "block";
   document.getElementById("gel_liq").style.display = "none";
   document.getElementById("gelprep").disabled = false;
+  $('#voltalertmessage').modal('show');
+  $('.modal-body').text('Ethidium Bromide (EtBr)is added to the gel to facilitate visualization of DNA after electrophoresis ');
   window.scrollBy(0, 600);
-}
+  }
+ 
+
 
 function gel_prep() {
 
@@ -125,6 +131,7 @@ function gel_prep() {
   //   $('.modal-body').text('Correct component(s) is(are) selected.');
   document.getElementById("gel_liqetbr").setAttribute("onclick", "gelliqetbr()");
   document.getElementById("gelprep").disabled = true;
+  window.scrollBy(0, 600);
   // document.getElementById("placecomb").disabled = false;
 
   //} else {
