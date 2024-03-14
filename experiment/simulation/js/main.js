@@ -104,11 +104,16 @@ function liqcool(){
 }
 
 function addetbr() {
+  
   document.getElementById("gel_liqetbr").style.display = "block";
   document.getElementById("gel_liq").style.display = "none";
   document.getElementById("gelprep").disabled = false;
+  $('#voltalertmessage').modal('show');
+  $('.modal-body').text('Ethidium Bromide (EtBr)is added to the gel to facilitate visualization of DNA after electrophoresis ');
   window.scrollBy(0, 600);
-}
+  }
+ 
+
 
 function gel_prep() {
 
@@ -125,6 +130,7 @@ function gel_prep() {
   //   $('.modal-body').text('Correct component(s) is(are) selected.');
   document.getElementById("gel_liqetbr").setAttribute("onclick", "gelliqetbr()");
   document.getElementById("gelprep").disabled = true;
+  window.scrollBy(0, 600);
   // document.getElementById("placecomb").disabled = false;
 
   //} else {
