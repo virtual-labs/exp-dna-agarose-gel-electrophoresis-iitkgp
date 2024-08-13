@@ -1534,6 +1534,14 @@ function gelrun() {
 
 }
 
+function removetopcover(){
+  document.getElementById("casecoverimg").style.display = "none";
+  document.getElementById('agel1a').setAttribute('onclick', "moveImage1()");
+}
+
+
+
+
 /**************************************************** View under UV light **********************************************************************************/
 
 var canvasuv1, canvasuv2;
