@@ -14,8 +14,8 @@
 
 
 ### Contributors List
-SrNo | Name | Vlabs Developer or Integration Engineer| Designation | Department| Institute| 
-:--|:--|:--|:--|:--|:--|
-1 | **Prakriti Dhang** | Developer and Integration Engineer | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
-2 | **Puja Kumari** || Research Scholar | School of Bioscience | IIT Kharagpur |
+SrNo | Name |  Role | Designation | Institute| 
+:--|:--|:--|:--|:--|
+1 | **Prakriti Dhang** | Developer and Integration Engineer | Project Scientist | IIT Kharagpur |
+2 | **Puja Kumari** | Content Creater | Research Scholar |  IIT Kharagpur |
 
