@@ -620,9 +620,10 @@ jsPlumb.ready(function () {
     document.getElementById('myCanvasstp').addEventListener('click', function () {
         // Delete all connections
         //instance.deleteEveryConnection();
-        document.getElementById("casecoverimg").style.display = "none";
+       // document.getElementById("casecoverimg").style.display = "none";
+       document.getElementById("casecoverimg").setAttribute('onclick', "removetopcover()");
         document.getElementById("viewsample").disabled=false;
-        document.getElementById('agel1a').setAttribute('onclick', "moveImage1()");
+        //document.getElementById('agel1a').setAttribute('onclick', "moveImage1()");
         
         const canvas = document.getElementById('textvoltimer');
         const ctx = canvas.getContext('2d');
