@@ -23,7 +23,7 @@
     },
     {
       "target": "application.html",
-      "source": "appliation.md",
+      "source": "application.md",
       "label": "Applications",
       "unit-type": "task",
       "content-type": "text"
