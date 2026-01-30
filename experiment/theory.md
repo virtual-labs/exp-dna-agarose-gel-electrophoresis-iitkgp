@@ -18,21 +18,6 @@ The following equations, derived from Ohm’s Law, may be used to express the re
 
 Voltage = current x resistance, or V = I x R
 
-Since DNA is colourless, the loaded sample need to be tracked. This is achieved by using a loading dye solution which consists of bromophenol blue. Finally, to visualize DNA, agarose gels are usually stained with ethidium bromide (EtBr), a fluorescent dye which intercalates between stacked base pairs of nucleotides and, in this environment, fluoresces when excited with ultraviolet light. A DNA and RNA size markers contain a mixture of DNA (or RNA) fragments of known length, making them suitable for estimating the fragment length of concurrently run samples.
+Since DNA is colourless, the loaded sample need to be tracked. This is achieved by using a loading dye solution which consists of bromophenol blue. Finally, to visualize DNA, agarose gels are usually stained with ethidium bromide (EtBr), a fluorescent dye which intercalates between stacked base pairs of nucleotides and, in this environment, fluoresces when excited with ultraviolet light. A DNA and RNA size markers contain a mixture of DNA (or RNA) fragments of known length, making them suitable for estimating the fragment length of concurrently run samples. Alternatively, several safer nucleic acid–staining dyes are now widely used in place of ethidium bromide (EtBr) for agarose gel electrophoresis. These include SYBR Safe, GelRed, GelGreen, SYBR Gold etc. which have been developed to exhibit high sensitivity, reduced mutagenicity and toxicity compared to EtBr.
 
 
-#### Materials Required:
-- Casting tray
-- Well combs
-- Voltage source
-- Gel box
-- UV light source
-- Microwave
-
-#### Reagents required:
-- TAE 
-- Agarose
-- Ethidium bromide (EtBr)
-- 6X gel loading buffer
-- DNA sample
-- DNA ladder
