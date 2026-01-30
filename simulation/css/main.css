@@ -1,0 +1,967 @@
+/*  
+Lab name: Experimental Biochemistry
+Exp name: DNA analysis by agarose gel electrophoresis
+File name: main.css
+Developer: Prakriti Dhang
+*/
+.div-inline {
+
+    display: inline-block;
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.img-container {
+    /*width: 100%;*/
+
+    display: inline-block;
+    position: relative;
+}
+
+
+/* .poscol{
+    width: 100%;
+    min-width: 23px;
+    min-height: 1px;
+    } */
+
+#agelcase {
+    position: relative;
+    width: 17%;
+    top: 1%;
+    left: 4%;
+    cursor: pointer;
+
+}
+
+#agel {
+    position: absolute;
+    width: 12%;
+   
+    top: 19%;
+    left: 6.45%;
+    /*animation: age1 10s linear;*/
+    transition: transform 4s ease-in-out;
+    cursor: pointer;
+}
+
+#comb {
+    position: absolute;
+    width: 16%;
+    height: 6%;
+    top: 24%;
+    left: 4.4%;
+    z-index: 2;
+    cursor: pointer;
+display:block;
+}
+
+#wells {
+    position: absolute;
+    width: 10%;
+    height: 3%;
+    top: 25%;
+    left: 7%;
+    z-index: 2;
+    cursor: pointer;
+display:none;
+}
+
+#emptymicrowave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    cursor:pointer;
+    
+    
+
+}
+
+#microwave {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+#microwaveliq {
+    position: absolute;
+    width: 18%;
+    top: 20%;
+    left: 75%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liq {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+
+}
+
+#gel_liqetbr {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+    
+
+}
+
+#emptyflask {
+    position: absolute;
+    width: 6.5%;
+    top: 42%;
+    left: 25%;
+    display: none;
+    cursor:pointer;
+  
+
+}
+
+#tube {
+    position: absolute;
+    width: 18%;
+    top: 50%;
+    left: 40%;
+    z-index: 21;
+    display: none;
+
+}
+#tubea {
+    position: absolute;
+    width:3.5%;
+    top: 50%;
+    left: 40%;
+    z-index: 21;
+    display: none;
+
+}
+#tubeb {
+    position: absolute;
+    width:3.5%;
+    top: 50%;
+    left: 44%;
+    z-index: 21;
+    display: none;
+
+}
+#tubec {
+    position: absolute;
+    width:3.5%;
+    top: 50%;
+    left: 48%;
+    z-index: 21;
+    display: none;
+
+}
+#tubed {
+    position: absolute;
+    width:3.5%;
+    top: 50%;
+    left: 52%;
+    z-index: 21;
+    display: none;
+
+}
+
+
+
+#tubeao {
+    position: absolute;
+    width:6.2%;
+    top: 32%;
+    left: 37.3%;
+    z-index: 21;
+    display: none;
+
+}
+#tubebo {
+    position: absolute;
+    width:6.2%;
+    top: 32%;
+    left: 41.2%;
+    z-index: 21;
+    display: none;
+
+}
+
+#tubeco {
+    position: absolute;
+    width:6.2%;
+    top: 32%;
+    left: 45.4%;
+    z-index: 21;
+    display: none;
+
+}
+
+#tubedo {
+    position: absolute;
+    width:6.2%;
+    top: 32%;
+    left: 49.2%;
+    z-index: 21;
+    display: none;
+
+}
+
+
+
+
+
+#tubemeter {
+    position: absolute;
+    width: 2%;
+    top: 10%;
+    left: 65%;
+    cursor: grabbing;
+    z-index: 20;
+    rotate: 30deg;
+    /*display: none;*/
+
+
+}
+
+#peptitea {
+    position: absolute;
+    width: 1.6%; /* 2*/
+    top: 3%; 
+    left: 41%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    /*display: none;*/
+ 
+}
+
+#peptitea1 {
+    position: absolute;
+    width: 1.5%; /* 2*/
+    top: 6%; 
+    left: 41%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
+ 
+}
+
+#peptiteb {
+    position: absolute;
+    width: 1.6%;
+    top: 3%;
+    left: 45%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;
+    display: none;*/
+}
+
+#peptiteb1 {
+    position: absolute;
+    width: 1.5%;
+    top: 6%;
+    left:45%; /*54.2%; */
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+    display: none;
+}
+
+#peptitec {
+    position: absolute;
+    width: 1.6%;
+    top: 3%;
+    left: 49%;
+    cursor: pointer;
+    z-index: 20;
+   /* rotate: 30deg;
+    display: none;*/
+}
+
+#peptitec1 {
+    position: absolute;
+    width: 1.5%;
+    top: 6%;
+    left:49%; /*57 */
+    cursor: pointer;
+    z-index: 20;
+   /* rotate: 30deg;*/
+   display: none;
+}
+
+#peptited {
+    position: absolute;
+    width: 1.6%;
+    top: 3%;
+    left: 53%;
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;
+    display: none;*/
+}
+
+#peptited1 {
+    position: absolute;
+    width: 1.5%;
+    top: 6%;
+    left: 53%; /* 59.8*/
+    cursor: pointer;
+    z-index: 20;
+    /*rotate: 30deg;*/
+   display: none;
+}
+
+#buffer {
+    position: absolute;
+    width: 4%;
+    top: 40%;
+    left: 65%;
+    /*display: none;*/
+
+}
+
+#buffertext {
+    position: absolute;
+    width: 4%;
+    top: 61%;
+    left: 69.9%;
+    /*display: none;*/
+
+}
+
+
+
+#voltage {
+
+    position: absolute;
+    width: 22%;
+    top: 120%;
+    left: 20%;
+    cursor: pointer;
+}
+
+#case {
+    position: absolute;
+    width: 35%;
+    top: 220%;
+    left: 2%;
+    cursor: pointer;
+}
+
+#casecoverimg {
+    position: absolute;
+    width: 25.8%;
+    height: 72%;
+    top: 218%;
+    left: 6.5%;
+    opacity: 60%;
+    z-index: 13;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+#myCanvas1 {
+    position: absolute;
+    width: 11%;
+    top: 223%;
+    left: 16.5%;
+    display: block;
+}
+
+/* #negativedot {
+    position: absolute;
+    width: 1%;
+    top: 273.2%;
+    left: 4.5%;
+}
+
+#positivedot {
+    position: absolute;
+    width: 1%;
+    top: 227.5%;
+    left: 33.3%;
+}
+
+#vnegativedot {
+    position: absolute;
+    width: 0.8%;
+    top: 144%;
+    left: 27%;
+}
+
+#vpositivedot {
+    position: absolute;
+    width: 0.8%;
+    top: 144%;
+    left: 29%;
+} */
+
+/* JS plumb connection starts*/
+
+.demo {
+    /* for IE10+ touch devices */
+    touch-action: none;
+}
+
+
+
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 13;
+}
+
+
+
+
+
+
+.littledot {
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+    /* background-image: url(./images/littledot.png);*/
+    z-index: 5;
+    position: absolute;
+    border-radius: 2%;
+
+}
+
+.littledot-hover-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+
+#ld1 {
+    position: absolute;
+    width: 1%;
+    top: 277%;
+    left: 4.5%;
+}
+
+#ld2 {
+    position: absolute;
+    width: 1%;
+    top: 230%;
+    left: 33.3%;
+
+}
+
+#ld3 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 22.1%;
+}
+
+#ld4 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 24%;
+}
+
+#ld5 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 22.1%;
+}
+
+#ld6 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 24%;
+}
+
+#ld7 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 37%;
+}
+
+#ld8 {
+    position: absolute;
+    width: 0.8%;
+    top: 145.5%;
+    left: 39%;
+}
+
+
+#ld9 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 37%;
+}
+
+#ld10 {
+    position: absolute;
+    width: 0.8%;
+    top: 179%;
+    left: 39%;
+}
+
+path,
+.jtk-endpoint {
+    cursor: pointer;
+}
+
+.cmdLink detach {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+
+
+
+/* JS plumb connection ends*/
+
+
+#bufferloadimg{
+    position: absolute;
+    width: 30%;
+    top: 222%;
+    left: 52%;
+    cursor: pointer;
+    opacity: 70%;
+    
+}
+
+#bufferintopimg{
+    position: absolute;
+    width: 23%;
+    top: 222%;
+    left: 8%;
+    cursor: pointer;
+    opacity: 100%;
+    z-index:9;
+}
+
+#sideviewcase {
+    position: absolute;
+    width: 35%;
+    top: 220%;
+    left: 50%;
+    cursor: pointer;
+}
+
+#agel1 {
+    position: absolute;
+    top: 224%;
+    left: 14.5%;
+    width: 13%;
+    z-index: 10;
+    cursor: pointer;
+    
+    /*transition: transform 4s ease-in-out;*/
+}
+
+#agel1a {
+    position: absolute;
+    top: 224%;
+    left: 14.5%;
+    width: 13%;
+    z-index: 11;
+    opacity: 80%;
+    cursor: pointer;
+    
+    
+    /*transition: transform 4s ease-in-out;*/
+}
+
+#uvmachine {
+    position: absolute;
+    width: 30%;
+    top: 320%;
+    left: 10%;
+    z-index: -10;
+    cursor: pointer;
+}
+
+#ladder {
+    position: absolute;
+    width: 8%;
+    top: 360%;
+    left: 45%;
+}
+
+
+#output {
+    position: absolute;
+    width: 11%;
+    top: 365%;
+    left: 18.5%;
+    display: none;
+    opacity: 65%;
+    /*transition: transform 4s ease-in-out;*/
+}
+
+#myCanvas2 {
+    position: absolute;
+    width: 11%;
+    top: 365%;
+    left: 18.5%;
+    display: block;
+}
+
+#myCanvasuv1 {
+    position: absolute;
+    width: 15%;
+    height: 120%;
+    top: 350%;
+    left: 11%;
+    display: block;
+
+}
+
+#myCanvasuv2 {
+    position: absolute;
+    width: 14%;
+    height: 120%;
+    top: 350%;
+    left: 25%;
+    display: block;
+    rotate: 180deg;
+}
+
+
+#myCanvass1 {
+    position: absolute;
+    width: 8.6%;
+    height: 31%;
+    top: 238%;
+    left: 52.95%;
+    opacity: 50%;
+
+}
+
+#myCanvass1A {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 268%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
+
+#myCanvass2B {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 255%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
+
+#myCanvass3C {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 243%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+
+}
+
+#myCanvass4D {
+    position: absolute;
+    width: 1.5%;
+    height: 7%;
+    top: 230%;
+    left: 13%;
+    z-index: 10;
+    display: none;
+}
+
+#myCanvass2 {
+    position: absolute;
+    width: 8.7%;
+    height: 31%;
+    top: 238%;
+    left: 74%;
+    opacity: 50%;
+
+}
+
+#myCanvass3 {
+    position: absolute;
+    width: 34.8%;
+    height: 9.4%;
+    top: 229%;
+    left: 50.1%;
+    opacity: 50%;
+
+}
+
+#myCanvass4 {
+    position: absolute;
+    width: 12.5%;
+    height: 18.5%;
+    top: 238%;
+    left: 61.5%;
+    z-index: 1;
+    opacity: 50%;
+
+}
+
+
+#myCanvasv1 {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 141.2%;
+    left: 26.2%;
+    cursor: pointer;
+    display: none;
+
+}
+
+#myCanvast1 {
+    position: absolute;
+    width: 1%;
+    height: 8%;
+    top: 165.6%;
+    left: 26.3%;
+    cursor: pointer;
+    display: none;
+
+}
+
+#myCanvasvp {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 141%;
+    left: 34.5%;
+    cursor: pointer;
+    display: none;
+}
+
+#myCanvasvn {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 155%;
+    left: 34.5%;
+    cursor: pointer;
+    display: none;
+
+}
+
+#myCanvasrn {
+    position: absolute;
+    width: 1.2%;
+    height: 8%;
+    top: 178%;
+    left: 29%;
+    cursor: pointer;
+    display: none;
+
+}
+
+#myCanvasstp {
+    position: absolute;
+    width: 1.8%;
+    height: 8%;
+    top: 178%;
+    left: 26.1%;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+#textvoltimer {
+    position: absolute;
+    width: 4%;
+    height: 14%;
+    top: 144%;
+    left: 29%;
+}
+
+
+
+#casecover {
+    position: absolute;
+    top: 150%;
+    left: 2%;
+}
+
+#sideviewcasetext {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    top: 265%;
+    left: 65%;
+}
+
+#sampledrop1 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 268%;
+    left: 15%;
+    z-index: 10;
+    /*  //background-image: linear-gradient(to right, #EBFCFF, #E8F8FF,#E8F8FF, #7FA9FF); */
+    display: none;
+
+
+}
+
+
+#samplea {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 268%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+}
+
+#sampledrop2 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 255%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+}
+
+#sampleb {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 255%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+}
+
+#sampledrop3 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 243%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+
+
+}
+
+
+#samplec {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 243%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+
+
+}
+
+#sampledrop4 {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 230%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+
+
+}
+
+#sampled {
+    position: absolute;
+    width: 0.5%;
+    height: 7%;
+    top: 230%;
+    left: 15%;
+    z-index: 10;
+    display: none;
+
+
+}
+
+
+/* Sample migrate*/
+#sample1 {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    top: 268%;
+    left: 15%;
+    z-index: 10;
+
+
+}
+
+#sample2 {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    top: 255%;
+    left: 15%;
+    z-index: 10;
+}
+
+
+#sample3 {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    top: 243%;
+    left: 15%;
+    z-index: 10;
+
+}
+
+#sample4 {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    top: 230%;
+    left: 15%;
+    z-index: 10;
+
+}
+
