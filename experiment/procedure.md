@@ -1,9 +1,23 @@
 ## Procedure
 
+#### Materials Required:
+- Casting tray
+- Well combs
+- Voltage source
+- Gel box
+- UV light source
+- Microwave
+
+#### Reagents required:
+- TAE 
+- Agarose
+- Ethidium bromide (EtBr)
+- 6X gel loading buffer
+- DNA sample
+- DNA ladder
 
 
-
-The protocol for running an agarose gel has been described briefly in the following sections:
+#### The protocol for running an agarose gel has been described briefly in the following sections:
 
 1. **Agarose Gel Preparation**
 
